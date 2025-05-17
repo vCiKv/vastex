@@ -1,18 +1,14 @@
 "use client"
-
-import { useEffect, useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Award, Building, Clock, Globe, Users } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
-import { SectionDivider } from "@/components/ui/section-divider"
-import { Blob } from "@/components/ui/blob"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ScrollReveal from "@/components/scroll-reveal"
+import Image from "next/image"
 import CallToAction from "../cta"
-
+import ScrollReveal from "@/components/scroll-reveal"
+import { Blob } from "@/components/ui/blob"
+import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import { SectionDivider } from "@/components/ui/section-divider"
+import { ArrowRight, Award, Building, Clock, Globe, Users } from "lucide-react"
+import Section from "@/components/section"
 export default function AboutPage() {
   const [mounted, setMounted] = useState(false)
 
@@ -22,10 +18,9 @@ export default function AboutPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white py-20 md:py-28">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28">
           {/* Background blobs */}
           <Blob
             variant="blob2"
@@ -71,14 +66,17 @@ export default function AboutPage() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
+        </Section>
 
 
         {/* Values Section */}
-        <div className="relative">
+        {/* <div className="relative">
           <SectionDivider variant="curve" fill="fill-gray-50" height={80} />
-        </div>
-        <section className="relative bg-gray-50 py-16 md:py-24">
+        </div> */}
+        <Section className="relative bg-gray-50"
+          divider={{ variant: "curve", fill: "fill-gray-50", height: 80, position: "top" }}
+          dividerBottom={{ variant: "curveAlt", fill: "fill-gray-50", height: 100, position: "bottom", className: "-mt-4" }}
+        >
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -153,14 +151,14 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div>
+        </div> */}
 
 
         {/* Team Section */}
-        <section className="relative bg-white py-16 md:py-24">
+        <Section className="relative bg-white">
           <Blob
             variant="blob3"
             color="text-gray-400"
@@ -180,7 +178,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </ScrollReveal>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   name: "John Smith",
@@ -199,6 +197,12 @@ export default function AboutPage() {
                   title: "Chief Technology Officer",
                   description: "Expert in industrial solutions and manufacturing technologies.",
                   delay: 600,
+                },
+                {
+                  name: "Bob Johnson",
+                  title: "HR manager",
+                  description: "Expert in industrial solutions and manufacturing technologies.",
+                  delay: 800,
                 },
               ].map((member, index) => (
                 <ScrollReveal key={index} delay={member.delay} direction="up">
@@ -223,7 +227,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-        </section>
+        </Section>
 
         {/* CTA Section */}
         <CallToAction>
@@ -257,7 +261,7 @@ export default function AboutPage() {
           </div>
         </CallToAction>
       </main>
-      <Footer />
+
     </div>
   )
 }

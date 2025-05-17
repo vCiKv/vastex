@@ -10,7 +10,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
     return (
       <>
         <div className="relative rotate-180 -mb-1">
-          <SectionDivider variant="wave" fill="fill-blue-700" height={70} />
+          <SectionDivider variant="waveAlt" fill="fill-blue-700" height={70} />
         </div>
         <section className="relative bg-blue-700 py-16 md:py-24 overflow-hidden">
           {props.children}

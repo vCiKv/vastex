@@ -4,14 +4,12 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CheckCircle } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { SectionDivider } from "@/components/ui/section-divider"
 import { Blob } from "@/components/ui/blob"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
+import Section from "@/components/section"
 
 export default function ServicesPage() {
   const [mounted, setMounted] = useState(false)
@@ -22,10 +20,10 @@ export default function ServicesPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white py-20 md:py-28 h-[60vh]">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 h-[60vh]">
           {/* Background blobs */}
           <Blob
             variant="blob2"
@@ -56,12 +54,12 @@ export default function ServicesPage() {
             </ScrollReveal>
           </div>
 
-        </section>
+        </Section>
         {/* <div className="relative rotate-180 -mb-0.5">
           <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
         </div> */}
         {/* Consulting Section */}
-        <section className="relative bg-white py-16 md:py-24">
+        <Section className="relative bg-white">
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -121,13 +119,19 @@ export default function ServicesPage() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div>
-
+        </div> */}
         {/* Industrial Solutions Section */}
-        <section className="relative bg-gray-50  py-16 md:py-24">
+        <Section className="relative bg-gray-50"
+          divider={{
+            variant: "curve", fill: "fill-gray-50", height: 80, position: "top"
+          }}
+          dividerBottom={{
+            variant: "tilt", fill: "fill-gray-50", height: 80, position: "bottom"
+          }}
+        >
           <Blob
             variant="blob3"
             color="text-gray-400"
@@ -186,13 +190,13 @@ export default function ServicesPage() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="tilt" fill="fill-white" height={60} />
-        </div>
+        </div> */}
 
         {/* Logistics Section */}
-        <section className="relative bg-white py-16 md:py-24">
+        <Section className="relative bg-white">
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -249,13 +253,20 @@ export default function ServicesPage() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div>
+        </div> */}
 
         {/* Procurement Section */}
-        <section className="relative bg-gray-50 py-16 md:py-24">
+        <Section className="relative bg-gray-50"
+          divider={{
+            variant: "curveAlt", fill: "fill-gray-50", height: 80, position: "top", className: "mt-4"
+          }}
+          dividerBottom={{
+            variant: "waveAlt", fill: "fill-gray-50", height: 80, position: "bottom"
+          }}
+        >
           <Blob
             variant="blob3"
             color="text-gray-400"
@@ -314,13 +325,13 @@ export default function ServicesPage() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="tilt" fill="fill-gray-50" height={60} />
-        </div>
+        </div> */}
 
         {/* Manufacturing Section */}
-        <section className="relative bg-white py-16 md:py-24">
+        <Section className="relative bg-white">
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -380,12 +391,12 @@ export default function ServicesPage() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* CTA Section */}
         <CallToAction />
       </main>
-      <Footer />
+
     </div>
   )
 }

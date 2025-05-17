@@ -6,13 +6,12 @@ import Image from "next/image"
 import { ArrowRight, CheckCircle, ChevronRight, Globe, Package, Settings, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { SectionDivider } from "@/components/ui/section-divider"
 import { Blob } from "@/components/ui/blob"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 import AnimatedLogo from "@/components/animated-logo"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "./cta"
+import Section from "@/components/section"
+
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -23,10 +22,10 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+
       <main className="flex-1 overflow-x-hidden">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-screen">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-screen">
           {/* Background blobs */}
           <Blob
             variant="blob2"
@@ -95,13 +94,15 @@ export default function Home() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Services Section */}
-        <div className="relative  rotate-180">
-          <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div>
-        <section className="relative bg-gray-50 py-16 md:py-24">
+        {/* <div className="relative  rotate-180">
+          <SectionDivider variant="wave1" fill="fill-gray-50" height={110} />
+        </div> */}
+        <Section className="relative bg-gray-50"
+          divider={{ variant: "waveAlt", fill: "fill-gray-50", height: 110, position: "both" }}
+        >
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -202,14 +203,18 @@ export default function Home() {
               </div>
             </ScrollReveal>
           </div>
-        </section>
-        <div className="relative">
-          <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div>
+        </Section>
+        {/* <div className="relative">
+          <SectionDivider variant="wave1" fill="fill-gray-50" height={110} />
+        </div> */}
 
 
         {/* About Section */}
-        <section className="relative bg-white py-16 md:py-24">
+        <Section className="relative bg-white"
+          divider={{
+            variant: "curve", fill: "fill-white", height: 80,
+          }}
+        >
           <Blob
             variant="blob3"
             color="text-gray-400"
@@ -266,13 +271,20 @@ export default function Home() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div>
+        </div> */}
 
         {/* Testimonials Section */}
-        <section className="relative bg-gray-50 py-16 md:py-24">
+        <Section className="relative bg-gray-50"
+          divider={{
+            variant: "curve", fill: "fill-gray-50", height: 80, position: "top"
+          }}
+          dividerBottom={{
+            variant: "waveAlt", fill: "fill-gray-50", height: 60, position: "bottom"
+          }}
+        >
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -361,13 +373,21 @@ export default function Home() {
             </div>
           </div>
 
-        </section>
-        <div className="relative">
-          <SectionDivider variant="tilt" fill="fill-gray-50" height={60} />
-        </div>
+        </Section>
+
         {/*stats page*/}
-        <section className="relative  py-16 md:py-24">
-        </section>
+        <Section className="relative  py-16 md:py-24">
+          <div className="container mx-auto min-h-[50vh]">
+            <div className="w-full h-[50vh]">
+              <img
+                src={"/map.svg"}
+                alt="map"
+                loading="lazy"
+              />
+            </div>
+            <h3 className="text-center text-5xl capitalize">{"Don't"} Miss the <span className="text-blue-700 font-black">Next Great</span><br /> Thing <span className="opacity-70 font-light">Ever Again</span></h3>
+          </div>
+        </Section>
         {/* CTA Section */}
         <CallToAction />
         {/* <div className="relative rotate-180 -mb-1">
@@ -417,7 +437,7 @@ export default function Home() {
         </section> */}
 
       </main>
-      <Footer />
-    </div>
+
+    </div >
   )
 }

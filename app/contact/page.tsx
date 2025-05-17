@@ -1,12 +1,7 @@
 "use client"
-
-import Link from "next/link"
-
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { Building, Mail, MapPin, Phone } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -14,16 +9,14 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { SectionDivider } from "@/components/ui/section-divider"
 import { Blob } from "@/components/ui/blob"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
+import Section from "@/components/section"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     company: "",
     message: "",
   })
@@ -46,7 +39,6 @@ export default function ContactPage() {
     setFormData({
       name: "",
       email: "",
-      phone: "",
       company: "",
       message: "",
     })
@@ -54,10 +46,10 @@ export default function ContactPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white py-20 md:py-28 h-[66vh]">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 h-[66vh]">
           {/* Background blobs */}
           <Blob
             variant="blob2"
@@ -85,13 +77,18 @@ export default function ContactPage() {
             </ScrollReveal>
           </div>
 
-        </section>
+        </Section>
 
         {/* Contact Form and Info Section */}
-        <div className="relative">
+        {/* <div className="relative">
           <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div>
-        <section className="relative bg-gray-50 py-16 md:py-24">
+        </div> */}
+        <Section className="relative bg-gray-50"
+          divider={{ variant: "tilt", fill: "fill-gray-50", height: 80, position: "top" }}
+          dividerBottom={{
+            variant: "waveAlt", fill: "fill-gray-50", height: 60
+          }}
+        >
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -124,6 +121,19 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
+                        <Label htmlFor="company">Company</Label>
+                        <Input
+                          id="company"
+                          name="company"
+                          placeholder="Your Company (optional)"
+                          value={formData.company}
+                          onChange={handleChange}
+                          className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid gap-4 grid-cols-1">
+                      <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
                         <Input
                           id="email"
@@ -136,30 +146,7 @@ export default function ContactPage() {
                           className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
                         />
                       </div>
-                    </div>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          placeholder="+1 (555) 000-0000"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="company">Company</Label>
-                        <Input
-                          id="company"
-                          name="company"
-                          placeholder="Your Company"
-                          value={formData.company}
-                          onChange={handleChange}
-                          className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
+
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
@@ -223,29 +210,18 @@ export default function ContactPage() {
                       <p className="text-gray-600">New York, NY 10001</p>
                     </CardContent>
                   </Card>
-                  <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <CardContent className="flex flex-col items-center p-6 text-center">
-                      <div className="mb-4 rounded-full bg-blue-100 p-3">
-                        <Building className="h-6 w-6 text-blue-700" />
-                      </div>
-                      <h3 className="text-xl font-bold">Regional Offices</h3>
-                      <p className="text-gray-600">London, UK</p>
-                      <p className="text-gray-600">Singapore</p>
-                      <p className="text-gray-600">Dubai, UAE</p>
-                    </CardContent>
-                  </Card>
                 </div>
               </ScrollReveal>
             </div>
           </div>
 
-        </section>
-        <div className="relative">
+        </Section>
+        {/* <div className="relative">
           <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div>
+        </div> */}
 
         {/* Map Section */}
-        <section className="relative bg-white py-16 md:py-24">
+        <Section className="relative bg-white">
           <Blob
             variant="blob3"
             color="text-gray-400"
@@ -276,10 +252,17 @@ export default function ContactPage() {
             </ScrollReveal>
           </div>
 
-        </section>
+        </Section>
 
         {/* FAQ Section */}
-        <section className="relative bg-gray-50 py-16 md:py-24">
+        <Section className="relative bg-gray-50"
+          divider={{
+            variant: "curveAlt", fill: "fill-gray-50", height: 60, position: "top", className: "mt-4"
+          }}
+          dividerBottom={{
+            variant: "tilt", fill: "fill-gray-50", height: 60
+          }}
+        >
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -342,13 +325,13 @@ export default function ContactPage() {
             </div>
           </div>
 
-        </section>
+        </Section>
         <div className="relative">
-          <SectionDivider variant="tilt" fill="fill-gray-50" height={60} />
+          {/* <SectionDivider variant="tilt" fill="fill-gray-50" height={60} /> */}
         </div>
         {/* CTA Section */}
         <CallToAction />
-        {/* <section className="relative bg-blue-700 py-16 md:py-24 overflow-hidden">
+        {/* <section className="relative bg-blue-700 overflow-hidden">
           <Blob
             variant="blob2"
             color="text-white"
@@ -379,7 +362,7 @@ export default function ContactPage() {
           </div>
         </section> */}
       </main>
-      <Footer />
+
     </div>
   )
 }
