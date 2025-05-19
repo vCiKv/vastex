@@ -37,7 +37,7 @@ export default function AboutPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">About Us</div>
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
                     <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                       Our Story and Mission
                     </h1>
@@ -56,7 +56,7 @@ export default function AboutPage() {
               <ScrollReveal direction="right" delay={300}>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src="https://images.pexels.com/photos/27406/pexels-photo-27406.jpg  "
                     width={500}
                     height={500}
                     alt="About Vastex Resources Limited"
@@ -88,7 +88,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">Our Values</div>
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Our Values</div>
                   <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">What Drives Us</h2>
                   <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Our core values shape everything we do at Vastex Resources Limited
@@ -99,42 +99,42 @@ export default function AboutPage() {
             <div className="h-full mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  icon: <Award className="h-6 w-6 text-blue-700" />,
+                  icon: <Award className="h-6 w-6 text-primary" />,
                   title: "Excellence",
                   description:
                     "We strive for excellence in everything we do, delivering the highest quality solutions to our clients.",
                   delay: 100,
                 },
                 {
-                  icon: <Users className="h-6 w-6 text-blue-700" />,
+                  icon: <Users className="h-6 w-6 text-primary" />,
                   title: "Integrity",
                   description:
                     "We conduct our business with the highest level of integrity, honesty, and transparency.",
                   delay: 200,
                 },
                 {
-                  icon: <Globe className="h-6 w-6 text-blue-700" />,
+                  icon: <Globe className="h-6 w-6 text-primary" />,
                   title: "Innovation",
                   description:
                     "We embrace innovation and continuously seek new ways to improve and deliver value to our clients.",
                   delay: 300,
                 },
                 {
-                  icon: <Building className="h-6 w-6 text-blue-700" />,
+                  icon: <Building className="h-6 w-6 text-primary" />,
                   title: "Partnership",
                   description:
                     "We build strong, collaborative partnerships with our clients, understanding their unique needs and challenges.",
                   delay: 400,
                 },
                 {
-                  icon: <Clock className="h-6 w-6 text-blue-700" />,
+                  icon: <Clock className="h-6 w-6 text-primary" />,
                   title: "Reliability",
                   description:
                     "We are committed to reliability, delivering on our promises and meeting deadlines consistently.",
                   delay: 500,
                 },
                 {
-                  icon: <Users className="h-6 w-6 text-blue-700" />,
+                  icon: <Users className="h-6 w-6 text-primary" />,
                   title: "Customer Focus",
                   description:
                     "We put our customers at the center of everything we do, ensuring their satisfaction and success.",
@@ -170,7 +170,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">Our Team</div>
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Our Team</div>
                   <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">Meet Our Leadership</h2>
                   <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Experienced professionals dedicated to your success
@@ -218,7 +218,7 @@ export default function AboutPage() {
                     </div>
                     <div className="text-center">
                       <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                      <p className="text-blue-700">{member.title}</p>
+                      <p className="text-primary">{member.title}</p>
                       <p className="text-gray-600">{member.description}</p>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/careers">
-                    <Button className="bg-white text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105">
+                    <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
                       View Open Positions <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>

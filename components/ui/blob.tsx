@@ -72,5 +72,5 @@ export function Blob({
     ),
   }
 
-  return <div className={cn("text-current", color)}>{blobs[variant]}</div>
+  return <div id="blob-decoration" className={cn("text-current", color)}>{blobs[variant]}</div>
 }

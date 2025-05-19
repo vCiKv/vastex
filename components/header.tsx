@@ -37,14 +37,14 @@ export default function Header() {
     >
       <div className="container flex items-center px-4 md:px-6">
         <Link href="/" className="mr-6">
-          <Logo width={32} height={32} />
+          <Logo width={96} height={52} />
         </Link>
         <nav className="hidden flex-1 items-center justify-center space-x-6 md:flex">
           {["Home", "About", "Services", "Contact"].map((item, index) => (
             <Link
               key={index}
               href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-700 transition-all duration-200 hover:text-blue-700 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-700 after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               {item}
             </Link>
@@ -52,7 +52,7 @@ export default function Header() {
         </nav>
         <div className="ml-auto flex items-center space-x-4">
           <Link href="/contact" className="hidden md:block">
-            <Button className="bg-blue-700 hover:bg-blue-800 transition-all duration-300 hover:scale-105">
+            <Button className="bg-primary hover:bg-blue-800 transition-all duration-300 hover:scale-105">
               Get in Touch
             </Button>
           </Link>
@@ -65,21 +65,21 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="mb-6">
-                <Logo width={32} height={32} />
+                <Logo width={96} height={52} />
               </div>
               <div className="flex flex-col space-y-4 py-6">
                 {["Home", "About", "Services", "Contact"].map((item, index) => (
                   <Link
                     key={index}
                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-lg font-medium text-gray-700 transition-all duration-200 hover:text-blue-700"
+                    className="text-lg font-medium text-gray-700 transition-all duration-200 hover:text-primary"
                     onClick={toggleMenu}
                   >
                     {item}
                   </Link>
                 ))}
                 <Link href="/contact" onClick={toggleMenu}>
-                  <Button className="mt-4 w-full bg-blue-700 hover:bg-blue-800">Get in Touch</Button>
+                  <Button className="mt-4 w-full bg-primary hover:bg-blue-800">Get in Touch</Button>
                 </Link>
               </div>
             </SheetContent>

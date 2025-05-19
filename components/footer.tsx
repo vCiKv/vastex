@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
 import Logo from "@/components/logo"
 import ScrollReveal from "@/components/scroll-reveal"
+import { companyAddress } from "@/app/companyDetails"
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
           <ScrollReveal direction="up" delay={100}>
             <div className="space-y-4">
               <Link href="/">
-                <Logo variant="white" width={32} height={32} textClassName="text-gray-300" />
+                <Logo variant="white" width={176} height={100} textClassName="text-gray-300" />
               </Link>
               <p className="text-gray-400">
                 Providing comprehensive business solutions including consulting, industrial solutions, logistics,
@@ -82,18 +83,18 @@ export default function Footer() {
           <ScrollReveal direction="up" delay={400}>
             <div className="space-y-4">
               <h3 className="text-lg font-bold">Contact Us</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start space-x-2">
-                  <MapPin className="mt-0.5 h-5 w-5 text-gray-400" />
-                  <span className="text-gray-400">123 Business Avenue, Suite 500, New York, NY 10001</span>
+              <ul className="space-y-8">
+                <li className="flex items-center space-x-2">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <span className="text-gray-400 w-4/5">{companyAddress}</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5 text-gray-400" />
-                  <span className="text-gray-400">+1 (555) 123-4567</span>
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span className="text-gray-400 w-4/5">+1 (555) 123-4567</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Mail className="h-5 w-5 text-gray-400" />
-                  <span className="text-gray-400">info@vastexresources.com</span>
+                  <Mail className="h-5 w-5 text-primary" />
+                  <span className="text-gray-400 w-4/5">info@vastexresources.com</span>
                 </li>
               </ul>
             </div>

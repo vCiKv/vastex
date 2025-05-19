@@ -12,6 +12,7 @@ import { Blob } from "@/components/ui/blob"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
 import Section from "@/components/section"
+import { companyAddress } from "../companyDetails"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -65,7 +66,7 @@ export default function ContactPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">Contact Us</div>
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Contact Us</div>
                   <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                     Get in Touch with Vastex Resources
                   </h1>
@@ -162,7 +163,7 @@ export default function ContactPage() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-[1.02]"
+                      className="w-full bg-primary hover:bg-blue-800 transition-transform hover:scale-[1.02]"
                     >
                       Send Message
                     </Button>
@@ -181,7 +182,7 @@ export default function ContactPage() {
                     <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                       <CardContent className="flex flex-col items-center p-6 text-center">
                         <div className="mb-4 rounded-full bg-blue-100 p-3">
-                          <Phone className="h-6 w-6 text-blue-700" />
+                          <Phone className="h-6 w-6 text-primary" />
                         </div>
                         <h3 className="text-xl font-bold">Phone</h3>
                         <p className="text-gray-600">+1 (555) 123-4567</p>
@@ -191,7 +192,7 @@ export default function ContactPage() {
                     <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                       <CardContent className="flex flex-col items-center p-6 text-center">
                         <div className="mb-4 rounded-full bg-blue-100 p-3">
-                          <Mail className="h-6 w-6 text-blue-700" />
+                          <Mail className="h-6 w-6 text-primary" />
                         </div>
                         <h3 className="text-xl font-bold">Email</h3>
                         <p className="text-gray-600">info@vastexresources.com</p>
@@ -202,12 +203,11 @@ export default function ContactPage() {
                   <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <CardContent className="flex flex-col items-center p-6 text-center">
                       <div className="mb-4 rounded-full bg-blue-100 p-3">
-                        <MapPin className="h-6 w-6 text-blue-700" />
+                        <MapPin className="h-6 w-6 text-primary" />
                       </div>
                       <h3 className="text-xl font-bold">Headquarters</h3>
-                      <p className="text-gray-600">123 Business Avenue</p>
-                      <p className="text-gray-600">Suite 500</p>
-                      <p className="text-gray-600">New York, NY 10001</p>
+                      <p className="text-gray-600">{companyAddress}</p>
+
                     </CardContent>
                   </Card>
                 </div>
@@ -274,7 +274,7 @@ export default function ContactPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">FAQs</div>
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">FAQs</div>
                   <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
                     Frequently Asked Questions
                   </h2>
@@ -331,7 +331,7 @@ export default function ContactPage() {
         </div>
         {/* CTA Section */}
         <CallToAction />
-        {/* <section className="relative bg-blue-700 overflow-hidden">
+        {/* <section className="relative bg-primary overflow-hidden">
           <Blob
             variant="blob2"
             color="text-white"
@@ -352,7 +352,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/contact">
-                    <Button className="bg-white text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105">
+                    <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
                       Get in Touch Today
                     </Button>
                   </Link>

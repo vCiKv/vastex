@@ -10,9 +10,9 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
     return (
       <>
         <div className="relative rotate-180 -mb-1">
-          <SectionDivider variant="waveAlt" fill="fill-blue-700" height={70} />
+          <SectionDivider variant="waveAlt" fill="fill-primary" height={70} />
         </div>
-        <section className="relative bg-blue-700 py-16 md:py-24 overflow-hidden">
+        <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
           {props.children}
         </section>
       </>
@@ -22,9 +22,9 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
     return (
       <>
         <div className="relative rotate-180 -mb-1">
-          <SectionDivider variant="wave" fill="fill-blue-700" height={70} />
+          <SectionDivider variant="wave" fill="fill-primary" height={70} />
         </div>
-        <section className="relative bg-blue-700 py-16 md:py-24 overflow-hidden">
+        <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
           <Blob
             variant="blob2"
             color="text-white"
@@ -47,7 +47,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/contact">
 
-                    <Button className="bg-white text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105">
+                    <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
                       Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
 
@@ -55,7 +55,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
                   <Link href="/services">
                     <Button
                       variant="outline"
-                      className="border-white text-white hover:text-white hover:bg-blue-900 bg-blue-700 transition-transform hover:scale-105"
+                      className="border-white text-white hover:text-white hover:bg-blue-900 bg-primary transition-transform hover:scale-105"
                     >
                       Explore Our Services
                     </Button>

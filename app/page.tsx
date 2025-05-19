@@ -7,10 +7,10 @@ import { ArrowRight, CheckCircle, ChevronRight, Globe, Package, Settings, Truck 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Blob } from "@/components/ui/blob"
-import AnimatedLogo from "@/components/animated-logo"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "./cta"
 import Section from "@/components/section"
+import Logo from "@/components/logo"
 
 
 export default function Home() {
@@ -25,9 +25,8 @@ export default function Home() {
 
       <main className="flex-1 overflow-x-hidden">
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-screen">
-          {/* Background blobs */}
-          <Blob
+        <Section containerClassName="relative overflow-hidden bg-white py-0 md:py-0 pb-28 min-h-screen -z-10">
+          {/* <Blob
             variant="blob2"
             color="text-blue-400"
             size="xl"
@@ -43,20 +42,20 @@ export default function Home() {
             opacity={0.05}
             animate
           />
-          <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
+          <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} /> */}
 
-          <div className="container relative z-10 px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-              <div className="flex flex-col justify-center space-y-4">
+          {/* <div className="relative z-10">
+            <div className="px-8 md:px-10 bg-white/40">
+              <div className="flex flex-col justify-center space-y-4 py-20 md:py-28">
                 <div className="space-y-2">
                   <ScrollReveal delay={300} direction="left">
-                    <h1 className="text-3xl font-bold tracking-tighter text-blue-700 sm:text-4xl md:text-5xl lg:text-6xl">
-                      Innovative Solutions for Global Industries
+                    <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl lg:text-6xl">
+                      Innovative Solutions <br /><span className="italic text-black font-light pl-6">for</span><br /> Global Industries
                     </h1>
                   </ScrollReveal>
-                  <div className="mb-4">{mounted && <AnimatedLogo width={60} height={60} className="mb-4" />}</div>
+                  <div className="mb-4">{mounted && <Logo width={176} height={100} className="pb-4" />}</div>
                   <ScrollReveal delay={600} direction="left">
-                    <p className="max-w-[600px] text-gray-600 md:text-xl">
+                    <p className="max-w-[600px] text-gray-800 md:text-xl">
                       Vastex Resources Limited delivers expert consulting, industrial solutions, logistics, procurement,
                       and manufacturing services to businesses worldwide.
                     </p>
@@ -65,14 +64,14 @@ export default function Home() {
                 <ScrollReveal delay={900} direction="up">
                   <div className="flex flex-col gap-2 min-[400px]:flex-row">
                     <Link href="/services">
-                      <Button className="bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                         Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
                     <Link href="/contact">
                       <Button
                         variant="outline"
-                        className="border-blue-700 text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105"
+                        className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
                       >
                         Contact Us
                       </Button>
@@ -80,18 +79,66 @@ export default function Home() {
                   </div>
                 </ScrollReveal>
               </div>
-              <ScrollReveal delay={600} direction="right">
-                <div className="flex items-center justify-center">
+              <ScrollReveal delay={600} direction="right" className="-z-10 h-[40vh] w-full">
+                <div className="flex items-center justify-center size-full">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
-                    width={500}
-                    height={500}
+                    src="https://images.pexels.com/photos/27406/pexels-photo-27406.jpg"
                     alt="Vastex Resources Limited"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500 -z-10"
                     priority
+                    fill
                   />
                 </div>
               </ScrollReveal>
+            </div>
+          </div> */}
+
+          <div className="relative z-10">
+            <div className="px-8 md:px-10 bg-white/40 h-[90vh]">
+              <div className="flex flex-col justify-center space-y-4 py-20 md:py-28">
+                <div className="space-y-2">
+                  <ScrollReveal delay={300} direction="left">
+                    <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl lg:text-6xl">
+                      Innovative Solutions <br /><span className="italic text-black font-light pl-6">for</span><br /> Global Industries
+                    </h1>
+                  </ScrollReveal>
+                  <div className="mb-4">{mounted && <Logo width={176} height={100} className="pb-4" />}</div>
+                  <ScrollReveal delay={600} direction="left">
+                    <p className="max-w-[600px] text-gray-800 md:text-xl">
+                      Vastex Resources Limited delivers expert consulting, industrial solutions, logistics, procurement,
+                      and manufacturing services to businesses worldwide.
+                    </p>
+                  </ScrollReveal>
+                </div>
+                <ScrollReveal delay={900} direction="up">
+                  <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                    <Link href="/services">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                        Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                    <Link href="/contact">
+                      <Button
+                        variant="outline"
+                        className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
+                      >
+                        Contact Us
+                      </Button>
+                    </Link>
+                  </div>
+                </ScrollReveal>
+              </div>
+              <div className="absolute top-0 left-0 size-full">
+                <ScrollReveal delay={600} direction="right" className="-z-10  size-full">
+                  <Image
+                    src="https://images.pexels.com/photos/27406/pexels-photo-27406.jpg"
+                    alt="Vastex Resources Limited"
+                    className="rounded-lg object-cover transition-transform hover:scale-[1.02] duration-500 -z-10"
+                    priority
+                    fill
+                  />
+                </ScrollReveal>
+              </div>
             </div>
           </div>
         </Section>
@@ -100,8 +147,10 @@ export default function Home() {
         {/* <div className="relative  rotate-180">
           <SectionDivider variant="wave1" fill="fill-gray-50" height={110} />
         </div> */}
-        <Section className="relative bg-gray-50"
-          divider={{ variant: "waveAlt", fill: "fill-gray-50", height: 110, position: "both" }}
+        <Section className="relative bg-gray-50 z-20"
+          // style={{ marginTop: "-300px" }}
+          containerClassName="-mt-64"
+          divider={{ variant: "waveAlt", fill: "fill-gray-50", height: 110, position: "both", className: "z-20" }}
         >
           <Blob
             variant="dots"
@@ -114,7 +163,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                     Our Services
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
@@ -129,35 +178,35 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  icon: <Settings className="h-5 w-5 text-blue-700" />,
+                  icon: <Settings className="h-5 w-5 text-primary" />,
                   title: "Consulting",
                   description: "Expert business and technical consulting services",
                   features: ["Strategic planning", "Process optimization", "Business transformation"],
                   delay: 100,
                 },
                 {
-                  icon: <Globe className="h-5 w-5 text-blue-700" />,
+                  icon: <Globe className="h-5 w-5 text-primary" />,
                   title: "Industrial Solutions",
                   description: "Comprehensive industrial solutions for your business",
                   features: ["Equipment supply", "Technical support", "Maintenance services"],
                   delay: 300,
                 },
                 {
-                  icon: <Truck className="h-5 w-5 text-blue-700" />,
+                  icon: <Truck className="h-5 w-5 text-primary" />,
                   title: "Logistics",
                   description: "Efficient logistics and supply chain management",
                   features: ["Global shipping", "Warehousing", "Distribution"],
                   delay: 500,
                 },
                 {
-                  icon: <Package className="h-5 w-5 text-blue-700" />,
+                  icon: <Package className="h-5 w-5 text-primary" />,
                   title: "Procurement",
                   description: "Strategic procurement and sourcing solutions",
                   features: ["Vendor management", "Cost optimization", "Supply chain solutions"],
                   delay: 700,
                 },
                 {
-                  icon: <Settings className="h-5 w-5 text-blue-700" />,
+                  icon: <Settings className="h-5 w-5 text-primary" />,
                   title: "Manufacturing",
                   description: "Custom manufacturing and production services",
                   features: ["Custom fabrication", "Quality control", "Production optimization"],
@@ -173,14 +222,14 @@ export default function Home() {
                       <div className="mb-2 rounded-full bg-blue-100 p-2 w-10 h-10 flex items-center justify-center">
                         {service.icon}
                       </div>
-                      <CardTitle className="text-xl text-blue-700">{service.title}</CardTitle>
+                      <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
                       <CardDescription className="text-gray-600">{service.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2 text-sm text-gray-600">
                         {service.features.map((feature, i) => (
                           <li key={i} className="flex items-center">
-                            <CheckCircle className="mr-2 h-4 w-4 text-blue-700" />
+                            <CheckCircle className="mr-2 h-4 w-4 text-primary" />
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -195,7 +244,7 @@ export default function Home() {
                 <Link href="/services">
                   <Button
                     variant="outline"
-                    className="border-blue-700 text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105"
+                    className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
                   >
                     View All Services <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
@@ -227,7 +276,7 @@ export default function Home() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">About Us</div>
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
                     <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
                       Your Trusted Partner in Business Excellence
                     </h2>
@@ -250,7 +299,7 @@ export default function Home() {
                     <Link href="/about">
                       <Button
                         variant="outline"
-                        className="border-blue-700 text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105"
+                        className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
                       >
                         Learn More About Us <ChevronRight className="ml-1 h-4 w-4" />
                       </Button>
@@ -261,7 +310,7 @@ export default function Home() {
               <ScrollReveal direction="right" delay={300}>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src="https://images.pexels.com/photos/32074753/pexels-photo-32074753/free-photo-of-team-collaborating-in-modern-office-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width={500}
                     height={500}
                     alt="About Vastex Resources Limited"
@@ -296,7 +345,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                     Testimonials
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
@@ -308,7 +357,7 @@ export default function Home() {
                 </div>
               </div>
             </ScrollReveal>
-            <div className="mx-auto h-full grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto h-full grid max-w-5xl grid-cols-1 gap-6 py-28 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   quote:
@@ -385,15 +434,15 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <h3 className="text-center text-5xl capitalize">{"Don't"} Miss the <span className="text-blue-700 font-black">Next Great</span><br /> Thing <span className="opacity-70 font-light">Ever Again</span></h3>
+            <h3 className="text-center text-5xl capitalize">{"Don't"} Miss the <span className="text-primary font-black">Next Great</span><br /> Thing <span className="opacity-70 font-light">Ever Again</span></h3>
           </div>
         </Section>
         {/* CTA Section */}
         <CallToAction />
         {/* <div className="relative rotate-180 -mb-1">
-          <SectionDivider variant="wave" fill="fill-blue-700" height={70} />
+          <SectionDivider variant="wave" fill="fill-primary" height={70} />
         </div>
-        <section className="relative bg-blue-700 py-16 md:py-24 overflow-hidden">
+        <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
           <Blob
             variant="blob2"
             color="text-white"
@@ -416,15 +465,15 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/contact">
-                    <Button className="bg-white text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105">
+                    <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
                       Contact Us Today
                     </Button>
                   </Link>
                   <Link href="/services">
                     <Button
                       variant="outline"
-                      className="border-white text-white hover:text-white hover:bg-blue-900 bg-blue-700 transition-transform hover:scale-105"
-                    // className="border-blue-700 text-blue-700 hover:bg-blue-50 transition-transform hover:scale-105"
+                      className="border-white text-white hover:text-white hover:bg-blue-900 bg-primary transition-transform hover:scale-105"
+                    // className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
 
                     >
                       Explore Our Services

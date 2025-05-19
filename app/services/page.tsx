@@ -39,7 +39,7 @@ export default function ServicesPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                     Our Services
                   </div>
                   <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
@@ -72,7 +72,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                       Consulting
                     </div>
                     <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
@@ -92,14 +92,14 @@ export default function ServicesPage() {
                       "Financial analysis and planning",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center">
-                        <CheckCircle className="mr-2 h-5 w-5 text-blue-700" />
+                        <CheckCircle className="mr-2 h-5 w-5 text-primary" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                         Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="right" delay={300}>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="https://images.pexels.com/photos/6779716/pexels-photo-6779716.jpeg?auto=compress&cs=tinysrgb&w=600"
                     width={600}
                     height={400}
                     alt="Consulting Services"
@@ -144,7 +144,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="left" className="order-2 lg:order-1">
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600"
                     width={600}
                     height={400}
                     alt="Industrial Solutions"
@@ -155,7 +155,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="right" delay={300} className="order-1 lg:order-2">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                       Industrial Solutions
                     </div>
                     <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
@@ -174,14 +174,14 @@ export default function ServicesPage() {
                       "Energy efficiency and sustainability solutions",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center">
-                        <CheckCircle className="mr-2 h-5 w-5 text-blue-700" />
+                        <CheckCircle className="mr-2 h-5 w-5 text-primary" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                         Learn More <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -209,7 +209,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">Logistics</div>
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Logistics</div>
                     <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
                       Efficient Logistics Solutions
                     </h2>
@@ -226,14 +226,14 @@ export default function ServicesPage() {
                       "Customs clearance and compliance",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center">
-                        <CheckCircle className="mr-2 h-5 w-5 text-blue-700" />
+                        <CheckCircle className="mr-2 h-5 w-5 text-primary" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                         Request Quote <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -243,7 +243,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="right" delay={300}>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?auto=compress&cs=tinysrgb&w=600"
                     width={600}
                     height={400}
                     alt="Logistics Services"
@@ -279,7 +279,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="left" className="order-2 lg:order-1">
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="https://images.pexels.com/photos/6169056/pexels-photo-6169056.jpeg?auto=compress&cs=tinysrgb&w=600"
                     width={600}
                     height={400}
                     alt="Procurement Services"
@@ -290,7 +290,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="right" delay={300} className="order-1 lg:order-2">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                       Procurement
                     </div>
                     <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
@@ -309,14 +309,14 @@ export default function ServicesPage() {
                       "Sustainable and ethical sourcing",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center">
-                        <CheckCircle className="mr-2 h-5 w-5 text-blue-700" />
+                        <CheckCircle className="mr-2 h-5 w-5 text-primary" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                         Contact Us <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -344,7 +344,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
                       Manufacturing
                     </div>
                     <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
@@ -364,14 +364,14 @@ export default function ServicesPage() {
                       "Prototyping and small batch production",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center">
-                        <CheckCircle className="mr-2 h-5 w-5 text-blue-700" />
+                        <CheckCircle className="mr-2 h-5 w-5 text-primary" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-blue-700 hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                         Get Started <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -381,7 +381,7 @@ export default function ServicesPage() {
               <ScrollReveal direction="right" delay={300}>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="https://images.pexels.com/photos/3811832/pexels-photo-3811832.jpeg?auto=compress&cs=tinysrgb&w=600"
                     width={600}
                     height={400}
                     alt="Manufacturing Services"

@@ -114,6 +114,7 @@ export function SectionDivider({
 
   return (
     <div
+      id="section-decoration"
       className={cn(
         "w-full overflow-hidden line-height-0 z-10",
         // isTop && "rotate-180"
