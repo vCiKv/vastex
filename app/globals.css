@@ -2,7 +2,53 @@
 
 @source '../*.{js,ts,jsx,tsx,mdx}';
 
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  font-display: auto;
+  font-stretch: normal;
+  src: url("/fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-VariableFont_wght";
+  font-display: auto;
+  font-stretch: normal;
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 185.1 44.2% 47.1%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+
+  --radius: 0.5rem;
+}
 @theme {
+  --font-gilroy: "Gilroy-ExtraBold", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+  --font-montserrat: "Montserrat-VariableFont_wght", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
@@ -105,7 +151,7 @@
   margin-inline: auto;
   padding-inline: 2rem;
 
-  @media (width >=--theme(--breakpoint-sm)) {
+  @media (width >= --theme(--breakpoint-sm)) {
     max-width: none;
   }
 
@@ -114,16 +160,10 @@
   }
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+@utility clip-path{
+  clip-path: inset(0);
+}
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -131,64 +171,29 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
-}
-
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 185.1 44.2% 47.1%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-
-    --radius: 0.5rem;
-  }
 
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl pb-4
+    @apply text-4xl md:text-5xl lg:text-6xl pb-4 font-gilroy;
   }
 
   h2 {
-    @apply text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 pb-3
+    @apply font-gilroy text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl text-gray-900 pb-3
   }
 
   h3 {
-    @apply text-2xl font-bold tracking-tighter sm:text-3xl text-gray-800 pb-2
+    @apply font-gilroy text-2xl font-bold tracking-tighter sm:text-3xl text-gray-800 pb-2
   }
 
   p {
-    @apply text-gray-600 md:text-lg leading-relaxed
+    @apply text-gray-600 md:text-lg leading-7 md:leading-8
   }
 }
 
