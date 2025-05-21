@@ -179,7 +179,7 @@ export default function ContactPage() {
                     <p>Reach out to us directly using the information below.</p>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <Card className="border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                       <CardContent className="flex flex-col items-center p-6 text-center">
                         <div className="mb-4 rounded-full bg-blue-100 p-3">
                           <Phone className="h-6 w-6 text-primary" />
@@ -189,7 +189,7 @@ export default function ContactPage() {
                         <p>Mon-Fri, 9am-5pm</p>
                       </CardContent>
                     </Card>
-                    <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <Card className="border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                       <CardContent className="flex flex-col items-center p-6 text-center">
                         <div className="mb-4 rounded-full bg-blue-100 p-3">
                           <Mail className="h-6 w-6 text-primary" />
@@ -200,7 +200,7 @@ export default function ContactPage() {
                       </CardContent>
                     </Card>
                   </div>
-                  <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                  <Card className="border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <CardContent className="flex flex-col items-center p-6 text-center">
                       <div className="mb-4 rounded-full bg-blue-100 p-3">
                         <MapPin className="h-6 w-6 text-primary" />
@@ -241,8 +241,8 @@ export default function ContactPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
-              <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
-                <div className="aspect-[16/9] w-full bg-gray-200">
+              <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 shadow-xs transition-all duration-300 hover:shadow-md">
+                <div className="aspect-video w-full bg-gray-200">
                   {/* Replace with actual map component or embed */}
                   <div className="flex h-full w-full items-center justify-center">
                     <p className="text-gray-500">Map Placeholder</p>
@@ -312,7 +312,7 @@ export default function ContactPage() {
                 },
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={faq.delay} direction="up">
-                  <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                  <Card className="border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <CardContent className="p-6">
                       <div className="space-y-2">
                         <h4 className="text-xl font-bold text-gray-900">{faq.question}</h4>

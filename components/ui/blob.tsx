@@ -21,7 +21,7 @@ export function Blob({
     sm: "w-32 h-32",
     md: "w-64 h-64",
     lg: "w-96 h-96",
-    xl: "w-[30rem] h-[30rem]",
+    xl: "w-120 h-120",
   }
 
   const animationClass = animate ? "animate-blob animation-delay-2000" : ""
@@ -59,7 +59,7 @@ export function Blob({
     dots: (
       <div
         className={cn(
-          "absolute rounded-full bg-current opacity-[0.15] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]",
+          "absolute rounded-full bg-current opacity-[0.15] mask-[radial-gradient(ellipse_at_center,white,transparent)]",
           sizeClasses[size],
           className,
         )}

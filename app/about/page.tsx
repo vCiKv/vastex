@@ -142,7 +142,7 @@ export default function AboutPage() {
                 },
               ].map((value, index) => (
                 <ScrollReveal key={index} delay={value.delay} direction="up">
-                  <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                  <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <div className="rounded-full bg-blue-100 p-3">{value.icon}</div>
                     <h4 className="text-xl font-bold text-gray-900">{value.title}</h4>
                     <p>{value.description}</p>
