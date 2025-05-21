@@ -2,6 +2,13 @@ import { cn } from "@/lib/utils";
 import { SectionDivider, SectionDividerProps } from "./ui/section-divider";
 import { CSSProperties } from "react";
 
+export function SectionPill(props: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">{props.children}</div>
+  )
+}
 export default function Section(props: {
   divider?: SectionDividerProps;
   dividerBottom?: SectionDividerProps;
