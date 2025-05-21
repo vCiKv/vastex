@@ -37,7 +37,7 @@ export default function AboutPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
+                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
                     <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                       Our Story and Mission
                     </h1>
@@ -46,7 +46,7 @@ export default function AboutPage() {
                       that drive growth and efficiency for our clients.
                     </p>
                   </div>
-                  <p className="text-gray-600">
+                  <p>
                     Since our inception, we have been committed to delivering excellence in consulting, industrial
                     solutions, logistics, procurement, and manufacturing services. Our team of experts brings decades of
                     combined experience to help businesses overcome challenges and achieve their goals.
@@ -60,7 +60,7 @@ export default function AboutPage() {
                     width={500}
                     height={500}
                     alt="About Vastex Resources Limited"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
               </ScrollReveal>
@@ -88,9 +88,9 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Our Values</div>
-                  <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">What Drives Us</h2>
-                  <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Our Values</div>
+                  <h2>What Drives Us</h2>
+                  <p  >
                     Our core values shape everything we do at Vastex Resources Limited
                   </p>
                 </div>
@@ -142,10 +142,10 @@ export default function AboutPage() {
                 },
               ].map((value, index) => (
                 <ScrollReveal key={index} delay={value.delay} direction="up">
-                  <div className="flex h-full flex-col items-center space-y-2 rounded-lg border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                  <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <div className="rounded-full bg-blue-100 p-3">{value.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-900">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
+                    <h4 className="text-xl font-bold text-gray-900">{value.title}</h4>
+                    <p>{value.description}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -170,9 +170,9 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Our Team</div>
-                  <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">Meet Our Leadership</h2>
-                  <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Our Team</div>
+                  <h2>Meet Our Leadership</h2>
+                  <p  >
                     Experienced professionals dedicated to your success
                   </p>
                 </div>
@@ -217,9 +217,9 @@ export default function AboutPage() {
                       />
                     </div>
                     <div className="text-center">
-                      <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                      <h4 className="text-xl font-bold text-gray-900">{member.name}</h4>
                       <p className="text-primary">{member.title}</p>
-                      <p className="text-gray-600">{member.description}</p>
+                      <p>{member.description}</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -244,8 +244,8 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">Join Our Team</h2>
-                  <p className="max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <h2 className=" text-white">Join Our Team</h2>
+                  <p className="max-w-[900px] text-blue-100">
                     We're always looking for talented individuals to join our growing team.
                   </p>
                 </div>

@@ -32,10 +32,10 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-gray-200 bg-white transition-all duration-300 ${scrolled ? "shadow-md py-2" : "py-4"
+      className={`sticky top-0 z-50 w-full  bg-white transition-all duration-300 ${scrolled ? "shadow-md py-1.5 border-b border-gray-200" : "py-3"
         }`}
     >
-      <div className="container flex items-center px-4 md:px-6">
+      <div className="container flex items-center px-4 md:px-6 h-16 box-border">
         <Link href="/" className="mr-6">
           <Logo width={96} height={52} />
         </Link>

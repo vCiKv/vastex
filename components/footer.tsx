@@ -39,7 +39,7 @@ export default function Footer() {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={200}>
             <div className="space-y-4">
-              <h3 className="text-lg font-bold">Quick Links</h3>
+              <h4 className="text-lg font-bold">Quick Links</h4>
               <ul className="space-y-2">
                 {[
                   { name: "Home", path: "/" },
@@ -63,7 +63,7 @@ export default function Footer() {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={300}>
             <div className="space-y-4">
-              <h3 className="text-lg font-bold">Services</h3>
+              <h4 className="text-lg font-bold">Services</h4>
               <ul className="space-y-2">
                 {["Consulting", "Industrial Solutions", "Logistics", "Procurement", "Manufacturing"].map(
                   (service, index) => (
@@ -82,7 +82,7 @@ export default function Footer() {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={400}>
             <div className="space-y-4">
-              <h3 className="text-lg font-bold">Contact Us</h3>
+              <h4 className="text-lg font-bold">Contact Us</h4>
               <ul className="space-y-8">
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-5 w-5 text-primary" />

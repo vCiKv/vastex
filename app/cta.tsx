@@ -37,6 +37,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
+                  {/* <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl"> */}
                   <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">
                     Ready to Transform Your Business?
                   </h2>

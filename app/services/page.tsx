@@ -39,13 +39,13 @@ export default function ServicesPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
+                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                     Our Services
                   </div>
                   <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                     Comprehensive Business Solutions
                   </h1>
-                  <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p  >
                     Vastex Resources Limited offers a wide range of services designed to help your business thrive in
                     today's competitive market.
                   </p>
@@ -72,13 +72,13 @@ export default function ServicesPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
+                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Consulting
                     </div>
-                    <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
+                    <h2>
                       Expert Business Consulting
                     </h2>
-                    <p className="text-gray-600 md:text-xl/relaxed">
+                    <p>
                       Our consulting services help businesses identify opportunities, overcome challenges, and achieve
                       their strategic goals.
                     </p>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
                     width={600}
                     height={400}
                     alt="Consulting Services"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
               </ScrollReveal>
@@ -148,20 +148,20 @@ export default function ServicesPage() {
                     width={600}
                     height={400}
                     alt="Industrial Solutions"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={300} className="order-1 lg:order-2">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
+                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Industrial Solutions
                     </div>
-                    <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
+                    <h2>
                       Comprehensive Industrial Solutions
                     </h2>
-                    <p className="text-gray-600 md:text-xl/relaxed">
+                    <p>
                       We provide end-to-end industrial solutions to optimize your operations and improve productivity.
                     </p>
                   </div>
@@ -209,11 +209,11 @@ export default function ServicesPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Logistics</div>
-                    <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
+                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Logistics</div>
+                    <h2>
                       Efficient Logistics Solutions
                     </h2>
-                    <p className="text-gray-600 md:text-xl/relaxed">
+                    <p>
                       Our logistics services ensure the smooth flow of goods and materials throughout your supply chain.
                     </p>
                   </div>
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                     width={600}
                     height={400}
                     alt="Logistics Services"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
               </ScrollReveal>
@@ -283,20 +283,20 @@ export default function ServicesPage() {
                     width={600}
                     height={400}
                     alt="Procurement Services"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={300} className="order-1 lg:order-2">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
+                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Procurement
                     </div>
-                    <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
+                    <h2>
                       Strategic Procurement Services
                     </h2>
-                    <p className="text-gray-600 md:text-xl/relaxed">
+                    <p>
                       Our procurement services help you source the right materials and equipment at competitive prices.
                     </p>
                   </div>
@@ -326,9 +326,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </Section>
-        {/* <div className="relative">
-          <SectionDivider variant="tilt" fill="fill-gray-50" height={60} />
-        </div> */}
 
         {/* Manufacturing Section */}
         <Section className="relative bg-white">
@@ -344,13 +341,13 @@ export default function ServicesPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">
+                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Manufacturing
                     </div>
-                    <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
+                    <h2>
                       Custom Manufacturing Solutions
                     </h2>
-                    <p className="text-gray-600 md:text-xl/relaxed">
+                    <p>
                       Our manufacturing services provide high-quality production capabilities tailored to your specific
                       needs.
                     </p>
@@ -385,7 +382,7 @@ export default function ServicesPage() {
                     width={600}
                     height={400}
                     alt="Manufacturing Services"
-                    className="rounded-lg object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
               </ScrollReveal>

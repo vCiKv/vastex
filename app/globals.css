@@ -44,9 +44,27 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl pb-4
+  }
+
+  h2 {
+    @apply text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 pb-3
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tighter sm:text-3xl text-gray-800 pb-2
+  }
+
+  p {
+    @apply text-gray-600 md:text-lg leading-relaxed
+  }
 }
 
 @layer utilities {
+
+
   .animation-delay-2000 {
     animation-delay: 2s;
   }

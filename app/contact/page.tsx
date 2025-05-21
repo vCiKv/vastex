@@ -66,11 +66,11 @@ export default function ContactPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">Contact Us</div>
+                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Contact Us</div>
                   <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                     Get in Touch with Vastex Resources
                   </h1>
-                  <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p  >
                     We're here to answer your questions and help your business succeed.
                   </p>
                 </div>
@@ -102,8 +102,8 @@ export default function ContactPage() {
               <ScrollReveal direction="left">
                 <div className="flex flex-col space-y-6">
                   <div className="space-y-2">
-                    <h2 className="text-2xl font-bold tracking-tighter text-gray-900 sm:text-3xl">Send Us a Message</h2>
-                    <p className="text-gray-600">
+                    <h3>Send Us a Message</h3>
+                    <p>
                       Fill out the form below and our team will get back to you as soon as possible.
                     </p>
                   </div>
@@ -173,10 +173,10 @@ export default function ContactPage() {
               <ScrollReveal direction="right" delay={300}>
                 <div className="flex flex-col space-y-6">
                   <div className="space-y-2">
-                    <h2 className="text-2xl font-bold tracking-tighter text-gray-900 sm:text-3xl">
+                    <h3>
                       Contact Information
-                    </h2>
-                    <p className="text-gray-600">Reach out to us directly using the information below.</p>
+                    </h3>
+                    <p>Reach out to us directly using the information below.</p>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
@@ -184,9 +184,9 @@ export default function ContactPage() {
                         <div className="mb-4 rounded-full bg-blue-100 p-3">
                           <Phone className="h-6 w-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-bold">Phone</h3>
-                        <p className="text-gray-600">+1 (555) 123-4567</p>
-                        <p className="text-gray-600">Mon-Fri, 9am-5pm</p>
+                        <h4 className="text-xl font-bold">Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                        <p>Mon-Fri, 9am-5pm</p>
                       </CardContent>
                     </Card>
                     <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
@@ -194,9 +194,9 @@ export default function ContactPage() {
                         <div className="mb-4 rounded-full bg-blue-100 p-3">
                           <Mail className="h-6 w-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-bold">Email</h3>
-                        <p className="text-gray-600">info@vastexresources.com</p>
-                        <p className="text-gray-600">support@vastexresources.com</p>
+                        <h4 className="text-xl font-bold">Email</h4>
+                        <p>info@vastexresources.com</p>
+                        <p>support@vastexresources.com</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -205,8 +205,8 @@ export default function ContactPage() {
                       <div className="mb-4 rounded-full bg-blue-100 p-3">
                         <MapPin className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold">Headquarters</h3>
-                      <p className="text-gray-600">{companyAddress}</p>
+                      <h4 className="text-xl font-bold">Headquarters</h4>
+                      <p>{companyAddress}</p>
 
                     </CardContent>
                   </Card>
@@ -233,15 +233,15 @@ export default function ContactPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold tracking-tighter text-gray-900 sm:text-3xl">Find Us</h2>
-                  <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <h3>Find Us</h3>
+                  <p  >
                     Visit our headquarters or regional offices
                   </p>
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
-              <div className="mt-8 overflow-hidden rounded-lg border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
+              <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md">
                 <div className="aspect-[16/9] w-full bg-gray-200">
                   {/* Replace with actual map component or embed */}
                   <div className="flex h-full w-full items-center justify-center">
@@ -274,11 +274,11 @@ export default function ContactPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-primary">FAQs</div>
-                  <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
+                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">FAQs</div>
+                  <h2>
                     Frequently Asked Questions
                   </h2>
-                  <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p  >
                     Find answers to common questions about our services
                   </p>
                 </div>
@@ -315,8 +315,8 @@ export default function ContactPage() {
                   <Card className="border-0 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <CardContent className="p-6">
                       <div className="space-y-2">
-                        <h3 className="text-xl font-bold text-gray-900">{faq.question}</h3>
-                        <p className="text-gray-600">{faq.answer}</p>
+                        <h4 className="text-xl font-bold text-gray-900">{faq.question}</h4>
+                        <p>{faq.answer}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -331,36 +331,6 @@ export default function ContactPage() {
         </div>
         {/* CTA Section */}
         <CallToAction />
-        {/* <section className="relative bg-primary overflow-hidden">
-          <Blob
-            variant="blob2"
-            color="text-white"
-            size="xl"
-            className="absolute -left-40 top-0 z-0"
-            opacity={0.07}
-            animate
-          />
-          <Blob variant="dots" color="text-white" size="lg" className="absolute right-0 bottom-0 z-0" opacity={0.1} />
-          <div className="container relative z-10 px-4 md:px-6">
-            <ScrollReveal>
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">Let's Work Together</h2>
-                  <p className="max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Ready to take your business to the next level? Contact us today to get started.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="/contact">
-                    <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
-                      Get in Touch Today
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section> */}
       </main>
 
     </div>
