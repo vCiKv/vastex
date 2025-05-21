@@ -1,26 +1,28 @@
-"use client"
 import Link from "next/link"
 import Image from "next/image"
 import CallToAction from "../cta"
 import ScrollReveal from "@/components/scroll-reveal"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
-import { SectionDivider } from "@/components/ui/section-divider"
 import { ArrowRight, Award, Building, Clock, Globe, Users } from "lucide-react"
 import Section from "@/components/section"
 export default function AboutPage() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28">
+        <Section containerClassName="relative overflow-hidden bg-white py-0 md:py-0">
+          <ScrollReveal direction="down" delay={100} className="relative h-[30vh] w-full">
+            <div className="flex items-center justify-center h-full relative">
+              <Image
+                src="https://images.pexels.com/photos/12885861/pexels-photo-12885861.jpeg"
+                alt="hero-VASTEX-Resources-Limited"
+                fill
+                priority
+                className="rounded-b-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500 size-full"
+              />
+            </div>
+          </ScrollReveal>
           {/* Background blobs */}
           <Blob
             variant="blob2"
@@ -32,35 +34,34 @@ export default function AboutPage() {
           />
           <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
 
-          <div className="container relative z-10 px-4 md:px-6">
+          <div className="container relative z-10 px-4 md:px-6 pt-8">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-              <ScrollReveal direction="left">
+              <ScrollReveal direction="left" delay={300}>
                 <div className="flex flex-col justify-center space-y-4">
-                  <div className="space-y-2">
+                  <div className="space-y-2 pb-4">
                     <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
                     <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                       Our Story and Mission
                     </h1>
                     <p className="max-w-[600px] text-gray-600 md:text-xl">
-                      Vastex Resources Limited was founded with a vision to provide comprehensive business solutions
+                      VASTEX Resources Limited was founded with a vision to provide comprehensive business solutions
                       that drive growth and efficiency for our clients.
                     </p>
                   </div>
                   <p>
-                    Since our inception, we have been committed to delivering excellence in consulting, industrial
-                    solutions, logistics, procurement, and manufacturing services. Our team of experts brings decades of
-                    combined experience to help businesses overcome challenges and achieve their goals.
+                    VASTEX Resources Limited is a consultancy firm based in Lekki Phase 1, Lagos Nigeria dedicated to assisting FMCG businesses in achieving their commercial objectives and turning around ailing operations for enhanced ROI and profitability.
+                    Our services encompass comprehensive consulting in manufacturing, Supply chain management, Brand building and marketing strategies, Route to market design, construction and distribution management and customer experience enhancement. By targeting Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets, we aim to become a pivotal partner in their set up and set out journey.
+                    Our billing strategy includes combination of Commitment fee, billable man hours and equity holding, ensuring a sustainable revenue model as we our client base.
+                    Currently VASTEX is a nascent venture with a team of 4 Executive directors seeking deserving clients to demonstrate our great capabilities.
                   </p>
                 </div>
               </ScrollReveal>
-              <ScrollReveal direction="right" delay={300}>
-                <div className="flex items-center justify-center">
-                  <Image
-                    src="https://images.pexels.com/photos/27406/pexels-photo-27406.jpg  "
-                    width={500}
-                    height={500}
-                    alt="About Vastex Resources Limited"
-                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+              <ScrollReveal direction="right" delay={500} className="h-[50vh] w-full relative rounded-xl -z-10">
+                <div className="flex items-center justify-center size-full clip-path rounded-xl">
+                  <img
+                    src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg"
+                    alt="About VASTEX Resources Limited"
+                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500 size-full fixed left-0 top-0"
                   />
                 </div>
               </ScrollReveal>
@@ -68,12 +69,8 @@ export default function AboutPage() {
           </div>
         </Section>
 
-
         {/* Values Section */}
-        {/* <div className="relative">
-          <SectionDivider variant="curve" fill="fill-gray-50" height={80} />
-        </div> */}
-        <Section className="relative bg-gray-50"
+        <Section className="relative bg-gray-50 py-24 md:py-28" containerClassName="py-0 md:py-0 -mt-28 z-10"
           divider={{ variant: "curve", fill: "fill-gray-50", height: 80, position: "top" }}
           dividerBottom={{ variant: "curveAlt", fill: "fill-gray-50", height: 100, position: "bottom", className: "-mt-4" }}
         >
@@ -91,7 +88,7 @@ export default function AboutPage() {
                   <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Our Values</div>
                   <h2>What Drives Us</h2>
                   <p  >
-                    Our core values shape everything we do at Vastex Resources Limited
+                    Our core values shape everything we do at VASTEX Resources Limited
                   </p>
                 </div>
               </div>
@@ -137,7 +134,7 @@ export default function AboutPage() {
                   icon: <Users className="h-6 w-6 text-primary" />,
                   title: "Customer Focus",
                   description:
-                    "We put our customers at the center of everything we do, ensuring their satisfaction and success.",
+                    "We put our client's at the center of everything we do, ensuring their satisfaction and success.",
                   delay: 600,
                 },
               ].map((value, index) => (
@@ -152,10 +149,6 @@ export default function AboutPage() {
             </div>
           </div>
         </Section>
-        {/* <div className="relative">
-          <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div> */}
-
 
         {/* Team Section */}
         <Section className="relative bg-white">
@@ -246,7 +239,7 @@ export default function AboutPage() {
                 <div className="space-y-2">
                   <h2 className=" text-white">Join Our Team</h2>
                   <p className="max-w-[900px] text-blue-100">
-                    We're always looking for talented individuals to join our growing team.
+                    {"We're"} always looking for talented individuals to join our growing team.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">

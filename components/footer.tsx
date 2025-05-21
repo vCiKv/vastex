@@ -46,8 +46,7 @@ export default function Footer() {
                   { name: "About Us", path: "/about" },
                   { name: "Services", path: "/services" },
                   { name: "Contact", path: "/contact" },
-                  { name: "Careers", path: "#" },
-                  { name: "Blog", path: "#" },
+                  { name: "Careers", path: "/careers" },
                 ].map((link, index) => (
                   <li key={index}>
                     <Link
@@ -103,7 +102,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Vastex Resources Limited. All rights reserved.
+              © {new Date().getFullYear()} VASTEX Resources Limited. All rights reserved.
             </p>
             <div className="flex space-x-4">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((policy, index) => (

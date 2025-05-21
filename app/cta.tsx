@@ -42,7 +42,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
                     Ready to Transform Your Business?
                   </h2>
                   <p className="max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Contact us today to discuss how Vastex Resources Limited can help your business thrive.
+                    Contact us today to discuss how VASTEX Resources Limited can help your business thrive.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">

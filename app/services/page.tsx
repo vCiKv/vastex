@@ -1,23 +1,13 @@
-"use client"
-
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { SectionDivider } from "@/components/ui/section-divider"
 import { Blob } from "@/components/ui/blob"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
 import Section from "@/components/section"
 
 export default function ServicesPage() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
     <div className="flex min-h-screen flex-col">
 
@@ -46,8 +36,8 @@ export default function ServicesPage() {
                     Comprehensive Business Solutions
                   </h1>
                   <p  >
-                    Vastex Resources Limited offers a wide range of services designed to help your business thrive in
-                    today's competitive market.
+                    VASTEX Resources Limited offers a wide range of services designed to help your business thrive in
+                    {"today's"}competitive market.
                   </p>
                 </div>
               </div>

@@ -1,13 +1,12 @@
 "use client"
 import type React from "react"
-import { useState, useEffect } from "react"
-import { Building, Mail, MapPin, Phone } from "lucide-react"
+import { useState, } from "react"
+import { Mail, MapPin, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { SectionDivider } from "@/components/ui/section-divider"
 import { Blob } from "@/components/ui/blob"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
@@ -21,11 +20,6 @@ export default function ContactPage() {
     company: "",
     message: "",
   })
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -71,7 +65,7 @@ export default function ContactPage() {
                     Get in Touch with Vastex Resources
                   </h1>
                   <p  >
-                    We're here to answer your questions and help your business succeed.
+                    {"We're"} here to answer your questions and help your business succeed.
                   </p>
                 </div>
               </div>
@@ -81,9 +75,7 @@ export default function ContactPage() {
         </Section>
 
         {/* Contact Form and Info Section */}
-        {/* <div className="relative">
-          <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div> */}
+
         <Section className="relative bg-gray-50"
           divider={{ variant: "tilt", fill: "fill-gray-50", height: 80, position: "top" }}
           dividerBottom={{
@@ -289,7 +281,7 @@ export default function ContactPage() {
                 {
                   question: "What industries do you serve?",
                   answer:
-                    "Vastex Resources Limited serves a wide range of industries including manufacturing, logistics, healthcare, technology, energy, and more. Our solutions are tailored to meet the specific needs of each industry.",
+                    "VASTEX Resources Limited serves a wide range of industries including manufacturing, logistics, healthcare, technology, energy, and more. Our solutions are tailored to meet the specific needs of each industry.",
                   delay: 200,
                 },
                 {

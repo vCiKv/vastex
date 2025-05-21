@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, CheckCircle, ChevronRight, Globe, Package, Settings, Truck } from "lucide-react"
+import { ArrowRight, CheckCircle, ChevronRight, Package, Settings, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Blob } from "@/components/ui/blob"
@@ -16,27 +16,42 @@ export default function Home() {
 
       <main className="flex-1 overflow-x-hidden">
         {/* Hero Section */}
-        <Section containerClassName="relative overflow-hidden bg-white py-0 md:py-0 pb-28 min-h-screen -z-10" className="relative z-10">
-          <div className="px-8 md:px-10 bg-white/65 h-[90vh]">
-            <div className="flex flex-col justify-center space-y-4 py-20 md:py-28">
-              <div className="space-y-2">
-                <ScrollReveal delay={300} direction="left">
-                  <div className="flex flex-col md:flex-row gap-y-6 gap-x-10 items-center">
-                    <h1 className="text-primary">
-                      Innovative Solutions <br /><span className="italic text-black font-light pl-6">for</span><br /> Global Industries
-                    </h1>
-                    <div className="mb-4">{<Logo width={176} height={100} className="pb-4" />}</div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={600} direction="left">
-                  <p className="max-w-[600px] leading-snug">
-                    Vastex Resources Limited delivers expert consulting, industrial solutions, logistics, procurement,
-                    and manufacturing services to businesses worldwide.
-                  </p>
-                </ScrollReveal>
+        <Section
+          containerClassName="relative overflow-hidden bg-white py-0 md:py-0 pb-28 min-h-screen -z-20"
+          className="relative px-8 md:px-10 bg-white/65 min-h-[90vh] w-full"
+        >
+          <div className="flex flex-col md:flex-row-reverse justify-center py-20 md:py-28 z-10">
+            <ScrollReveal delay={300} direction="right" className="flex justify-center pb-8">
+              <div className="scale-80 md:scale-100 w-[275px] h-[176px]">
+                <Logo width={"100%"} height={"100%"} className="pb-4 size-full" />
               </div>
+            </ScrollReveal>
+            <div className="space-y-2">
+              <ScrollReveal delay={300} direction="left">
+                <div className="flex flex-col md:flex-row gap-y-6 gap-x-10 items-center">
+                  <h1 className="text-primary text-5xl md:text-5xl lg:text-6xl flex flex-col gap-y-2.5 items-center text-center">
+                    <span className="flex flex-wrap  md:flex-nowrap justify-center items-center gap-x-2.5">
+                      <span className="p-1.5 bg-primary rounded-xl text-white">Innovative</span>
+                      <span className="p-1.5">
+                        Solutions
+                      </span>
+                    </span>
+                    <span className="block italic text-[#949599] font-light px-1.5">for</span>
+                    <span className="block">
+                      Global Industries
+                    </span>
+                  </h1>
+
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={600} direction="left">
+                <p className="max-w-[600px] leading-snug text-center pb-4">
+                  VASTEX Resources Limited delivers expert consulting, industrial solutions, logistics, procurement,
+                  and manufacturing services to businesses worldwide.
+                </p>
+              </ScrollReveal>
               <ScrollReveal delay={900} direction="up">
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center">
                   <Link href="/services">
                     <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
                       Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
@@ -53,24 +68,22 @@ export default function Home() {
                 </div>
               </ScrollReveal>
             </div>
-            <div className="absolute top-0 left-0 size-full">
-              <ScrollReveal delay={600} direction="right" className="-z-10  size-full">
-                <Image
-                  src="https://images.pexels.com/photos/27406/pexels-photo-27406.jpg"
-                  alt="Vastex Resources Limited"
-                  className="rounded-xl object-cover transition-transform hover:scale-[1.02] duration-500 -z-10"
-                  priority
-                  fill
-                />
-              </ScrollReveal>
-            </div>
+
+          </div>
+          <div className="absolute top-0 left-0 size-full -z-10">
+            <Image
+              src="https://images.pexels.com/photos/27406/pexels-photo-27406.jpg"
+              alt="VASTEX Resources Limited"
+              className="rounded-xl object-cover size-full"
+              priority
+              fill
+            />
           </div>
         </Section>
 
         {/* Services Section */}
 
         <Section className="relative bg-white z-20"
-          // style={{ marginTop: "-300px" }}
           containerClassName="-mt-64"
           divider={{ variant: "waveAlt", fill: "fill-white", height: 110, position: "top", className: "z-20" }}
         >
@@ -226,17 +239,17 @@ export default function Home() {
                       Your Trusted Partner in Business Excellence
                     </h2>
                     <p>
-                      Vastex Resources Limited is a global leader in providing comprehensive business solutions across
-                      multiple industries.
+                      VASTEX Resources Limited is a leading consultancy firm based in Lekki Phase 1, Lagos Nigeria. We provide comprehensive business solutions across
+                      multiple industries, assisting businesses in achieving their commercial objectives and improving profitability.
                     </p>
                   </div>
                   <div className="space-y-4 text-gray-600">
                     <p>
-                      With years of experience and a team of dedicated professionals, we deliver innovative solutions
+                      With years of experience between a team of dedicated professionals, we deliver innovative solutions
                       that help businesses optimize their operations, reduce costs, and achieve sustainable growth.
                     </p>
                     <p>
-                      Our commitment to excellence, integrity, and customer satisfaction has made us a trusted partner
+                      Our commitment to excellence, integrity, and client satisfaction makes us a trusted partner
                       for businesses of all sizes around the world.
                     </p>
                   </div>
@@ -258,7 +271,7 @@ export default function Home() {
                     src="https://images.pexels.com/photos/32074753/pexels-photo-32074753/free-photo-of-team-collaborating-in-modern-office-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width={500}
                     height={500}
-                    alt="About Vastex Resources Limited"
+                    alt="About VASTEX Resources Limited"
                     className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
                   />
                 </div>
@@ -332,7 +345,7 @@ export default function Home() {
                     What Our Clients Say
                   </h2>
                   <p  >
-                    Hear from businesses that have partnered with Vastex Resources Limited
+                    Hear from businesses that have partnered with VASTEX Resources Limited
                   </p>
                 </div>
               </div>
@@ -341,14 +354,14 @@ export default function Home() {
               {[
                 {
                   quote:
-                    "Vastex Resources Limited provided exceptional consulting services that transformed our business operations. Their expertise and dedication to our success were outstanding.",
+                    "VASTEX Resources Limited provided exceptional consulting services that transformed our business operations. Their expertise and dedication to our success were outstanding.",
                   name: "Sarah Johnson",
                   title: "CEO, Global Tech Solutions",
                   delay: 200,
                 },
                 {
                   quote:
-                    "The logistics and procurement services provided by Vastex Resources Limited have significantly improved our supply chain efficiency and reduced costs.",
+                    "The logistics and procurement services provided by VASTEX Resources Limited have significantly improved our supply chain efficiency and reduced costs.",
                   name: "Michael Chen",
                   title: "Operations Director, Innovative Manufacturing",
                   delay: 400,
