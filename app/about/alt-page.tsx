@@ -50,11 +50,8 @@ export default function AboutPage() {
                   </div>
                   <p>
                     VASTEX Resources Limited is a consultancy firm based in Lekki Phase 1, Lagos Nigeria dedicated to assisting FMCG businesses in achieving their commercial objectives and turning around ailing operations for enhanced ROI and profitability.
-
                     Our services encompass comprehensive consulting in manufacturing, Supply chain management, Brand building and marketing strategies, Route to market design, construction and distribution management and customer experience enhancement. By targeting Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets, we aim to become a pivotal partner in their set up and set out journey.
-
                     Our billing strategy includes combination of Commitment fee, billable man hours and equity holding, ensuring a sustainable revenue model as we our client base.
-
                     Currently VASTEX is a nascent venture with a team of 4 Executive directors seeking deserving clients to demonstrate our great capabilities.
                   </p>
                 </div>
