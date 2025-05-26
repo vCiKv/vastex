@@ -12,7 +12,59 @@ import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
 import Section from "@/components/section"
 import { companyAddress } from "../companyDetails"
+import { CompanyNumbers } from "@/components/company-detail"
+import Link from "next/link"
 
+const GridImage = (props: { src: string }) => {
+  return (
+    <img
+      src={props.src}
+      alt="grid-image"
+      className="size-full object-cover rounded-xl aspect-square"
+    />
+  )
+}
+const OutroGrid = () => {
+  return (
+    <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 p-4 min-h-[30vh] max-h-[60vh]">
+      <div className="md:block hidden rounded-xl relative col-span-1">
+        {/* <GridImage src="https://images.unsplash.com/photo-1628149455678-16f37bc392f4?" /> */}
+        <GridImage src="./logo.png" />
+      </div>
+      <div className="flex size-full relative rounded-xl col-span-2 bg-primary text-accent p-4 items-center justify-center">
+        <h1 className="text-center">
+          VASTEX Resources Limited
+        </h1>
+      </div>
+
+      <div className="w-full h-[100%] md:block hidden rounded-xl relative col-span-2" >
+        <GridImage src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" />
+      </div>
+
+      <div className="size-full col-span-1 flex flex-row justify-center items-start gap-4 bg-dot-pink rounded-xl">
+        <div className="rounded-xl relative bg-transparent ">
+          <div className="size-full z-[1]">
+            <h4 className="text-pink md:text-4xl text-3xl font-bold uppercase pb-6">
+              Get to <span className="text-primary">know us</span>
+            </h4>
+            <div className="inline-flex gap-1.5">
+              <Button size={"sm"} className="border-2 border-transparent hover:border-white">
+                <Link href="/services">
+                  see services
+                </Link>
+              </Button>
+              <Button size={"sm"} variant={"outline"}>
+                <Link href="/about">
+                  learn about us
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div >
+      </div>
+    </div >
+  )
+}
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -155,7 +207,7 @@ export default function ContactPage() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-blue-800 transition-transform hover:scale-[1.02]"
+                      className="w-full bg-primary hover:bg-primary/70 transition-transform hover:scale-[1.02]"
                     >
                       Send Message
                     </Button>
@@ -177,8 +229,9 @@ export default function ContactPage() {
                           <Phone className="h-6 w-6 text-primary" />
                         </div>
                         <h4 className="text-xl font-bold">Phone</h4>
-                        <p>+1 (555) 123-4567</p>
-                        <p>Mon-Fri, 9am-5pm</p>
+                        <p className="flex flex-col tracking-widest">
+                          <CompanyNumbers noStyle />
+                        </p>
                       </CardContent>
                     </Card>
                     <Card className="border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
@@ -199,6 +252,7 @@ export default function ContactPage() {
                       </div>
                       <h4 className="text-xl font-bold">Headquarters</h4>
                       <p>{companyAddress}</p>
+                      <p>Mon-Fri, 9am-5pm</p>
 
                     </CardContent>
                   </Card>
@@ -208,9 +262,6 @@ export default function ContactPage() {
           </div>
 
         </Section>
-        {/* <div className="relative">
-          <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div> */}
 
         {/* Map Section */}
         <Section className="relative bg-white">
@@ -226,9 +277,10 @@ export default function ContactPage() {
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   <h3>Find Us</h3>
-                  <p  >
+                  <p>
                     Visit our headquarters or regional offices
                   </p>
+                  <p>{companyAddress}</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -236,9 +288,17 @@ export default function ContactPage() {
               <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 shadow-xs transition-all duration-300 hover:shadow-md">
                 <div className="aspect-video w-full bg-gray-200">
                   {/* Replace with actual map component or embed */}
-                  <div className="flex h-full w-full items-center justify-center">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.4782203728105!2d3.455383645742792!3d6.439012886125669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf56744174089%3A0x85d46038b6fc5759!2sRegus%20-%20Lagos%2C%20Lennox!5e0!3m2!1sen!2sng!4v1748296947638!5m2!1sen!2sng"
+                    width="100%" height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  {/* <div className="flex h-full w-full items-center justify-center">
                     <p className="text-gray-500">Map Placeholder</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </ScrollReveal>
@@ -247,7 +307,7 @@ export default function ContactPage() {
         </Section>
 
         {/* FAQ Section */}
-        <Section className="relative bg-gray-50"
+        <Section className="relative bg-gray-50 py-16"
           divider={{
             variant: "curveAlt", fill: "fill-gray-50", height: 60, position: "top", className: "mt-4"
           }}
@@ -276,7 +336,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </ScrollReveal>
-            <div className="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2">
+            <div className="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2 ">
               {[
                 {
                   question: "What industries do you serve?",
@@ -304,7 +364,7 @@ export default function ContactPage() {
                 },
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={faq.delay} direction="up">
-                  <Card className="border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                  <Card className="h-full border-0 shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                     <CardContent className="p-6">
                       <div className="space-y-2">
                         <h4 className="text-xl font-bold text-gray-900">{faq.question}</h4>
@@ -316,10 +376,10 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-
         </Section>
-        <div className="relative">
-          {/* <SectionDivider variant="tilt" fill="fill-gray-50" height={60} /> */}
+        {/* Outro */}
+        <div className="relative py-12">
+          <OutroGrid />
         </div>
         {/* CTA Section */}
         <CallToAction />

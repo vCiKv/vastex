@@ -2,7 +2,8 @@ import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
 import Logo from "@/components/logo"
 import ScrollReveal from "@/components/scroll-reveal"
-import { companyAddress } from "@/app/companyDetails"
+import { companyAddress, companyEmail } from "@/app/companyDetails"
+import { CompanyNumbers } from "./company-detail"
 
 export default function Footer() {
   return (
@@ -68,7 +69,7 @@ export default function Footer() {
                   (service, index) => (
                     <li key={index}>
                       <Link
-                        href="/services"
+                        href={`/services#${service.toLowerCase()}`}
                         className="text-gray-400 transition-all duration-200 hover:text-white hover:translate-x-1 inline-block"
                       >
                         {service}
@@ -85,15 +86,22 @@ export default function Footer() {
               <ul className="space-y-8">
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-gray-400 w-4/5">{companyAddress}</span>
+                  <span className="text-gray-400 w-4/5">
+                    {companyAddress}
+                  </span>
                 </li>
-                <li className="flex items-center space-x-2">
+                <CompanyNumbers />
+                {/* <li className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-primary" />
                   <span className="text-gray-400 w-4/5">+1 (555) 123-4567</span>
-                </li>
+                </li> */}
                 <li className="flex items-center space-x-2">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span className="text-gray-400 w-4/5">info@vastexresources.com</span>
+                  <span className="text-gray-400 w-4/5">
+                    <a href={"mailto:" + companyEmail} target="_blank">
+                      {companyEmail}
+                    </a>
+                  </span>
                 </li>
               </ul>
             </div>

@@ -6,6 +6,50 @@ import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Award, Building, Clock, Globe, Users } from "lucide-react"
 import Section from "@/components/section"
+import { partners } from "../companyDetails"
+
+function Person(props: {
+  member: {
+    name: string;
+    role: string;
+    department: string;
+    bio: string;
+    avatarUrl: string;
+    contact: {
+      phones: string[];
+      companyEmail: string;
+      emails: string[];
+    }
+  }, index: number
+}) {
+  const { index, member } = props
+  return (
+    <ScrollReveal delay={(index + 1) * 200} direction="up">
+      <div className="flex flex-col items-center space-y-4 transition-all duration-300 hover:-translate-y-1 py-8">
+        <div className="overflow-hidden rounded-full shadow-md">
+          <Image
+            src={member.avatarUrl}
+            width={200}
+            height={200}
+            alt={`${member.name} - ${member.department}`}
+            className="aspect-square object-cover transition-transform hover:scale-105 duration-500"
+          />
+        </div>
+        <div className="text-center">
+          <h4 className="text-xl font-bold text-gray-900 capitalize">{member.name}</h4>
+          <div className="capitalize text-base">
+            <p className="text-primary/80 font-light">{member.role}</p>
+            <p className="text-primary font-bold">{member.department}</p>
+          </div>
+          {/* <p>{member.bio}</p> */}
+          <p className="text-base">
+            With over 20 years of experience in business management and consulting
+          </p>
+        </div>
+      </div>
+    </ScrollReveal>
+  )
+}
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -35,20 +79,20 @@ export default function AboutPage() {
           <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
 
           <div className="container relative z-10 px-4 md:px-6 pt-8">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-              <ScrollReveal direction="left" delay={300}>
-                <div className="flex flex-col justify-center space-y-4">
+            <div className="grid gap-6 grid-col-2 lg:grid-cols-3 lg:gap-12 xl:gap-16">
+              <ScrollReveal direction="left" delay={300} className="md:col-span-2">
+                <div className="flex flex-col justify-center space-y-4 md:pb-12">
                   <div className="space-y-2 pb-4">
                     <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
                     <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                       Our Story and Mission
                     </h1>
-                    <p className="max-w-[600px] text-gray-600 md:text-xl">
+                    <p className="max-w-[600px] text-gray-600 md:text-xl ">
                       VASTEX Resources Limited was founded with a vision to provide comprehensive business solutions
                       that drive growth and efficiency for our clients.
                     </p>
                   </div>
-                  <p>
+                  <p className="pb-12">
                     VASTEX Resources Limited is a consultancy firm based in Lekki Phase 1, Lagos Nigeria dedicated to assisting FMCG businesses in achieving their commercial objectives and turning around ailing operations for enhanced ROI and profitability.
 
                     Our services encompass comprehensive consulting in manufacturing, Supply chain management, Brand building and marketing strategies, Route to market design, construction and distribution management and customer experience enhancement. By targeting Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets, we aim to become a pivotal partner in their set up and set out journey.
@@ -59,13 +103,20 @@ export default function AboutPage() {
                   </p>
                 </div>
               </ScrollReveal>
-              <ScrollReveal direction="right" delay={500} className="h-[50vh] w-full relative rounded-xl -z-10">
-                <div className="flex items-center justify-center size-full clip-path rounded-xl">
+              <ScrollReveal direction="right" delay={500} className="h-[50vh] md:h-full w-full relative rounded-xl -z-10">
+                {/* <div className="flex items-center justify-center size-full clip-path rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')]">
                   <img
                     src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg"
                     alt="About VASTEX Resources Limited"
                     className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500 size-full fixed left-0 top-0"
                   />
+                </div> */}
+                <div className="flex items-center justify-center size-full rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 ">
+                  {/* <img
+                    src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg"
+                    alt="About VASTEX Resources Limited"
+                    className="rounded-xl object-cover  size-full fixed left-0 top-0"
+                  /> */}
                 </div>
               </ScrollReveal>
             </div>
@@ -174,7 +225,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </ScrollReveal>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
+            {/* <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   name: "John Smith",
@@ -219,6 +270,11 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </ScrollReveal>
+              ))}
+            </div> */}
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-6 gap-y-3 py-12 md:grid-cols-2 lg:grid-cols-4">
+              {partners.map((member, index) => (
+                <Person index={index} member={member} key={index + "-" + member.name} />
               ))}
             </div>
           </div>

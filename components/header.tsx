@@ -2,15 +2,32 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, Underline } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Logo from "@/components/logo"
+import { cn } from "@/lib/utils"
+import { usePathname } from "next/navigation"
 
+function HeaderLink(props: { url: string, text?: string, className?: string }) {
+  const { className, url, text } = props
+  const pathname = usePathname()
+  return (
+    <Link
+      href={url}
+      className={cn("capitalize md:text-sm text-lg w-fit md:w-auto font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+        className,
+        pathname.toLowerCase() === "/" + url.toLowerCase() && "text-base font-bold text-primary",
+        pathname.toLowerCase() === "/" && url.toLowerCase() === "home" && "text-base font-bold text-primary"
+      )}
+    >
+      {text ?? url}
+    </Link>
+  )
+}
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -41,18 +58,22 @@ export default function Header() {
         </Link>
         <nav className="hidden flex-1 items-center justify-center space-x-6 md:flex">
           {["Home", "About", "Services", "Contact"].map((item, index) => (
-            <Link
-              key={index}
-              href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {item}
-            </Link>
+            <HeaderLink url={item === "Home" ? "./" : item.toLowerCase()} text={item === "/" ? "Home" : item} key={"nav-item-" + index} />
+            // <Link
+            //   key={index}
+            //   href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+            //   className={cn("text-sm font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+            //     pathname.toLowerCase() === "/" + item.toLowerCase() && "text-base font-bold text-primary",
+            //     pathname.toLowerCase() === "/" && item.toLowerCase() === "home" && "text-base font-bold text-primary"
+            //   )}
+            // >
+            //   {item}
+            // </Link>
           ))}
         </nav>
         <div className="ml-auto flex items-center space-x-4">
           <Link href="/contact" className="hidden md:block">
-            <Button className="bg-primary hover:bg-blue-800 transition-all duration-300 hover:scale-105">
+            <Button className="bg-primary hover:bg-primary/70 transition-all duration-300 hover:scale-105">
               Get in Touch
             </Button>
           </Link>
@@ -69,17 +90,19 @@ export default function Header() {
               </div>
               <div className="flex flex-col space-y-4 py-6">
                 {["Home", "About", "Services", "Contact"].map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-lg font-medium text-gray-700 transition-all duration-200 hover:text-primary"
-                    onClick={toggleMenu}
-                  >
-                    {item}
-                  </Link>
+                  <HeaderLink url={item === "Home" ? "/" : item.toLowerCase()} text={item === "/" ? "Home" : item} key={"nav-item-" + index} />
+
+                  // <Link
+                  //   key={index}
+                  //   href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  //   className="text-lg font-medium text-gray-700 transition-all duration-200 hover:text-primary"
+                  //   onClick={toggleMenu}
+                  // >
+                  //   {item}
+                  // </Link>
                 ))}
                 <Link href="/contact" onClick={toggleMenu}>
-                  <Button className="mt-4 w-full bg-primary hover:bg-blue-800">Get in Touch</Button>
+                  <Button className="mt-4 w-full bg-primary hover:bg-primary/70">Get in Touch</Button>
                 </Link>
               </div>
             </SheetContent>

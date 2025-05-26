@@ -53,7 +53,7 @@ export default function Home() {
               <ScrollReveal delay={900} direction="up">
                 <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center">
                   <Link href="/services">
-                    <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                    <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
                       Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -298,6 +298,9 @@ export default function Home() {
                 src={"/map.svg"}
                 alt="map"
                 loading="lazy"
+                width={"100%"}
+                height={"100%"}
+
               />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/25">

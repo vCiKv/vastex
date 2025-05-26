@@ -45,9 +45,7 @@ export default function ServicesPage() {
           </div>
 
         </Section>
-        {/* <div className="relative rotate-180 -mb-0.5">
-          <SectionDivider variant="wave" fill="fill-gray-50" height={70} />
-        </div> */}
+
         {/* Consulting Section */}
         <Section className="relative bg-white">
           <Blob
@@ -57,7 +55,7 @@ export default function ServicesPage() {
             className="absolute -left-20 bottom-40 z-0"
             opacity={0.1}
           />
-          <div className="container relative z-10 px-4 md:px-6">
+          <div className="container relative z-10 px-4 md:px-6" id="consulting">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
@@ -89,7 +87,7 @@ export default function ServicesPage() {
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
                         Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -110,11 +108,9 @@ export default function ServicesPage() {
             </div>
           </div>
         </Section>
-        {/* <div className="relative">
-          <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div> */}
+
         {/* Industrial Solutions Section */}
-        <Section className="relative bg-gray-50"
+        <Section className="relative bg-gray-50 pt-12"
           divider={{
             variant: "curve", fill: "fill-gray-50", height: 80, position: "top"
           }}
@@ -129,7 +125,7 @@ export default function ServicesPage() {
             className="absolute right-0 top-20 z-0"
             opacity={0.07}
           />
-          <div className="container relative z-10 px-4 md:px-6">
+          <div className="container relative z-10 px-4 md:px-6" id="industrial solutions">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
               <ScrollReveal direction="left" className="order-2 lg:order-1">
                 <div className="flex items-center justify-center">
@@ -171,7 +167,7 @@ export default function ServicesPage() {
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
                         Learn More <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -181,9 +177,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </Section>
-        {/* <div className="relative">
-          <SectionDivider variant="tilt" fill="fill-white" height={60} />
-        </div> */}
 
         {/* Logistics Section */}
         <Section className="relative bg-white">
@@ -194,7 +187,7 @@ export default function ServicesPage() {
             className="absolute -left-20 bottom-40 z-0"
             opacity={0.1}
           />
-          <div className="container relative z-10 px-4 md:px-6">
+          <div className="container relative z-10 px-4 md:px-6 " id="logistics">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
@@ -223,7 +216,7 @@ export default function ServicesPage() {
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
                         Request Quote <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -244,12 +237,10 @@ export default function ServicesPage() {
             </div>
           </div>
         </Section>
-        {/* <div className="relative">
-          <SectionDivider variant="curve" fill="fill-white" height={80} />
-        </div> */}
+
 
         {/* Procurement Section */}
-        <Section className="relative bg-gray-50"
+        <Section className="relative bg-gray-50 pt-12"
           divider={{
             variant: "curveAlt", fill: "fill-gray-50", height: 80, position: "top", className: "mt-4"
           }}
@@ -264,7 +255,7 @@ export default function ServicesPage() {
             className="absolute right-0 top-20 z-0"
             opacity={0.07}
           />
-          <div className="container relative z-10 px-4 md:px-6">
+          <div className="container relative z-10 px-4 md:px-6" id="procurement">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
               <ScrollReveal direction="left" className="order-2 lg:order-1">
                 <div className="flex items-center justify-center">
@@ -306,7 +297,7 @@ export default function ServicesPage() {
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
                         Contact Us <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
@@ -318,7 +309,7 @@ export default function ServicesPage() {
         </Section>
 
         {/* Manufacturing Section */}
-        <Section className="relative bg-white">
+        <Section className="relative bg-white" >
           <Blob
             variant="dots"
             color="text-blue-500"
@@ -326,7 +317,7 @@ export default function ServicesPage() {
             className="absolute -left-20 bottom-40 z-0"
             opacity={0.1}
           />
-          <div className="container relative z-10 px-4 md:px-6">
+          <div className="container relative z-10 px-4 md:px-6" id="manufacturing">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
               <ScrollReveal direction="left">
                 <div className="flex flex-col justify-center space-y-4">
@@ -358,7 +349,7 @@ export default function ServicesPage() {
                   </ul>
                   <div>
                     <Link href="/contact">
-                      <Button className="bg-primary hover:bg-blue-800 transition-transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
                         Get Started <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
