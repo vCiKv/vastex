@@ -7,6 +7,7 @@ export const partners = [
   {
     name: "tola olaosebikan",
     role: "president",
+    experience: [],
     department: "supply chain & admin",
     avatarUrl: "/placeholder.svg?width=200&height=200",
     bio: "",
@@ -19,9 +20,10 @@ export const partners = [
   {
     name: "nwuke chima",
     role: "president",
+    experience: ["Apt & Synchs Limited", "Genesis Group", "Fidelity Bank Plc", "UAC Foods"],
     department: "marketing & strategy",
-    avatarUrl: "/placeholder.svg?width=200&height=200",
-    bio: "",
+    avatarUrl: "/avatar/chima.jpg",
+    bio: ("Nwuke Chima is a seasoned senior executive with 26+ years in Marketing / Sales gained within the Fast-Moving Consumer Goods industry(FMCG) and Banking industries. His career is marked by consistently driving substantial revenue growth through execution of cutting-edge brand turnaround strategies, building and leveraging strong teams, and boosting operational efficiency. "),
     contact: {
       phones: ["+2348033060710"],
       companyEmail: "",
@@ -31,9 +33,10 @@ export const partners = [
   {
     name: "kingsley igwebuike",
     role: "president",
+    experience: ["Kevank LTD", "Conoil Plc", "UACN PLC"],
     department: "technical & technology",
-    avatarUrl: "/placeholder.svg?width=200&height=200",
-    bio: "",
+    avatarUrl: "/avatar/kingsley.jpg",
+    bio: ("Kingsley has over 34 years experience in engineering and production, with experiences cutting-across Manufacturing, Construction, hospitality, oil and gas sectors. His career started with UACN PLC as a management trainee. His passion for oil and gas experience made him to join Conoil Plc after 14 years experience with UACN PLC. He worked with team of experts consultants, contractors and other specialist to review design of retail stations and tank farm development."),
     contact: {
       phones: ["+2348033224088"],
       companyEmail: "",
@@ -43,9 +46,10 @@ export const partners = [
   {
     name: "james iwunze",
     role: "president",
+    experience: ["ZITONIA Integrated Ventures Ltd.", "NASCO Group Nigeria", "UACN PLC", "Chemiron Pharmaceuticals"],
     department: "route to market & channels",
-    avatarUrl: "/placeholder.svg?width=200&height=200",
-    bio: "",
+    avatarUrl: "/avatar/james.jpg",
+    bio: ("James Iwunze is a seasoned Commercial Manager with over 28 years of extensive experience spanning product & brand development, sales & distribution, and strategic management within Nigeria’s Fast-Moving Consumer Goods industry(FMCG). he progressed through key positions from Field Sales Manager to Product Group Manager, Sales Manager, Head of Marketing, and ultimately, Head of Sales overseeing NASCO Household Ltd., NASCO Foods, and NASCO Industrial Products."),
     contact: {
       phones: ["+2348033421585"],
       companyEmail: "",

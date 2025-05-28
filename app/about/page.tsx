@@ -15,6 +15,7 @@ function Person(props: {
     department: string;
     bio: string;
     avatarUrl: string;
+    experience: string[];
     contact: {
       phones: string[];
       companyEmail: string;
@@ -31,20 +32,33 @@ function Person(props: {
             src={member.avatarUrl}
             width={200}
             height={200}
-            alt={`${member.name} - ${member.department}`}
+            alt={`${member.name}`}
             className="aspect-square object-cover transition-transform hover:scale-105 duration-500"
           />
         </div>
-        <div className="text-center">
+        <div className="text-center space-y-2">
           <h4 className="text-xl font-bold text-gray-900 capitalize">{member.name}</h4>
           <div className="capitalize text-base">
             <p className="text-primary/80 font-light">{member.role}</p>
             <p className="text-primary font-bold">{member.department}</p>
           </div>
           {/* <p>{member.bio}</p> */}
-          <p className="text-base">
-            With over 20 years of experience in business management and consulting
+          <p className="text-base text-left">
+            {member.bio}
           </p>
+          <div>
+            <p className="lowercase pt-4 font-light">Experiences</p>
+            <div className="flex flex-row flex-wrap gap-1.5">
+              {member.experience.map(experience =>
+                <span
+                  key={member.name + "-" + experience}
+                  className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
+                >
+                  {experience}
+                </span>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </ScrollReveal>
