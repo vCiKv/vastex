@@ -2,11 +2,16 @@ import Link from "next/link"
 import Image from "next/image"
 import CallToAction from "../cta"
 import ScrollReveal from "@/components/scroll-reveal"
-import { Blob } from "@/components/ui/blob"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Award, Building, Clock, Globe, Users } from "lucide-react"
 import Section from "@/components/section"
 import { partners } from "../companyDetails"
+import { Blob } from "@/components/ui/blob"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck } from "react-icons/fa6";
+import { FaGlobeAfrica } from "react-icons/fa";
+import { RiFlagLine } from "react-icons/ri";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import { TbContract } from "react-icons/tb";
 
 function Person(props: {
   member: {
@@ -40,14 +45,13 @@ function Person(props: {
           <h4 className="text-xl font-bold text-gray-900 capitalize">{member.name}</h4>
           <div className="capitalize text-base">
             <p className="text-primary/80 font-light">{member.role}</p>
-            <p className="text-primary font-bold">{member.department}</p>
+            <p className="text-primary font-bold lg:h-[70px]">{member.department}</p>
           </div>
-          {/* <p>{member.bio}</p> */}
-          <p className="text-base text-left">
+          <p className="text-base text-left lg:h-[650px]">
             {member.bio}
           </p>
           <div>
-            <p className="lowercase pt-4 font-light">Experiences</p>
+            <p className="lowercase pt-4 font-light text-sm">Experiences</p>
             <div className="flex flex-row flex-wrap gap-1.5">
               {member.experience.map(experience =>
                 <span
@@ -59,11 +63,61 @@ function Person(props: {
               )}
             </div>
           </div>
+          <div>
+            {/* <p className="lowercase pt-4 font-light text-sm">Contact</p>
+            <div className="flex flex-row flex-wrap gap-1.5">
+              {member.contact.phones.map(number =>
+                <span key={number} className="inline-flex gap-1">
+                  <Phone />
+                  <span>{number}</span>
+                </span>
+              )}
+            </div> */}
+          </div>
         </div>
       </div>
-    </ScrollReveal>
+    </ScrollReveal >
   )
 }
+
+// function AboutUs() {
+//   const buttonVariants = [
+//     "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+//     , {
+//       variants: {
+//         variant: {
+//           default: "bg-primary text-primary-foreground hover:bg-primary/90",
+//           destructive:
+//             "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+//           outline:
+//             "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+//           secondary:
+//             "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+//           ghost: "hover:bg-accent hover:text-accent-foreground",
+//           link: "text-primary underline-offset-4 hover:underline",
+//         },
+//         size: {
+//           default: "h-10 px-4 py-2",
+//           sm: "h-9 rounded-md px-3",
+//           lg: "h-11 rounded-md px-8",
+//           icon: "h-10 w-10",
+//         },
+//       },
+//       defaultVariants: {
+//         variant: "default",
+//         size: "default",
+//       },
+//     },
+//   ]
+
+//   return (
+//     <p>
+//       VASTEX Resources Limited is an integrated service firm dedicated to assisting FMCG businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
+//       Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
+//       We target Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets.We aim to become a pivotal partner in their set up and set out journey.
+//     </p>
+//   )
+// }
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -81,7 +135,6 @@ export default function AboutPage() {
               />
             </div>
           </ScrollReveal>
-          {/* Background blobs */}
           <Blob
             variant="blob2"
             color="text-blue-400"
@@ -90,14 +143,14 @@ export default function AboutPage() {
             opacity={0.07}
             animate
           />
-          <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
+          <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} animate />
 
           <div className="container relative z-10 px-4 md:px-6 pt-8">
             <div className="grid gap-6 grid-col-2 lg:grid-cols-3 lg:gap-12 xl:gap-16">
               <ScrollReveal direction="left" delay={300} className="md:col-span-2">
                 <div className="flex flex-col justify-center space-y-4 md:pb-12">
                   <div className="space-y-2 pb-4">
-                    <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">About Us</div>
+                    <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">About Us</div>
                     <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
                       Our Story and Mission
                     </h1>
@@ -106,114 +159,146 @@ export default function AboutPage() {
                       that drive growth and efficiency for our clients.
                     </p>
                   </div>
-                  <p className="pb-12">
-                    VASTEX Resources Limited is a consultancy firm based in Lekki Phase 1, Lagos Nigeria dedicated to assisting FMCG businesses in achieving their commercial objectives and turning around ailing operations for enhanced ROI and profitability.
-
-                    Our services encompass comprehensive consulting in manufacturing, Supply chain management, Brand building and marketing strategies, Route to market design, construction and distribution management and customer experience enhancement. By targeting Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets, we aim to become a pivotal partner in their set up and set out journey.
-
-                    Our billing strategy includes combination of Commitment fee, billable man hours and equity holding, ensuring a sustainable revenue model as we our client base.
-
-                    Currently VASTEX is a nascent venture with a team of 4 Executive directors seeking deserving clients to demonstrate our great capabilities.
-                  </p>
+                  <p className="pb-24">
+                    VASTEX Resources Limited is an integrated service firm dedicated to assisting FMCG businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
+                    Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
+                    We target Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets.We aim to become a pivotal partner in their set up and set out journey.                  </p>
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={500} className="h-[50vh] md:h-full w-full relative rounded-xl -z-10">
-                {/* <div className="flex items-center justify-center size-full clip-path rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')]">
-                  <img
-                    src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg"
-                    alt="About VASTEX Resources Limited"
-                    className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500 size-full fixed left-0 top-0"
-                  />
-                </div> */}
                 <div className="flex items-center justify-center size-full rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 ">
-                  {/* <img
-                    src="https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg"
-                    alt="About VASTEX Resources Limited"
-                    className="rounded-xl object-cover  size-full fixed left-0 top-0"
-                  /> */}
                 </div>
               </ScrollReveal>
             </div>
           </div>
         </Section>
-
+        {/* Mission and Vision */}
+        <Section
+          containerClassName="py-0 md:py-0 -mt-[12%] z-20"
+          className="pt-10"
+          divider={{
+            variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "-mb-8"
+          }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-8 gap-12 pb-12">
+            <div className="border rounded-xl shadow-md py-2 group">
+              <div className="flex  items-center gap-x-6 border-l-4 border-accent group-hover:border-primary">
+                <div className="flex justify-center items-center p-2.5 ml-2.5 size-12 bg-accent text-primary group-hover:bg-primary group-hover:text-accent rounded-full">
+                  <RiFlagLine className="size-full" />
+                </div>
+                <div className="py-2">
+                  <h4 className="group-hover:text-primary text-2xl font-bold tracking-tight font-gilroy">Our Mission</h4>
+                  <p className="font-bold group-hover:text-primary/60">To be a pivotal partner to all our clients</p>
+                </div>
+              </div>
+              <p className="p-3">
+                A pivotal partner is a key player who plays a critical role in the success of an event, project, or business. They are essential and have a significant impact on the overall outcome.
+                A pivotal partner is not just a participant; they are a driving force, whose actions and contributions directly influence the success of the endeavour.
+              </p>
+            </div>
+            <div className="border rounded-xl shadow-md py-2 group">
+              <div className="flex  items-center gap-x-6 border-l-4 border-accent group-hover:border-primary">
+                <div className="flex justify-center items-center p-2.5 ml-2.5 size-12 bg-accent text-primary group-hover:bg-primary group-hover:text-accent rounded-full">
+                  <FaBullseye className="size-full" />
+                </div>
+                <div className="py-2">
+                  <h4 className="group-hover:text-primary text-2xl font-bold tracking-tight font-gilroy">Our Vision</h4>
+                  <p className="font-bold group-hover:text-primary/60">To be a pivotal partner to all our clients</p>
+                </div>
+              </div>
+              <p className="p-3">
+                A pivotal partner is a key player who plays the critical role in the success of an event, project, or business.We are essential and have a significant impact on the overall outcome.
+                A pivotal partner is not just a participant; we are a driving force, whose actions and contributions directly influence the success of the endeavour.
+              </p>
+            </div>
+          </div>
+        </Section>
         {/* Values Section */}
-        <Section className="relative bg-gray-50 py-24 md:py-28" containerClassName="py-0 md:py-0 -mt-28 z-10"
+        <Section className="relative bg-gray-50 py-24 md:py-28" containerClassName="py-0 md:py-0 z-10"
           divider={{ variant: "curve", fill: "fill-gray-50", height: 80, position: "top" }}
           dividerBottom={{ variant: "curveAlt", fill: "fill-gray-50", height: 100, position: "bottom", className: "-mt-4" }}
         >
-          <Blob
+          {/* <Blob
             variant="dots"
             color="text-blue-500"
             size="lg"
             className="absolute -left-20 bottom-40 z-0"
             opacity={0.1}
-          />
-          <div className="container relative z-10 px-4 md:px-6">
+          /> */}
+          <div className="container relative z-10 px-4 md:px-6 min-h-[50vh]">
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Our Values</div>
+                  <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">Our Values</div>
                   <h2>What Drives Us</h2>
-                  <p  >
-                    Our core values shape everything we do at VASTEX Resources Limited
+                  <p>
+                    Our <b>5</b> core values shape everything we do at VASTEX Resources Limited
                   </p>
                 </div>
               </div>
             </ScrollReveal>
-            <div className="h-full mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+            <div className="h-full mx-auto max-w-5xl gap-6 md:gap-12 px-6 py-12 flex flex-nowrap w-full overflow-scroll">
               {[
                 {
-                  icon: <Award className="h-6 w-6 text-primary" />,
-                  title: "Excellence",
+                  icon: <FaStar className="text-primary" />,
+                  title: "Trust",
                   description:
-                    "We strive for excellence in everything we do, delivering the highest quality solutions to our clients.",
+                    "The bedrock of all successful engagements",
                   delay: 100,
                 },
                 {
-                  icon: <Users className="h-6 w-6 text-primary" />,
-                  title: "Integrity",
+                  icon: <FaListCheck className="text-primary" />,
+                  title: "Competence",
                   description:
-                    "We conduct our business with the highest level of integrity, honesty, and transparency.",
+                    "Our demonstrable capability and consistent delivery of superior results",
                   delay: 200,
                 },
                 {
-                  icon: <Globe className="h-6 w-6 text-primary" />,
+                  icon: <FaGlobeAfrica className="text-primary" />,
                   title: "Innovation",
                   description:
-                    "We embrace innovation and continuously seek new ways to improve and deliver value to our clients.",
+                    "Propelling forward ideas, ensuring our solutions consistently redefine industry benchmarks and secure future relevance.",
                   delay: 300,
                 },
                 {
-                  icon: <Building className="h-6 w-6 text-primary" />,
+                  icon: <TbContract className="text-primary" />,
                   title: "Partnership",
                   description:
-                    "We build strong, collaborative partnerships with our clients, understanding their unique needs and challenges.",
+                    "Aligning objectives and amplifying collective strengths for unparalleled success.",
                   delay: 400,
                 },
                 {
-                  icon: <Clock className="h-6 w-6 text-primary" />,
-                  title: "Reliability",
+                  icon: <FaPeopleGroup className="text-primary" />,
+                  title: "Relationship",
                   description:
-                    "We are committed to reliability, delivering on our promises and meeting deadlines consistently.",
-                  delay: 500,
+                    "Transforming transactional interactions into invaluable, long-term strategic alliances.",
+                  delay: 400,
                 },
-                {
-                  icon: <Users className="h-6 w-6 text-primary" />,
-                  title: "Customer Focus",
-                  description:
-                    "We put our client's at the center of everything we do, ensuring their satisfaction and success.",
-                  delay: 600,
-                },
+
               ].map((value, index) => (
                 <ScrollReveal key={index} delay={value.delay} direction="up">
-                  <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                    <div className="rounded-full bg-blue-100 p-3">{value.icon}</div>
-                    <h4 className="text-xl font-bold text-gray-900">{value.title}</h4>
-                    <p>{value.description}</p>
+                  <div className="w-[360px] relative h-full">
+
+                    <span className="absolute text-9xl opacity-35 text-primary/70 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
+                    <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-accent bg-white/90 p-6 text-center shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                      <div className="rounded-full bg-accent p-3">{value.icon}</div>
+                      <h4 className="text-xl font-bold text-gray-900">{value.title}</h4>
+                      <p>{value.description}</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
+            </div>
+            <div className="max-w-5xl mx-auto px-6">
+              <div className="inline-flex rounded-xl bg-transparent border border-gray-300 text-sm text-gray-300">
+                <span className="inline-flex cursor-pointer transition-all items-center justify-center hover:bg-primary hover:text-accent px-4 py-1 border-r rounded-l-xl border-gray-300">
+                  <MdArrowBackIos />
+                </span>
+                <span className="inline-flex cursor-pointer transition-all items-center justify-center hover:bg-primary hover:text-accent px-4 py-1 border-l rounded-r-xl border-gray-300">
+                  <MdArrowForwardIos />
+                </span>
+              </div>
+              <p className="text-[12px] font-light max-w-[120px] leading-tight">scroll left & right to see more!</p>
             </div>
           </div>
         </Section>
@@ -231,9 +316,9 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Our Team</div>
+                  <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">Our Team</div>
                   <h2>Meet Our Leadership</h2>
-                  <p  >
+                  <p>
                     Experienced professionals dedicated to your success
                   </p>
                 </div>
@@ -328,6 +413,6 @@ export default function AboutPage() {
         </CallToAction>
       </main>
 
-    </div>
+    </div >
   )
 }

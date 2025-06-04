@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, Underline } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Logo from "@/components/logo"
@@ -59,16 +59,6 @@ export default function Header() {
         <nav className="hidden flex-1 items-center justify-center space-x-6 md:flex">
           {["Home", "About", "Services", "Contact"].map((item, index) => (
             <HeaderLink url={item === "Home" ? "./" : item.toLowerCase()} text={item === "/" ? "Home" : item} key={"nav-item-" + index} />
-            // <Link
-            //   key={index}
-            //   href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-            //   className={cn("text-sm font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
-            //     pathname.toLowerCase() === "/" + item.toLowerCase() && "text-base font-bold text-primary",
-            //     pathname.toLowerCase() === "/" && item.toLowerCase() === "home" && "text-base font-bold text-primary"
-            //   )}
-            // >
-            //   {item}
-            // </Link>
           ))}
         </nav>
         <div className="ml-auto flex items-center space-x-4">
@@ -90,16 +80,9 @@ export default function Header() {
               </div>
               <div className="flex flex-col space-y-4 py-6">
                 {["Home", "About", "Services", "Contact"].map((item, index) => (
-                  <HeaderLink url={item === "Home" ? "/" : item.toLowerCase()} text={item === "/" ? "Home" : item} key={"nav-item-" + index} />
-
-                  // <Link
-                  //   key={index}
-                  //   href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  //   className="text-lg font-medium text-gray-700 transition-all duration-200 hover:text-primary"
-                  //   onClick={toggleMenu}
-                  // >
-                  //   {item}
-                  // </Link>
+                  <span onClick={() => setIsMenuOpen(false)} key={"nav-item-" + index} >
+                    <HeaderLink url={item === "Home" ? "/" : item.toLowerCase()} text={item === "/" ? "Home" : item} />
+                  </span>
                 ))}
                 <Link href="/contact" onClick={toggleMenu}>
                   <Button className="mt-4 w-full bg-primary hover:bg-primary/70">Get in Touch</Button>

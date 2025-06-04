@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Twitter } from "lucide-react"
 import Logo from "@/components/logo"
 import ScrollReveal from "@/components/scroll-reveal"
 import { companyAddress, companyEmail } from "@/app/companyDetails"

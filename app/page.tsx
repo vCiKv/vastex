@@ -8,18 +8,30 @@ import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "./cta"
 import Section from "@/components/section"
 import Logo from "@/components/logo"
+import { FloatingPaths } from "@/components/ui/background-paths"
+import AnimatedTextCycle from "@/components/ui/animated-text-cycle";
 
 
 export default function Home() {
+  const innovativeAlternatives = [
+    "Innovative",
+    "Trailblazing",
+    "Transformative",
+    "Pioneering",
+    "Groundbreaking"
+  ]
   return (
     <div className="flex min-h-screen flex-col">
 
       <main className="flex-1 overflow-x-hidden">
         {/* Hero Section */}
         <Section
-          containerClassName="relative overflow-hidden bg-white py-0 md:py-0 pb-28 min-h-screen -z-20"
-          className="relative px-8 md:px-10 bg-white/65 min-h-[90vh] w-full"
+          containerClassName="relative overflow-hidden bg-white py-0 md:py-0 pb-28 min-h-screen -z-20 backdrop-blur-sm"
+          className="relative px-8 md:px-10 bg-accent/60 min-h-[90vh] w-full "
         >
+          <div className="absolute inset-0">
+            <FloatingPaths position={-2} />
+          </div>
           <div className="flex flex-col md:flex-row-reverse justify-center py-20 md:py-28 z-10">
             <ScrollReveal delay={300} direction="right" className="flex justify-center pb-8">
               <div className="scale-80 md:scale-100 w-[275px] h-[176px]">
@@ -29,9 +41,10 @@ export default function Home() {
             <div className="space-y-2">
               <ScrollReveal delay={300} direction="left">
                 <div className="flex flex-col md:flex-row gap-y-6 gap-x-10 items-center">
-                  <h1 className="text-primary text-5xl md:text-5xl lg:text-6xl flex flex-col gap-y-2.5 items-center text-center">
-                    <span className="flex flex-wrap  md:flex-nowrap justify-center items-center gap-x-2.5">
-                      <span className="p-1.5 bg-primary rounded-xl text-white">Innovative</span>
+                  <h1 className="text-primary text-5xl md:text-5xl lg:text-6xl flex flex-col gap-y-2.5 items-center text-center w-full justify-center">
+                    <span className="flex flex-col justify-center items-center gap-x-2.5">
+                      {/* <span className="p-1.5 bg-primary rounded-xl text-white">Innovative</span> */}
+                      <span className="p-1.5 bg-primary rounded-xl text-white"><AnimatedTextCycle words={innovativeAlternatives} interval={2500} /> </span>
                       <span className="p-1.5">
                         Solutions
                       </span>

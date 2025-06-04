@@ -7,10 +7,10 @@ export const partners = [
   {
     name: "tola olaosebikan",
     role: "president",
-    experience: [],
+    experience: ["Genesis Group", "Coca-Cola", "UAC Foods", "Drug Houses Ltd."],
     department: "supply chain & admin",
-    avatarUrl: "/placeholder.svg?width=200&height=200",
-    bio: "",
+    avatarUrl: "/avatar/tola.jpg",
+    bio: ("Tola Olaosebikan is a seasoned Supply Chain & Project Management expert with over 30 of experience in the Fast-Moving Consumer Goods (FMCG) sector, pecialising, including Assistant Production Supervisor, Administrative and Operations Manager, and Chief Operating Officer, consistently driving productivity and profitability in reputable organizations in food and beverage manufacturing."),
     contact: {
       phones: ["+2348035025917"],
       companyEmail: "",
@@ -36,7 +36,7 @@ export const partners = [
     experience: ["Kevank LTD", "Conoil Plc", "UACN PLC"],
     department: "technical & technology",
     avatarUrl: "/avatar/kingsley.jpg",
-    bio: ("Kingsley has over 34 years experience in engineering and production, with experiences cutting-across Manufacturing, Construction, hospitality, oil and gas sectors. His career started with UACN PLC as a management trainee. His passion for oil and gas experience made him to join Conoil Plc after 14 years experience with UACN PLC. He worked with team of experts consultants, contractors and other specialist to review design of retail stations and tank farm development."),
+    bio: ("Kingsley Igwebuike has over 34 years experience in engineering and production, with experiences cutting-across Manufacturing, Construction, hospitality, oil and gas sectors. His career started with UACN PLC as a management trainee. His passion for oil and gas experience made him to join Conoil Plc after 14 years experience with UACN PLC. He worked with team of experts consultants, contractors and other specialist to review design of retail stations and tank farm development."),
     contact: {
       phones: ["+2348033224088"],
       companyEmail: "",
@@ -57,7 +57,7 @@ export const partners = [
     }
   }
 ]
-export const companyEmail = "info@vastex.com"
+export const companyEmail = "info@vastex.ng"
 export const getPartnersPhoneNumbers = () => {
   const allNumber = <string[]>[]
   for (const partner of partners) {
