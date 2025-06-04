@@ -252,9 +252,7 @@ export default function Home() {
                       Your Trusted Partner in Business Excellence
                     </h2>
                     <p>
-                      VASTEX Resources Limited is a leading consultancy firm based in Lekki Phase 1, Lagos Nigeria. We provide comprehensive business solutions across
-                      multiple industries, assisting businesses in achieving their commercial objectives and improving profitability.
-                    </p>
+                      VASTEX Resources Limited is an integrated service firm dedicated to assisting FMCG businesses in achieving their commercial objectives                    </p>
                   </div>
                   <div className="space-y-4 text-gray-600">
                     <p>

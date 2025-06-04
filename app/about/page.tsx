@@ -175,9 +175,9 @@ export default function AboutPage() {
         {/* Mission and Vision */}
         <Section
           containerClassName="py-0 md:py-0 -mt-[12%] z-20"
-          className="pt-10"
+          className="pt-10 "
           divider={{
-            variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "-mb-8"
+            variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "mt-[-5px]"
           }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-8 gap-12 pb-12">
