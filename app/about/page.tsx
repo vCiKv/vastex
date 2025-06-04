@@ -152,7 +152,7 @@ export default function AboutPage() {
                   <div className="space-y-2 pb-4">
                     <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">About Us</div>
                     <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
-                      Our Story and Mission
+                      Our Story
                     </h1>
                     <p className="max-w-[600px] text-gray-600 md:text-xl ">
                       VASTEX Resources Limited was founded with a vision to provide comprehensive business solutions
@@ -255,9 +255,9 @@ export default function AboutPage() {
                 },
                 {
                   icon: <FaGlobeAfrica className="text-primary" />,
-                  title: "Innovation",
+                  title: "Integrity",
                   description:
-                    "Propelling forward ideas, ensuring our solutions consistently redefine industry benchmarks and secure future relevance.",
+                    "the unwavering foundation of our brand",
                   delay: 300,
                 },
                 {
@@ -298,7 +298,7 @@ export default function AboutPage() {
                   <MdArrowForwardIos />
                 </span>
               </div>
-              <p className="text-[12px] font-light max-w-[120px] leading-tight">scroll left & right to see more!</p>
+              <p className="text-sm font-light max-w-[120px] leading-tight">scroll left & right to see more!</p>
             </div>
           </div>
         </Section>
