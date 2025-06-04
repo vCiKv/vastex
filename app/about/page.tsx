@@ -7,7 +7,7 @@ import { partners } from "../companyDetails"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck } from "react-icons/fa6";
+import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck, FaShieldHalved } from "react-icons/fa6";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { RiFlagLine } from "react-icons/ri";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
@@ -174,8 +174,8 @@ export default function AboutPage() {
         </Section>
         {/* Mission and Vision */}
         <Section
-          containerClassName="py-0 md:py-0 -mt-[12%] z-20"
-          className="pt-10 "
+          containerClassName="py-0 md:py-0 z-20 mt-[-120px]"
+          className="pt-12 z-20"
           divider={{
             variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "mt-[-5px]"
           }}
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">Our Values</div>
                   <h2>What Drives Us</h2>
                   <p>
-                    Our <b>5</b> core values shape everything we do at VASTEX Resources Limited
+                    Our <b>6</b> core values shape everything we do at VASTEX Resources Limited
                   </p>
                 </div>
               </div>
@@ -254,10 +254,10 @@ export default function AboutPage() {
                   delay: 200,
                 },
                 {
-                  icon: <FaGlobeAfrica className="text-primary" />,
+                  icon: <FaShieldHalved className="text-primary" />,
                   title: "Integrity",
                   description:
-                    "the unwavering foundation of our brand",
+                    "The unwavering foundation of our brand",
                   delay: 300,
                 },
                 {
@@ -274,9 +274,15 @@ export default function AboutPage() {
                     "Transforming transactional interactions into invaluable, long-term strategic alliances.",
                   delay: 400,
                 },
-
+                {
+                  icon: <FaGlobeAfrica className="text-primary" />,
+                  title: "Innovation",
+                  description:
+                    "Propelling forward ideas, ensuring our solutions consistently redefine industry benchmarks and secure future relevance.",
+                  delay: 300,
+                },
               ].map((value, index) => (
-                <ScrollReveal key={index} delay={value.delay} direction="up">
+                <ScrollReveal key={index} delay={100 * (index + 1)} direction="up">
                   <div className="w-[360px] relative h-full">
 
                     <span className="absolute text-9xl opacity-35 text-primary/70 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
