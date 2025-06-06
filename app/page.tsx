@@ -354,7 +354,7 @@ export default function Home() {
                       Your Trusted Partner in Business Excellence
                     </h2>
                     <p>
-                      VASTEX Resources Limited is an integrated service firm dedicated to assisting FMCG businesses in achieving their commercial objectives                    </p>
+                      VASTEX Resources Limited is an integrated service firm dedicated to assisting businesses in achieving their commercial objectives                    </p>
                   </div>
                   <div className="space-y-4 text-gray-600">
                     <p>

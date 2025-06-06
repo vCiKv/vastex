@@ -112,7 +112,7 @@ function Person(props: {
 
 //   return (
 //     <p>
-//       VASTEX Resources Limited is an integrated service firm dedicated to assisting FMCG businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
+//       VASTEX Resources Limited is an integrated service firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
 //       Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
 //       We target Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets.We aim to become a pivotal partner in their set up and set out journey.
 //     </p>

@@ -1,5 +1,7 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Twitter } from "lucide-react"
+// import { Facebook, Instagram, Linkedin, Mail, MapPin, Twitter } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
+
 import Logo from "@/components/logo"
 import ScrollReveal from "@/components/scroll-reveal"
 import { companyAddress, companyEmail } from "@/app/companyDetails"
@@ -15,11 +17,11 @@ export default function Footer() {
               <Link href="/">
                 <Logo variant="white" width={176} height={100} textClassName="text-gray-300" />
               </Link>
-              <p className="text-gray-400">
-                Providing comprehensive business solutions including consulting, industrial solutions, logistics,
+              <p className="text-gray-400 pt-4">
+                Providing  business solutions including consulting, industrial solutions, logistics,
                 procurement, and manufacturing.
               </p>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 {[
                   { icon: <Facebook className="h-5 w-5" />, label: "Facebook" },
                   { icon: <Twitter className="h-5 w-5" />, label: "Twitter" },
@@ -35,7 +37,7 @@ export default function Footer() {
                     <span className="sr-only">{social.label}</span>
                   </Link>
                 ))}
-              </div>
+              </div> */}
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={200}>
