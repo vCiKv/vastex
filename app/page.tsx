@@ -94,7 +94,7 @@ export default function Home() {
                 loop: true,
                 containScroll: "keepSnaps"
               }}
-              plugins={[Autoplay({ delay: 10500 })]}
+              plugins={[Autoplay({ delay: 7500 })]}
             >
               <CarouselContent>
                 <CarouselItem className="size-full">
