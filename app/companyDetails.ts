@@ -46,7 +46,7 @@ export const partners = [
   {
     name: "james iwunze",
     role: "president",
-    experience: ["ZITONIA Integrated Ventures Ltd.", "NASCO Group Nigeria", "UACN PLC", "Chemiron Pharmaceuticals"],
+    experience: ["ZITONIA Integrated Ventures Ltd.", "Masters Oil & Gas", "UACN PLC", "Chemiron Pharmaceuticals"],
     department: "route to market & channels",
     avatarUrl: "/avatar/james.jpg",
     bio: ("James Iwunze is a seasoned Commercial Manager with over 28 years of extensive experience spanning product & brand development, sales & distribution, and strategic management within Nigeria’s Fast-Moving Consumer Goods industry(FMCG). he progressed through key positions from Field Sales Manager to Product Group Manager, Sales Manager, Head of Marketing, and ultimately, Head of Sales overseeing NASCO Household Ltd., NASCO Foods, and NASCO Industrial Products."),

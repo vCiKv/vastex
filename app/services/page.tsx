@@ -6,14 +6,20 @@ import { Blob } from "@/components/ui/blob"
 import ScrollReveal from "@/components/scroll-reveal"
 import CallToAction from "../cta"
 import Section from "@/components/section"
+import PageHeader from "@/components/page-header"
 
 export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col">
 
       <main className="flex-1">
+        <PageHeader
+          pageTitle="Services"
+          imageUrl="https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg"
+          breadcrumb={["services"]}
+        />
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 h-[60vh]">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 h-[60vh]" containerClassName="py-0 md:py-0">
           {/* Background blobs */}
           <Blob
             variant="blob2"
@@ -33,7 +39,7 @@ export default function ServicesPage() {
                     Our Services
                   </div>
                   <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
-                    Comprehensive Business Solutions
+                    Integrated Service Firm
                   </h1>
                   <p  >
                     VASTEX Resources Limited offers a wide range of services designed to help your business thrive in

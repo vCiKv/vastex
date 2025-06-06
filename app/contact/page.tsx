@@ -14,17 +14,18 @@ import Section from "@/components/section"
 import { companyAddress } from "../companyDetails"
 import { CompanyNumbers } from "@/components/company-detail"
 import Link from "next/link"
+import PageHeader from "@/components/page-header"
 
-const GridImage = (props: { src: string }) => {
+function GridImage(props: { src: string }) {
   return (
     <img
       src={props.src}
       alt="grid-image"
-      className="size-full object-cover rounded-xl aspect-square"
+      className="size-full object-cover rounded-xl aspect-square opacity-70"
     />
   )
 }
-const OutroGrid = () => {
+function OutroGrid() {
   return (
     <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 p-4 min-h-[30vh] max-h-[60vh]">
       <div className="md:block hidden rounded-xl relative col-span-1">
@@ -38,7 +39,9 @@ const OutroGrid = () => {
       </div>
 
       <div className="w-full h-[100%] md:block hidden rounded-xl relative col-span-2" >
-        <GridImage src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" />
+        <div className="relative bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
+          <GridImage src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" />
+        </div>
       </div>
 
       <div className="size-full col-span-1 flex flex-row justify-center items-start gap-4 bg-dot-pink rounded-xl">
@@ -95,8 +98,13 @@ export default function ContactPage() {
     <div className="flex min-h-screen flex-col">
 
       <main className="flex-1">
+        <PageHeader
+          pageTitle="Contact"
+          imageUrl="https://images.pexels.com/photos/7680154/pexels-photo-7680154.jpeg"
+          breadcrumb={["contact"]}
+        />
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 h-[66vh]">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[66vh]" containerClassName="py-0 md:py-0">
           {/* Background blobs */}
           <Blob
             variant="blob2"
