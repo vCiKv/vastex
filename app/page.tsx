@@ -54,7 +54,7 @@ function HeroText() {
         </ScrollReveal>
         <ScrollReveal delay={600} direction="left">
           <p className="max-w-[600px] leading-snug text-center py-4">
-            VASTEX Resources Limited delivers expert consulting, industrial solutions, logistics, procurement,
+            VASTEX Resources Limited delivers operational consulting, industrial solutions, logistics, procurement,
             and manufacturing services to businesses worldwide.
           </p>
         </ScrollReveal>

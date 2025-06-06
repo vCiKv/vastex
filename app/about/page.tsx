@@ -7,7 +7,7 @@ import { partners } from "../companyDetails"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck, FaShieldHalved } from "react-icons/fa6";
+import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck, FaShieldHalved, FaDollarSign, FaMoneyBill1Wave } from "react-icons/fa6";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { RiFlagLine } from "react-icons/ri";
 import { TbContract } from "react-icons/tb";
@@ -255,7 +255,7 @@ export default function AboutPage() {
             <div className="h-full mx-auto max-w-6xl gap-6 md:gap-12 px-6 py-12 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center">
               {[
                 {
-                  icon: <FaStar className="text-primary" />,
+                  icon: <FaMoneyBill1Wave className="text-primary" />,
                   title: "Market Knowledge",
                   description:
                     "is the strategic foresight that enables us to pinpoint opportunities, navigate competition, and deliver measurable impact.",
