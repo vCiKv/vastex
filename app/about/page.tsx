@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import CallToAction from "../cta"
@@ -6,13 +7,14 @@ import Section from "@/components/section"
 import { partners } from "../companyDetails"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck, FaShieldHalved, FaDollarSign, FaMoneyBill1Wave } from "react-icons/fa6";
+import { ArrowRight, ChevronDown, ChevronUp, Copy } from "lucide-react"
+import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck, FaShieldHalved, FaMoneyBill1Wave } from "react-icons/fa6";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { RiFlagLine } from "react-icons/ri";
 import { TbContract } from "react-icons/tb";
 import PageHeader from "@/components/page-header"
-
+import { useState } from "react"
+import { toast } from "sonner"
 function Person(props: {
   member: {
     name: string;
@@ -29,6 +31,10 @@ function Person(props: {
   }, index: number
 }) {
   const { index, member } = props
+  const [showBio, setShowBio] = useState(false)
+  const toggle = () => {
+    setShowBio(p => !p)
+  }
   return (
     <ScrollReveal delay={(index + 1) * 200} direction="up">
       <div className="flex flex-col items-center space-y-4 transition-all duration-300 hover:-translate-y-1 py-8">
@@ -47,22 +53,33 @@ function Person(props: {
             <p className="text-primary/80 font-light">{member.role}</p>
             <p className="text-primary font-bold lg:h-[70px]">{member.department}</p>
           </div>
-          <p className="text-base text-left lg:h-[650px]">
-            {member.bio}
-          </p>
-          <div>
-            <p className="lowercase pt-4 font-light text-sm">Experiences</p>
-            <div className="flex flex-row flex-wrap gap-1.5">
-              {member.experience.map(experience =>
-                <span
-                  key={member.name + "-" + experience}
-                  className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
-                >
-                  {experience}
-                </span>
-              )}
+          <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span>
+          {showBio && <>
+            <p className="text-base text-left">
+              {member.bio}
+            </p>
+            <div>
+              <p className="lowercase pt-4 font-light text-sm">Experiences</p>
+              <div className="flex flex-row flex-wrap gap-1.5">
+                {member.experience.map(experience =>
+                  <span
+                    key={member.name + "-" + experience}
+                    className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
+                  >
+                    {experience}
+                  </span>
+                )}
+              </div>
             </div>
-          </div>
+            <div>
+              <p className="lowercase pt-4 font-light text-sm">Contact</p>
+              <p className="text-primary inline-flex gap-2 cursor-pointer items-center" onClick={() => { navigator.clipboard.writeText(member.contact.companyEmail); toast.success("Email copied to clipboard") }}>
+                {member.contact.companyEmail} <Copy />
+              </p>
+            </div>
+            <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span>
+
+          </>}
           <div>
             {/* <p className="lowercase pt-4 font-light text-sm">Contact</p>
             <div className="flex flex-row flex-wrap gap-1.5">
@@ -75,8 +92,8 @@ function Person(props: {
             </div> */}
           </div>
         </div>
-      </div>
-    </ScrollReveal >
+      </div >
+    </ScrollReveal>
   )
 }
 
@@ -129,37 +146,12 @@ export default function AboutPage() {
             imageUrl="https://images.pexels.com/photos/12885861/pexels-photo-12885861.jpeg"
             breadcrumb={["about"]}
           />
-          {/* <ScrollReveal direction="down" delay={100} className="relative h-[60vh] w-full group">
-            <div className="relative bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
-              <div className="flex items-center justify-center h-full relative">
-                <Image
-                  src="https://images.pexels.com/photos/12885861/pexels-photo-12885861.jpeg"
-                  alt="hero-VASTEX-Resources-Limited"
-                  fill
-                  priority
-                  className="rounded-b-xl object-cover shadow-lg transition-transform group-hover:scale-[1.02] duration-500 size-full opacity-50"
-                />
-              </div>
-              <div className="absolute bg-accent/70 rounded-lg top-10 left-10 pt-12 min-w-lg flex flex-col backdrop-blur-sm">
-
-                <div className="px-6 py-3">
-                  <h2 className="text-white">About</h2>
-                  <span className="flex flex-nowrap gap-2 font-light text-white capitalize text-sm items-center">
-                    <Link className="hover:font-normal cursor-pointer" href={"/"}>Home</Link>
-                    <ChevronRight className="size-3" />
-                    <Link className="hover:font-normal cursor-pointer" href={"/about"}>about</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </ScrollReveal> */}
           <Blob
-            variant="blob2"
-            color="text-blue-400"
-            size="xl"
-            className="absolute -left-40 -top-20 z-0"
-            opacity={0.07}
+            variant="blob3"
+            color="text-primary"
+            size="md"
+            className="absolute -left-30 -top-25 z-0"
+            opacity={0.6}
             animate
           />
           <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} animate />
@@ -169,23 +161,26 @@ export default function AboutPage() {
                 <div className="flex flex-col justify-center space-y-4 md:pb-12">
                   <div className="space-y-2 pb-4">
                     <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">About Us</div>
-                    <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
+                    {/* <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
                       Our Story
+                    </h1> */}
+                    <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
+                      About Us
                     </h1>
-                    <p className="max-w-[600px] text-gray-600 md:text-xl ">
+                    {/* <p className="max-w-[600px] text-gray-600 md:text-xl ">
                       VASTEX Resources Limited was founded to provide services
                       that drive growth and efficiency for our clients.
-                    </p>
+                    </p> */}
                   </div>
                   <p className="pb-24">
                     VASTEX Resources Limited is an integrated service firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting, Company Representation and New Business Set Up.
                     Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
-                    We target Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets. We aim to become a pivotal partner in their set up and set out journey.
+                    Our clients include Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses, especially foreign companies looking to enter Nigerian Market. We aim to become a pivotal partner in their set up and set out journey.
                   </p>
                 </div>
               </ScrollReveal>
-              <ScrollReveal direction="right" delay={500} className="h-[50vh] md:h-[90vh] md:w-full w-[100vw] relative rounded-xl -z-10">
-                <div className="flex items-center justify-center size-full rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 opacity-80">
+              <ScrollReveal direction="right" delay={500} className="relative rounded-xl -z-10">
+                <div className="flex items-center justify-center h-[50vh] md:h-[90vh] md:w-full w-[100vw] rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 opacity-80">
                   <div className="bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
                   </div>
                 </div>
@@ -221,7 +216,7 @@ export default function AboutPage() {
                 </div>
                 <div className="py-2">
                   <h4 className="group-hover:text-primary text-2xl font-bold tracking-tight font-gilroy pb-4">Our Vision</h4>
-                  <p className="group-hover:text-primary/60 leading-5">To be a pivotal partner to all our clients</p>
+                  {/* <p className="group-hover:text-primary/60 leading-5">To be a pivotal partner to all our clients</p> */}
                 </div>
               </div>
 
@@ -247,7 +242,7 @@ export default function AboutPage() {
                   <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">Our Values</div>
                   <h2>What Drives Us</h2>
                   <p>
-                    Our <b>7</b> core values shape everything we do at VASTEX Resources Limited
+                    Our <b>6</b> core values shape everything we do at VASTEX Resources Limited
                   </p>
                 </div>
               </div>
@@ -284,12 +279,12 @@ export default function AboutPage() {
                   description:
                     "The unwavering foundation of our brand",
                 },
-                {
-                  icon: <FaStar className="text-primary" />,
-                  title: "Trust",
-                  description:
-                    "The bedrock of all successful engagements",
-                },
+                // {
+                //   icon: <FaStar className="text-primary" />,
+                //   title: "Trust",
+                //   description:
+                //     "The bedrock of all successful engagements",
+                // },
                 {
                   icon: <FaPeopleGroup className="text-primary" />,
                   title: "Relationship",
@@ -305,7 +300,7 @@ export default function AboutPage() {
                     <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-accent bg-white/90 p-6 text-center shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                       <div className="rounded-full bg-accent p-3">{value.icon}</div>
                       <h4 className="text-xl font-bold text-gray-900">{value.title}</h4>
-                      <p>{value.description}</p>
+                      {/* <p>{value.description}</p> */}
                     </div>
                   </div>
                 </ScrollReveal>

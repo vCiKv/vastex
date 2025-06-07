@@ -13,7 +13,7 @@ export const partners = [
     bio: ("Tola Olaosebikan is a seasoned Supply Chain & Project Management expert with over 30 of experience in the Fast-Moving Consumer Goods (FMCG) sector, pecialising, including Assistant Production Supervisor, Administrative and Operations Manager, and Chief Operating Officer, consistently driving productivity and profitability in reputable organizations in food and beverage manufacturing."),
     contact: {
       phones: ["+2348035025917"],
-      companyEmail: "",
+      companyEmail: "tola@vastex.ng",
       emails: ["tola2tee@gmail.com"],
     }
   },
@@ -26,7 +26,7 @@ export const partners = [
     bio: ("Nwuke Chima is a seasoned senior executive with 26+ years in Marketing / Sales gained within the Fast-Moving Consumer Goods industry(FMCG) and Banking industries. His career is marked by consistently driving substantial revenue growth through execution of cutting-edge brand turnaround strategies, building and leveraging strong teams, and boosting operational efficiency. "),
     contact: {
       phones: ["+2348033060710"],
-      companyEmail: "",
+      companyEmail: "chima@vastex.ng",
       emails: ["chimameltus@yahoo.com"],
     }
   },
@@ -39,7 +39,7 @@ export const partners = [
     bio: ("Kingsley Igwebuike has over 34 years experience in engineering and production, with experiences cutting-across Manufacturing, Construction, hospitality, oil and gas sectors. His career started with UACN PLC as a management trainee. His passion for oil and gas experience made him to join Conoil Plc after 14 years experience with UACN PLC. He worked with team of experts consultants, contractors and other specialist to review design of retail stations and tank farm development."),
     contact: {
       phones: ["+2348033224088"],
-      companyEmail: "",
+      companyEmail: "kingsley@vastex.ng",
       emails: ["kaycey@gmail.com"],
     }
   },
@@ -52,7 +52,7 @@ export const partners = [
     bio: ("James Iwunze is a seasoned Commercial Manager with over 28 years of extensive experience spanning product & brand development, sales & distribution, and strategic management within Nigeria’s Fast-Moving Consumer Goods industry(FMCG). he progressed through key positions from Field Sales Manager to Product Group Manager, Sales Manager, Head of Marketing, and ultimately, Head of Sales overseeing NASCO Household Ltd., NASCO Foods, and NASCO Industrial Products."),
     contact: {
       phones: ["+2348033421585"],
-      companyEmail: "",
+      companyEmail: "james@vastex.ng",
       emails: ["avajjamesi247@gmail.com"],
     }
   }

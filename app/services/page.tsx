@@ -19,14 +19,14 @@ export default function ServicesPage() {
           breadcrumb={["services"]}
         />
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 h-[60vh]" containerClassName="py-0 md:py-0">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[40vh]" containerClassName="py-0 md:py-0">
           {/* Background blobs */}
           <Blob
-            variant="blob2"
+            variant="blob1"
             color="text-blue-400"
-            size="xl"
-            className="absolute -left-40 -top-20 z-0"
-            opacity={0.07}
+            size="sm"
+            className="absolute -left-10 -top-10 z-0"
+            opacity={0.5}
             animate
           />
           <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
@@ -49,7 +49,6 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
           </div>
-
         </Section>
 
         {/* Consulting Section */}

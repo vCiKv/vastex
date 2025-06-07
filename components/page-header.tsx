@@ -26,19 +26,19 @@ export default function PageHeader(
         </div>
         <div className="absolute bg-primary/70 rounded-lg top-10 left-10 pt-12 min-w-lg flex flex-col backdrop-blur-sm">
 
-          <div className="px-6 py-3">
+          <div className="px-6 py-3 z-20">
             <h2 className="text-white">{pageTitle}</h2>
             <span className="flex flex-nowrap gap-2 font-light text-white capitalize text-sm items-center">
-              <Link className="hover:font-normal cursor-pointer" href={"/"}>Home</Link>
+              <Link className="hover:font-normal cursor-pointer hover:underline transition-all" href={"/"}>Home</Link>
               {breadcrumb.map((bread, index) => (
                 <React.Fragment key={pageTitle + "-breadcrumb-" + index}>
                   {typeof (bread) === "string" && <>
                     <ChevronRight className="size-3" />
-                    <Link className="hover:font-normal cursor-pointer" href={"/" + bread}>{bread}</Link>
+                    <Link className="hover:font-normal cursor-pointer hover:underline transition-all" href={"/" + bread}>{bread}</Link>
                   </>}
                   {typeof (bread) === "object" && <>
                     <ChevronRight className="size-3" key={pageTitle + "-" + bread.href + "-" + bread.title} />
-                    <Link className="hover:font-normal cursor-pointer" href={bread.title}>{bread.title}</Link>
+                    <Link className="hover:font-normal cursor-pointer hover:underline transition-all" href={bread.title}>{bread.title}</Link>
                   </>}
                 </React.Fragment>
               ))}

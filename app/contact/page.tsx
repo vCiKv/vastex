@@ -15,6 +15,7 @@ import { companyAddress } from "../companyDetails"
 import { CompanyNumbers } from "@/components/company-detail"
 import Link from "next/link"
 import PageHeader from "@/components/page-header"
+import { toast } from "sonner"
 
 function GridImage(props: { src: string }) {
   return (
@@ -68,13 +69,17 @@ function OutroGrid() {
     </div >
   )
 }
+const defaultContactData = {
+  name: "",
+  email: "",
+  company: "",
+  message: "",
+}
+const isValidString = (str: any) => {
+  return (typeof (str) === "string" && str.trim() !== "")
+}
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  })
+  const [formData, setFormData] = useState(defaultContactData)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -83,15 +88,24 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!isValidString(formData.email)) {
+      toast.error("Contact Form", { description: `Invalid Email` })
+      return
+    }
+    if (!isValidString(formData.message)) {
+      toast.error("Contact Form", { description: `Invalid Message` })
+      return
+    }
+    if (!isValidString(formData.name)) {
+      toast.error("Contact Form", { description: `Invalid Name` })
+      return
+    }
+
     // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData)
-    alert("Thank you for your message. We will get back to you shortly.")
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      message: "",
-    })
+    toast.message("Contact Form", { description: "Thank you for your message. We will get back to you shortly." })
+    setFormData(defaultContactData)
   }
 
   return (
@@ -104,14 +118,14 @@ export default function ContactPage() {
           breadcrumb={["contact"]}
         />
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[66vh]" containerClassName="py-0 md:py-0">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[40vh]" containerClassName="py-0 md:py-0">
           {/* Background blobs */}
           <Blob
             variant="blob2"
-            color="text-blue-400"
-            size="xl"
+            color="text-primary"
+            size="lg"
             className="absolute -left-40 -top-20 z-0"
-            opacity={0.07}
+            opacity={0.6}
             animate
           />
           <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
@@ -248,8 +262,8 @@ export default function ContactPage() {
                           <Mail className="h-6 w-6 text-primary" />
                         </div>
                         <h4 className="text-xl font-bold">Email</h4>
-                        <p>info@vastexresources.com</p>
-                        <p>support@vastexresources.com</p>
+                        <p>info@vastex.ng</p>
+                        <p>support@vastex.ng</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -361,7 +375,7 @@ export default function ContactPage() {
                 {
                   question: "How do I request a quote?",
                   answer:
-                    "You can request a quote by filling out our contact form, calling our office, or sending an email to info@vastexresources.com. Please provide details about your project or requirements for an accurate quote.",
+                    "You can request a quote by filling out our contact form, calling our office, or sending an email to info@vastex.ng. Please provide details about your project or requirements for an accurate quote.",
                   delay: 400,
                 },
                 {
