@@ -16,6 +16,7 @@ import { CompanyNumbers } from "@/components/company-detail"
 import Link from "next/link"
 import PageHeader from "@/components/page-header"
 import { toast } from "sonner"
+import emailjs from "@emailjs/browser"
 
 function GridImage(props: { src: string }) {
   return (
@@ -75,7 +76,7 @@ const defaultContactData = {
   company: "",
   message: "",
 }
-const isValidString = (str: any) => {
+const isValidString = (str: unknown) => {
   return (typeof (str) === "string" && str.trim() !== "")
 }
 export default function ContactPage() {
@@ -104,8 +105,24 @@ export default function ContactPage() {
 
     // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData)
-    toast.message("Contact Form", { description: "Thank you for your message. We will get back to you shortly." })
-    setFormData(defaultContactData)
+
+    emailjs.send('service_1cdgp2s', 'template_lrluw2c', formData, {
+      publicKey: "user_kgMxU5V2Jzhmp0R3hiDeD",
+      limitRate: {
+        throttle: 90 * 1000
+      }
+    }).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        toast.success("Contact Form", { description: "Thank you for your message. We will get back to you shortly." })
+        setFormData(defaultContactData)
+      },
+      (error) => {
+        console.log('FAILED...', error);
+        toast.error("Contact Form", { description: "There was an issue sending your mail, Please try again." })
+
+      },
+    );
   }
 
   return (
@@ -118,24 +135,24 @@ export default function ContactPage() {
           breadcrumb={["contact"]}
         />
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[40vh]" containerClassName="py-0 md:py-0">
+        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[70vh]" containerClassName="py-0 md:py-0">
           {/* Background blobs */}
           <Blob
             variant="blob2"
             color="text-primary"
             size="lg"
             className="absolute -left-40 -top-20 z-0"
-            opacity={0.6}
+            opacity={0.2}
             animate
           />
-          <Blob variant="dots" color="text-gray-400" size="xl" className="absolute right-0 top-0 z-0" opacity={0.3} />
+          <Blob variant="blob1" color="text-gray-400" size="md" className="absolute -right-10 top-0 z-0" opacity={0.3} />
 
           <div className="container relative z-10 px-4 md:px-6">
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Contact Us</div>
-                  <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
+                  <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
                     Get in Touch with Vastex Resources
                   </h1>
                   <p  >

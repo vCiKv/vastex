@@ -8,7 +8,7 @@ import { partners } from "../companyDetails"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ChevronDown, ChevronUp, Copy } from "lucide-react"
-import { FaBullseye, FaPeopleGroup, FaStar, FaListCheck, FaShieldHalved, FaMoneyBill1Wave } from "react-icons/fa6";
+import { FaBullseye, FaPeopleGroup, FaListCheck, FaShieldHalved, FaMoneyBill1Wave } from "react-icons/fa6";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { RiFlagLine } from "react-icons/ri";
 import { TbContract } from "react-icons/tb";

@@ -4,7 +4,7 @@ import { Mail, MapPin } from "lucide-react"
 
 import Logo from "@/components/logo"
 import ScrollReveal from "@/components/scroll-reveal"
-import { companyAddress, companyEmail } from "@/app/companyDetails"
+import { companyAddress, companyEmail, getServicesList } from "@/app/companyDetails"
 import { CompanyNumbers } from "./company-detail"
 
 export default function Footer() {
@@ -67,7 +67,7 @@ export default function Footer() {
             <div className="space-y-4">
               <h4 className="text-lg font-bold">Services</h4>
               <ul className="space-y-2">
-                {["Consulting", "Industrial Solutions", "Logistics", "Procurement", "Manufacturing"].map(
+                {getServicesList().map(
                   (service, index) => (
                     <li key={index}>
                       <Link
