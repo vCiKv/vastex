@@ -88,7 +88,7 @@ function DisplayService(props: { services: ServiceType, noPoints?: boolean, isOd
           <SectionDivider fill={index % 2 === (isOdd ? 1 : 0) ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
           <div
             className={cn(
-              "relative py-24 md:py-26",
+              "relative pb-24 py-10 md:pb-26",
               index % 2 === (isOdd ? 1 : 0) ? "" : "bg-gray-50"
             )}>
 
@@ -374,21 +374,21 @@ export default function ServicesPage() {
                     Integrated Service Firm
                   </h1>
                   <p className="pb-12">
-                    VASTEX Resources Limited offers a wide range of services designed to help your business thrive in {"today's"} competitive market.
+                    VASTEX Resources Limited an integrated service firm offers a wide range of innovative and practical solutions, designed to help your business thrive in {"today's"} competitive market.
                   </p>
                   {/* <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Why?
                     </div> */}
-                  <h3 className="text-center font-normal">Why VASTEX?</h3>
+                  <h2 className="text-center font-normal text-vastex-green">Why VASTEX?</h2>
                   <div className="h-full mx-auto max-w-6xl gap-12 px-6 pb-12 pt-8 w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center">
                     {[
-                      "We have Deep industry experience and deep market knowledge in various sectors.",
-                      "We offer agile and insight-driven approach to solutions from business start-up to launch.",
-                      "We are true to our commitments, regulatory and legal demands we will do it only when it is right."
+                      "We have deep industry experience and deep market knowledge",
+                      "We offer agile and insight-driven solutions, from business start-up to launch.",
+                      "We are true to our commitments, regulatory and legal demands. we will do it only when it is right."
                     ].map((description, index) => (
                       <ScrollReveal key={index} delay={100 * (index + 1)} direction="up" className="h-full">
                         <div className="relative h-full">
-                          <span className="absolute text-9xl opacity-35 text-primary/70 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
+                          <span className="absolute text-9xl opacity-35 text-vastex-green/70 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
                           <div className="flex h-full flex-col lg:items-center space-y-2 rounded-xl p-6 lg:text-center transition-all duration-300">
                             <p>{description}</p>
                           </div>
@@ -396,43 +396,19 @@ export default function ServicesPage() {
                       </ScrollReveal>
                     ))}
                   </div>
-                  <h3 className="text-center font-normal">What VASTEX Offers</h3>
-                  <p>
+                  {/* <p>
                     Our services covers a variety of sectors including FMCG and Manufacturing supporting both day-to-day operations and large-scale project execution. Our services will improve performance, reduce cost, and enable organizational growth. We deliver end-to-end SCM support tailored to your business goals.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </ScrollReveal>
           </div>
         </Section>
-        {/* <Section className="space-y-2 container mx-auto px-6">
-          <div className="text-center space-y-2">
-            <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-              why?
-            </div>
-            <h2 className="text-center">Why VASTEX?</h2>
-          </div>
-          <div className="h-full mx-auto max-w-6xl gap-12 px-6 py-12 w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center">
-            {[
-              "Deep industry experience in various sectors and industries.",
-              "Agile, data-driven approach to solutions from procurement to delivery.",
-              "Track record of on-time project execution and operational improvement."
-            ].map((description, index) => (
-              <ScrollReveal key={index} delay={100 * (index + 1)} direction="up" className="h-full">
-                <div className="relative h-full">
-                  <span className="absolute text-9xl opacity-35 text-primary/70 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
-                  <div className="flex h-full flex-col lg:items-center space-y-2 rounded-xl p-6 lg:text-center transition-all duration-300">
-                    <p>{description}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </Section> */}
+        <h2 className="text-center font-normal text-vastex-green pb-0">Our Services</h2>
         <DisplayService services={companyServices.businessDevelopment} noPoints />
         <DisplayService services={companyServices.tradeChannel} noPoints isOdd />
         <DisplayService services={companyServices.supplyChain} buttonText="Contact Us" />
-        <DisplayService services={companyServices.technical} noPoints buttonText="Learn More" />
+        <DisplayService services={companyServices.technical} buttonText="Learn More" />
 
         {/* <DisplayServiceSupplyChain />
         <DisplayServiceTechnical /> */}
