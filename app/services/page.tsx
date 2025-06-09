@@ -51,9 +51,33 @@ function BlobVariants(props: { index: number }) {
   }
 }
 
-const sectionVariants = ["wave", "curve", "tilt", "waveAlt"]
-function DisplayServiceSupplyChain() {
-  const services = companyServices.supplyChain
+// const sectionVariants = ["wave", "curve", "tilt", "waveAlt"]
+type ServiceType = {
+  department: string;
+  introText?: string;
+  services: {
+    title: string;
+    imageUrl: string;
+    points?: string[];
+    description?: string;
+  }[];
+}
+function ServicePoints(props: { points: string[] }) {
+  return (
+    <ul className="flex flex-col gap-y-2 text-gray-600">
+      {props.points.map((point, index) => (
+        <li key={"points-" + index} className="inline-flex items-center">
+          <CheckCircle className="mr-2 size-6 text-primary" />
+          <span>{point}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+function DisplayService(props: { services: ServiceType, noPoints?: boolean, isOdd?: boolean, buttonText?: string }) {
+  const defaultButtonText = "Request Consultation"
+  const sectionVariants = ["wave", "curve", "tilt", "waveAlt"]
+  const { isOdd, services } = props
   return (
     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
       {services.services.map((service, index) => (
@@ -61,179 +85,55 @@ function DisplayServiceSupplyChain() {
           key={service.title + "-" + index}
           className="relative"
         >
-
-          <SectionDivider fill={index % 2 === 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
+          <SectionDivider fill={index % 2 === (isOdd ? 1 : 0) ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
           <div
             className={cn(
               "relative py-24 md:py-26",
-              index % 2 === 0 ? "" : "bg-gray-50"
+              index % 2 === (isOdd ? 1 : 0) ? "" : "bg-gray-50"
             )}>
 
             <BlobVariants index={index} />
             <div className="container relative z-10 px-4 md:px-6" id={service.title}>
               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
-                <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
+                <ScrollReveal direction={(index % 2 === (isOdd ? 1 : 0)) ? "left" : "right"} className={(index % 2 === (isOdd ? 1 : 0)) ? "lg:order-first" : "lg:order-last"}>
                   <div className="flex flex-col justify-center space-y-4">
                     <div className="space-y-2">
                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-                        Supply-Chain
-                      </div>
-                      <h2>
-                        {service.title}
-                      </h2>
-                    </div>
-                    <ul className="flex flex-col gap-y-2 text-gray-600">
-                      {service.points.map((point, index) => (
-                        <li key={"points-" + index} className="inline-flex items-center">
-                          <CheckCircle className="mr-2 size-6 text-primary" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div>
-                      <Link href="/contact">
-                        <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-                          Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
-                  <div className="flex items-center justify-center">
-                    <Image
-                      src="https://images.pexels.com/photos/6779716/pexels-photo-6779716.jpeg?auto=compress&cs=tinysrgb&w=600"
-                      width={600}
-                      height={400}
-                      alt={service.title}
-                      className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
-                    />
-                  </div>
-                </ScrollReveal>
-              </div>
-
-            </div>
-          </div>
-          <SectionDivider fill={index % 2 === 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
-        </div>
-
-      ))}
-    </Section>
-  )
-}
-function DisplayServiceTechnical() {
-  const services = companyServices.technical
-  return (
-    <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
-      {services.services.map((service, index) => (
-        <div
-          key={service.title + "-" + index}
-          className="relative"
-        >
-
-          <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
-          <div
-            className={cn(
-              "relative py-24 md:py-26",
-              index % 2 !== 0 ? "" : "bg-gray-50"
-            )}>
-
-            <BlobVariants index={index} />
-            <div className="container relative z-10 px-4 md:px-6" id={service.title}>
-              <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
-                <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
-                  <div className="flex flex-col justify-center space-y-4">
-                    <div className="space-y-2">
-                      <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary capitalize">
                         {services.department}
                       </div>
                       <h2>
                         {service.title}
                       </h2>
                     </div>
-                    <ul className="flex flex-col gap-y-2 text-gray-600">
-                      {service.points.map((point, index) => (
+                    {
+                      props.noPoints ?
+                        <p className="text-gray-600">
+                          {service.description ?? ""}
+                        </p>
+                        :
+                        <ServicePoints points={service.points ?? []} />
+                    }
+                    {/* <ul className="flex flex-col gap-y-2 text-gray-600">
+                      {service.points ?? [].map((point, index) => (
                         <li key={"points-" + index} className="inline-flex items-center">
                           <CheckCircle className="mr-2 size-6 text-primary" />
                           <span>{point}</span>
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
                     <div>
                       <Link href="/contact">
                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-                          Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                          {props.buttonText ?? defaultButtonText} <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                     </div>
                   </div>
                 </ScrollReveal>
-                <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
+                <ScrollReveal direction={(index % 2 === (isOdd ? 1 : 0)) ? "right" : "left"} delay={300}>
                   <div className="flex items-center justify-center">
                     <Image
-                      src="https://images.pexels.com/photos/6779716/pexels-photo-6779716.jpeg?auto=compress&cs=tinysrgb&w=600"
-                      width={600}
-                      height={400}
-                      alt={service.title}
-                      className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
-                    />
-                  </div>
-                </ScrollReveal>
-              </div>
-
-            </div>
-          </div>
-          <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
-        </div>
-
-      ))}
-    </Section>
-  )
-}
-function DisplayServiceNewBusinessSetup() {
-  const services = companyServices.businessDevelopment
-  return (
-    <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0 pb:24">
-      {services.services.map((service, index) => (
-        <div
-          key={service.title + "-" + index}
-          className="relative"
-        >
-          <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
-          <div
-            className={cn(
-              "relative",
-              index % 2 !== 0 ? "" : "bg-gray-50"
-            )}>
-            <BlobVariants index={index} />
-            <div className="container relative z-10 px-4 md:px-6 py-24 md:py-26" id={service.title}>
-              <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
-                <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
-                  <div className="flex flex-col justify-center space-y-4">
-                    <div className="space-y-2">
-                      <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary capitalize">
-                        {services.department}
-                      </div>
-                      <h2>
-                        {service.title}
-                      </h2>
-                    </div>
-                    <p className="text-gray-600">
-                      {service.description}
-                    </p>
-                    <div>
-                      <Link href="/contact">
-                        <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-                          Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
-                  <div className="flex items-center justify-center">
-                    <Image
-                      src="https://images.pexels.com/photos/6779716/pexels-photo-6779716.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      src={service.imageUrl}
                       width={600}
                       height={400}
                       alt={service.title}
@@ -244,13 +144,211 @@ function DisplayServiceNewBusinessSetup() {
               </div>
             </div>
           </div>
-          <SectionDivider className={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
+          <SectionDivider fill={index % 2 === (isOdd ? 1 : 0) ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
         </div>
 
       ))}
     </Section>
   )
 }
+// function DisplayServiceSupplyChain() {
+//   const services = companyServices.supplyChain
+//   return (
+//     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
+//       {services.services.map((service, index) => (
+//         <div
+//           key={service.title + "-" + index}
+//           className="relative"
+//         >
+
+//           <SectionDivider fill={index % 2 === 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
+//           <div
+//             className={cn(
+//               "relative py-24 md:py-26",
+//               index % 2 === 0 ? "" : "bg-gray-50"
+//             )}>
+
+//             <BlobVariants index={index} />
+//             <div className="container relative z-10 px-4 md:px-6" id={service.title}>
+//               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
+//                 <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
+//                   <div className="flex flex-col justify-center space-y-4">
+//                     <div className="space-y-2">
+//                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
+//                         Supply-Chain
+//                       </div>
+//                       <h2>
+//                         {service.title}
+//                       </h2>
+//                     </div>
+//                     <ul className="flex flex-col gap-y-2 text-gray-600">
+//                       {service.points.map((point, index) => (
+//                         <li key={"points-" + index} className="inline-flex items-center">
+//                           <CheckCircle className="mr-2 size-6 text-primary" />
+//                           <span>{point}</span>
+//                         </li>
+//                       ))}
+//                     </ul>
+//                     <div>
+//                       <Link href="/contact">
+//                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
+//                           Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
+//                         </Button>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 </ScrollReveal>
+//                 <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
+//                   <div className="flex items-center justify-center">
+//                     <Image
+//                       src={service.imageUrl}
+//                       width={600}
+//                       height={400}
+//                       alt={service.title}
+//                       className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+//                     />
+//                   </div>
+//                 </ScrollReveal>
+//               </div>
+//             </div>
+//           </div>
+//           <SectionDivider fill={index % 2 === 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
+//         </div>
+
+//       ))}
+//     </Section>
+//   )
+// }
+// function DisplayServiceTechnical() {
+//   const services = companyServices.technical
+//   return (
+//     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
+//       {services.services.map((service, index) => (
+//         <div
+//           key={service.title + "-" + index}
+//           className="relative"
+//         >
+
+//           <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
+//           <div
+//             className={cn(
+//               "relative py-24 md:py-26",
+//               index % 2 !== 0 ? "" : "bg-gray-50"
+//             )}>
+
+//             <BlobVariants index={index} />
+//             <div className="container relative z-10 px-4 md:px-6" id={service.title}>
+//               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
+//                 <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
+//                   <div className="flex flex-col justify-center space-y-4">
+//                     <div className="space-y-2">
+//                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary capitalize">
+//                         {services.department}
+//                       </div>
+//                       <h2>
+//                         {service.title}
+//                       </h2>
+//                     </div>
+//                     <ul className="flex flex-col gap-y-2 text-gray-600">
+//                       {service.points.map((point, index) => (
+//                         <li key={"points-" + index} className="inline-flex items-center">
+//                           <CheckCircle className="mr-2 size-6 text-primary" />
+//                           <span>{point}</span>
+//                         </li>
+//                       ))}
+//                     </ul>
+//                     <div>
+//                       <Link href="/contact">
+//                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
+//                           Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
+//                         </Button>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 </ScrollReveal>
+//                 <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
+//                   <div className="flex items-center justify-center">
+//                     <Image
+//                       src={service.imageUrl}
+//                       width={600}
+//                       height={400}
+//                       alt={service.title}
+//                       className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+//                     />
+//                   </div>
+//                 </ScrollReveal>
+//               </div>
+
+//             </div>
+//           </div>
+//           <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
+//         </div>
+
+//       ))}
+//     </Section>
+//   )
+// }
+// function DisplayServiceNewBusinessSetup() {
+//   const services = companyServices.businessDevelopment
+//   return (
+//     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0 pb:24">
+//       {services.services.map((service, index) => (
+//         <div
+//           key={service.title + "-" + index}
+//           className="relative"
+//         >
+//           <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
+//           <div
+//             className={cn(
+//               "relative",
+//               index % 2 !== 0 ? "" : "bg-gray-50"
+//             )}>
+//             <BlobVariants index={index} />
+//             <div className="container relative z-10 px-4 md:px-6 py-24 md:py-26" id={service.title}>
+//               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
+//                 <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
+//                   <div className="flex flex-col justify-center space-y-4">
+//                     <div className="space-y-2">
+//                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary capitalize">
+//                         {services.department}
+//                       </div>
+//                       <h2>
+//                         {service.title}
+//                       </h2>
+//                     </div>
+//                     <p className="text-gray-600">
+//                       {service.description}
+//                     </p>
+//                     <div>
+//                       <Link href="/contact">
+//                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
+//                           Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+//                         </Button>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 </ScrollReveal>
+//                 <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
+//                   <div className="flex items-center justify-center">
+//                     <Image
+//                       src={service.imageUrl}
+//                       width={600}
+//                       height={400}
+//                       alt={service.title}
+//                       className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
+//                     />
+//                   </div>
+//                 </ScrollReveal>
+//               </div>
+//             </div>
+//           </div>
+//           <SectionDivider className={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
+//         </div>
+
+//       ))}
+//     </Section>
+//   )
+// }
 export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -338,9 +436,12 @@ export default function ServicesPage() {
             ))}
           </div>
         </Section> */}
-        <DisplayServiceNewBusinessSetup />
-        <DisplayServiceSupplyChain />
-        <DisplayServiceTechnical />
+        <DisplayService services={companyServices.businessDevelopment} noPoints />
+        <DisplayService services={companyServices.supplyChain} isOdd buttonText="Contact Us" />
+        <DisplayService services={companyServices.technical} buttonText="Learn More" />
+
+        {/* <DisplayServiceSupplyChain />
+        <DisplayServiceTechnical /> */}
         {/* CTA Section */}
         <CallToAction />
       </main>
