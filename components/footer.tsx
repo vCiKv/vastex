@@ -19,7 +19,7 @@ export default function Footer() {
               </Link>
               <p className="text-gray-400 pt-4">
                 Providing  business solutions including, operation advisory, management solutions, industrial solutions, logistics, procurement,
-                and manufacturing services to businesses worldwide.
+                and manufacturing services to businesses.
               </p>
               {/* <div className="flex space-x-4">
                 {[

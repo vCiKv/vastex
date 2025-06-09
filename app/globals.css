@@ -8,12 +8,14 @@
   font-stretch: normal;
   src: url("/fonts/Gilroy-ExtraBold.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Montserrat-VariableFont_wght";
   font-display: auto;
   font-stretch: normal;
   src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
+
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -41,17 +43,16 @@
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  /* --ring: 221.2 83.2% 53.3%;
-  --border:185.1 44.2% 47.1%;
-  --input:185.1 44.2% 47.1%; */
   --ring: 185.1 44.2% 47.1%;
 
   --radius: 0.5rem;
 }
-@theme {
-  --font-gilroy: "Gilroy-ExtraBold", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
-  --font-montserrat: "Montserrat-VariableFont_wght", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
 
+@theme {
+  --font-gilroy: "Gilroy-ExtraBold", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-montserrat: "Montserrat-VariableFont_wght", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-vastex-green: "#0f940f";
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
@@ -154,7 +155,7 @@
   margin-inline: auto;
   padding-inline: 2rem;
 
-  @media (width >= --theme(--breakpoint-sm)) {
+  @media (width >=--theme(--breakpoint-sm)) {
     max-width: none;
   }
 
@@ -163,10 +164,12 @@
   }
 }
 
-@utility clip-path{
+@utility clip-path {
   clip-path: inset(0);
 }
+
 @layer base {
+
   *,
   ::after,
   ::before,

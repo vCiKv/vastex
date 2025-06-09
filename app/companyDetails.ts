@@ -82,7 +82,7 @@ export const companyServices = {
         title: "Procurement & Supplier Management",
         imageUrl: "https://images.pexels.com/photos/262353/pexels-photo-262353.jpeg",
         points: [
-          "Sourcing materials and equipment cost-effectively for operations and projects",
+          "Sourcing materials and equipment for cost-effective operations and projects",
           "Supplier & Compliance Management",
           "Supplier Relationship Management: Ensuring reliable supply",
           "Vendor onboarding and project procurement",
@@ -211,24 +211,19 @@ export const companyServices = {
         description: ("VASTEX work with Businesses / Brands to develop winning strategies and plans that enable them to successfully Launch their new businesses into the market. To do this, we navigate the entire spectrum from brand essence development, consumer touchpoints exercise consumer and trade understanding, consumer and trade insights generation, route to market design and construction, through to business / brand reveal. We go through the rigor to ensure that all the stakeholders in the entire space are aligned to ensure a perfect punch launch or relaunch.")
       },
       {
-        title: "Annual Marketing",
+        title: "Marketing/Brand Strategy and Planing Solutions",
         imageUrl: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
-        description: ("VASTEX work with Businesses to articulate / couch their annual marketing strategy and practical plans to enable them achieve their business objectives and win in the market.")
+        description: ("VASTEX work with Businesses to articulate / couch their annual marketing strategy and practical plans to enable them achieve their business objectives and win in the market. \n Lead Businesses Marketing functions in an outsourced capacity to drive their strategy and planning process, develop actionable activities and provide oversight supervision on implementation to ensure achievement of Goals for an agreed period.")
       },
       {
-        title: "Brand Strategy and Planning Solutions",
-        imageUrl: "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg",
-        description: ("Lead Businesses Marketing functions in an outsourced capacity to drive their strategy and planning process, develop actionable activities and provide oversight supervision on implementation to ensure achievement of Goals for an agreed period.")
-      },
-      {
-        title: "New Product Development",
+        title: "Innovation & New Product Development",
         imageUrl: "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg",
-        description: ("VASTEX assists businesses instil new ways of thinking that energies creativity, ensures the team have the requisite skills and resources to develop breakthrough ideas, and works with them to embed an efficient system to bring the ideas to market.\nEssentially, we lead businesses through the process of creating ideas, turning them into business opportunities and launching the opportunities into the market. \nInnovation is a core driver of Growth and is too important in businesses.However, it may be too expensive for businesses to carry.Reason smart businesses may need to consider the route of outsourcing this to function VASTEX while they consider sweating their assets for growth.")
+        description: ("VASTEX assists businesses instil new ways of thinking that energies creativity, ensures the team have the requisite skills and resources to develop breakthrough ideas, and works with them to embed an efficient system to bring the ideas to market.\n Essentially, we lead businesses through the process of creating ideas, turning them into business opportunities and launching the opportunities into the market. \nInnovation is a core driver of Growth and is too important in businesses.However, it may be too expensive for businesses to carry.Reason smart businesses may need to consider the route of outsourcing this to function VASTEX while they consider sweating their assets for growth.")
       },
       {
-        title: "Brand Essence & Positioning Development",
+        title: "Brand Essence & Positioning Solutions",
         imageUrl: "https://images.pexels.com/photos/2182981/pexels-photo-2182981.jpeg",
-        description: ("Most medium enterprises / brand owners in Manufacturing, Franchise, Retail etc just practice the mostly the marketing principle of advertising without understanding the core essence and right positioning of the Brand in the Market.\n VASTEX will work with such clients to develop a Brand Essence and Positioning that will act as the soul and persona of the brand, such that will guide the brand activities and behaviour, build consumer affinity for the brands to enable them win sustainably in the market.")
+        description: ("Most medium enterprises / brand owners in Manufacturing, Franchise, Retail etc practice mostly the marketing principle of advertising without understanding the core essence and right positioning of the Brand in the Market.\n VASTEX will work with such clients to develop a Brand Essence and Positioning that will act as the soul and persona of the brand, such that will guide the brand activities and behaviour, build consumer affinity for the brands to enable them win sustainably in the market.")
       },
     ]
   },
@@ -238,7 +233,7 @@ export const companyServices = {
       {
         title: "Trade Channel and Customer Franchise Building Strategy",
         imageUrl: "https://images.pexels.com/photos/45775/pexels-photo-45775.jpeg",
-        description: ("Vastex Resources Limited, we are committed to building lasting relationships, fostering connections, and ensuring continuous consumer and customer franchise creation.\nWe drive business success by optimizing secondary sales strategies, expanding market reach, and strengthening customer engagement across Nigeria and the West African sub-region.  \nOur Secondary Sales Excellence \nStrategic Market Expansion – Helping businesses penetrate new markets while reinforcing existing customer bases through tailored RTM & GTM strategies.  \nEnhanced Distribution Channels – We developing multi-layered sales networks that integrate both traditional and digital platforms for wider consumer accessibility.  \nCustomer Acquisition & Retention – We Design personalized engagement solutions to attract new customers and deepen loyalty through superior service.  \nOperational Support for Sales Growth – Establishing storage, logistics, and sell-out teams to stabilize supply chains and drive sales velocity.  \nBrand-Driven Consumer Connection – Implementing customer franchise-building strategies via digital and social engagement for lasting brand loyalty.  \nSales Optimization for Local & International Brands – Creating scalable sales and customer service platforms tailored to both local businesses and foreign product entry into the region.  \nAt Vastex, we don’t just sell—we cultivate long-term partnerships, refine sales ecosystems, and ensure businesses thrive in competitive markets. \nImagine a business where customer satisfaction meets sales excellence—where every interaction leads to stronger relationships and lasting success. \nWelcome to Vastex Resources Limited, your trusted partner in customer service optimization and secondary sales acceleration. \nFrom Nigeria to the broader West African sub-region, we deliver impactful solutions that fuel growth and drive sustainable sales success. ")
+        description: ("Vastex Resources Limited is committed to building lasting relationships, fostering connections, and ensuring continuous consumer and customer franchise creation.\nWe drive business success by optimizing secondary sales strategies, expanding market reach, and strengthening customer engagement across Nigeria and the West African sub-region.  \nOur Secondary Sales Excellence \nStrategic Market Expansion – Helping businesses penetrate new markets while reinforcing existing customer bases through tailored RTM & GTM strategies.  \nEnhanced Distribution Channels – We developing multi-layered sales networks that integrate both traditional and digital platforms for wider consumer accessibility.  \nCustomer Acquisition & Retention – We Design personalized engagement solutions to attract new customers and deepen loyalty through superior service.  \nOperational Support for Sales Growth – Establishing storage, logistics, and sell-out teams to stabilize supply chains and drive sales velocity.  \nBrand-Driven Consumer Connection – Implementing customer franchise-building strategies via digital and social engagement for lasting brand loyalty.  \nSales Optimization for Local & International Brands – Creating scalable sales and customer service platforms tailored to both local businesses and foreign product entry into the region.  \nAt Vastex, we don’t just sell—we cultivate long-term partnerships, refine sales ecosystems, and ensure businesses thrive in competitive markets. \nImagine a business where customer satisfaction meets sales excellence—where every interaction leads to stronger relationships and lasting success. \nWelcome to Vastex Resources Limited, your trusted partner in customer service optimization and secondary sales acceleration. \nFrom Nigeria to the broader West African sub-region, we deliver impactful solutions that fuel growth and drive sustainable sales success. ")
       }
     ]
   }

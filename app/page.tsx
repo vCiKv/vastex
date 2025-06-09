@@ -56,7 +56,7 @@ function HeroText() {
           <ScrollReveal delay={600} direction="left">
             <p className="max-w-[600px] leading-snug text-center py-4 text-white">
               VASTEX Resources Limited delivers operation advisory, management solutions, industrial solutions, logistics, procurement,
-              and manufacturing services to businesses worldwide.
+              and manufacturing services to businesses.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={900} direction="up">
@@ -108,7 +108,7 @@ export default function Home() {
                   <div className="bg-primary/30 bg-gradient-to-r from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
                     <div className="container pt-32">
                       <div className="text-center flex justify-center items-center flex-col">
-                        <h2 className="text-accent">Operational Advisory / Management Solutions</h2>
+                        <h2 className="text-accent">Operations Advisory / Management Solutions</h2>
                         <p className="text-white max-w-[600px] pb-4">
                           Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
                         <Link href="/services">
