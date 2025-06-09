@@ -8,7 +8,7 @@ import { partners } from "../companyDetails"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ChevronDown, ChevronUp, Copy } from "lucide-react"
-import { FaBullseye, FaPeopleGroup, FaListCheck, FaShieldHalved, FaMoneyBill1Wave } from "react-icons/fa6";
+import { FaBullseye, FaPeopleGroup, FaListCheck, FaShieldHalved, FaMoneyBill1Wave, FaStar } from "react-icons/fa6";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { RiFlagLine } from "react-icons/ri";
 import { TbContract } from "react-icons/tb";
@@ -245,13 +245,7 @@ export default function AboutPage() {
           divider={{ variant: "curve", fill: "fill-gray-50", height: 80, position: "top" }}
           dividerBottom={{ variant: "curveAlt", fill: "fill-gray-50", height: 100, position: "bottom", className: "-mt-4" }}
         >
-          {/* <Blob
-            variant="dots"
-            color="text-blue-500"
-            size="lg"
-            className="absolute -left-20 bottom-40 z-0"
-            opacity={0.1}
-          /> */}
+
           <div className="container relative z-10 px-4 md:px-6 min-h-[50vh]">
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -259,7 +253,7 @@ export default function AboutPage() {
                   <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">Our Values</div>
                   <h2>What Drives Us</h2>
                   <p>
-                    Our <b>6</b> core values shape everything we do at VASTEX Resources Limited
+                    Our core values shape everything we do at VASTEX Resources Limited
                   </p>
                 </div>
               </div>
@@ -296,12 +290,12 @@ export default function AboutPage() {
                   description:
                     "The unwavering foundation of our brand",
                 },
-                // {
-                //   icon: <FaStar className="text-primary" />,
-                //   title: "Trust",
-                //   description:
-                //     "The bedrock of all successful engagements",
-                // },
+                {
+                  icon: <FaStar className="text-primary" />,
+                  title: "Passionate",
+                  description:
+                    "The bedrock of all successful engagements",
+                },
                 {
                   icon: <FaPeopleGroup className="text-primary" />,
                   title: "Relationship",

@@ -113,14 +113,7 @@ function DisplayService(props: { services: ServiceType, noPoints?: boolean, isOd
                         :
                         <ServicePoints points={service.points ?? []} />
                     }
-                    {/* <ul className="flex flex-col gap-y-2 text-gray-600">
-                      {service.points ?? [].map((point, index) => (
-                        <li key={"points-" + index} className="inline-flex items-center">
-                          <CheckCircle className="mr-2 size-6 text-primary" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul> */}
+
                     <div>
                       <Link href="/contact">
                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
@@ -389,9 +382,9 @@ export default function ServicesPage() {
                   <h3 className="text-center font-normal">Why VASTEX?</h3>
                   <div className="h-full mx-auto max-w-6xl gap-12 px-6 pb-12 pt-8 w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center">
                     {[
-                      "Deep industry experience in various sectors and industries.",
-                      "Agile, data-driven approach to solutions from procurement to delivery.",
-                      "Track record of on-time project execution and operational improvement."
+                      "We have Deep industry experience and deep market knowledge in various sectors.",
+                      "We offer agile and insight-driven approach to solutions from business start-up to launch.",
+                      "We are true to our commitments, regulatory and legal demands we will do it only when it is right."
                     ].map((description, index) => (
                       <ScrollReveal key={index} delay={100 * (index + 1)} direction="up" className="h-full">
                         <div className="relative h-full">
@@ -437,8 +430,9 @@ export default function ServicesPage() {
           </div>
         </Section> */}
         <DisplayService services={companyServices.businessDevelopment} noPoints />
-        <DisplayService services={companyServices.supplyChain} isOdd buttonText="Contact Us" />
-        <DisplayService services={companyServices.technical} buttonText="Learn More" />
+        <DisplayService services={companyServices.tradeChannel} noPoints isOdd />
+        <DisplayService services={companyServices.supplyChain} buttonText="Contact Us" />
+        <DisplayService services={companyServices.technical} noPoints buttonText="Learn More" />
 
         {/* <DisplayServiceSupplyChain />
         <DisplayServiceTechnical /> */}

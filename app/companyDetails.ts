@@ -231,7 +231,16 @@ export const companyServices = {
         description: ("Most medium enterprises / brand owners in Manufacturing, Franchise, Retail etc just practice the mostly the marketing principle of advertising without understanding the core essence and right positioning of the Brand in the Market.\n VASTEX will work with such clients to develop a Brand Essence and Positioning that will act as the soul and persona of the brand, such that will guide the brand activities and behaviour, build consumer affinity for the brands to enable them win sustainably in the market.")
       },
     ]
-
+  },
+  tradeChannel: {
+    department: "route-to-market",
+    services: [
+      {
+        title: "Trade Channel and Customer Franchise Building Strategy",
+        imageUrl: "https://images.pexels.com/photos/45775/pexels-photo-45775.jpeg",
+        description: ("Vastex Resources Limited, we are committed to building lasting relationships, fostering connections, and ensuring continuous consumer and customer franchise creation.\nWe drive business success by optimizing secondary sales strategies, expanding market reach, and strengthening customer engagement across Nigeria and the West African sub-region.  \nOur Secondary Sales Excellence \nStrategic Market Expansion – Helping businesses penetrate new markets while reinforcing existing customer bases through tailored RTM & GTM strategies.  \nEnhanced Distribution Channels – We developing multi-layered sales networks that integrate both traditional and digital platforms for wider consumer accessibility.  \nCustomer Acquisition & Retention – We Design personalized engagement solutions to attract new customers and deepen loyalty through superior service.  \nOperational Support for Sales Growth – Establishing storage, logistics, and sell-out teams to stabilize supply chains and drive sales velocity.  \nBrand-Driven Consumer Connection – Implementing customer franchise-building strategies via digital and social engagement for lasting brand loyalty.  \nSales Optimization for Local & International Brands – Creating scalable sales and customer service platforms tailored to both local businesses and foreign product entry into the region.  \nAt Vastex, we don’t just sell—we cultivate long-term partnerships, refine sales ecosystems, and ensure businesses thrive in competitive markets. \nImagine a business where customer satisfaction meets sales excellence—where every interaction leads to stronger relationships and lasting success. \nWelcome to Vastex Resources Limited, your trusted partner in customer service optimization and secondary sales acceleration. \nFrom Nigeria to the broader West African sub-region, we deliver impactful solutions that fuel growth and drive sustainable sales success. ")
+      }
+    ]
   }
 }
 export const companyEmail = "info@vastex.ng"

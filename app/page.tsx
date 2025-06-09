@@ -28,54 +28,58 @@ function HeroText() {
     "Transformative",
   ]
   return (
-    <div className="flex flex-col md:flex-row-reverse justify-center py-28">
-      <ScrollReveal delay={300} direction="right" className="flex justify-center pb-8 pr-4">
-        <div className="scale-80 md:scale-100 w-[275px] h-[176px]">
-          <Logo width={"100%"} height={"100%"} className="pb-4 size-full" />
-        </div>
-      </ScrollReveal>
-      <div className="space-y-2  pt-8">
-        <ScrollReveal delay={300} direction="left">
-          <div className="flex flex-col md:flex-row gap-y-6 gap-x-10 items-center">
-            <h1 className="text-primary text-5xl md:text-5xl lg:text-6xl flex flex-col gap-y-2.5 items-center text-center w-full justify-center">
-              <span className="flex flex-col justify-center items-center gap-x-2.5">
-                <span className="p-1.5 bg-primary rounded-xl text-white"><AnimatedTextCycle words={innovativeAlternatives} interval={2500} /> </span>
-                <span className="p-1.5">
-                  Solutions
+    <div className="bg-[url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg')] bg-center bg-cover min-h-[100vh] w-full">
+      <div className="flex flex-col md:flex-row-reverse justify-center py-28 bg-accent/30 bg-gradient-to-r from-accent/60 via-15%-accent/30 via-70%-accent/10 to-black/5 backdrop-blur-xs size-full">
+        <ScrollReveal delay={300} direction="right" className="flex justify-center pb-8 pr-4">
+          <div className="scale-80 md:scale-100 w-[275px] h-[176px]">
+            <Logo width={"100%"} height={"100%"} className="pb-4 size-full" />
+          </div>
+        </ScrollReveal>
+        <div className="space-y-2  pt-8">
+          <ScrollReveal delay={300} direction="left">
+            <div className="flex flex-col md:flex-row gap-y-6 gap-x-10 items-center">
+              <h1 className="text-primary text-5xl md:text-5xl lg:text-6xl flex flex-col gap-y-2.5 items-center text-center w-full justify-center">
+                <span className="flex flex-col justify-center items-center gap-x-2.5">
+                  <span className="p-1.5 bg-primary rounded-xl text-white"><AnimatedTextCycle words={innovativeAlternatives} interval={2500} /> </span>
+                  <span className="p-1.5">
+                    Solutions
+                  </span>
                 </span>
-              </span>
-              <span className="block italic text-[#949599] font-light px-1.5">for</span>
-              <span className="block">
-                Businesses
-              </span>
-            </h1>
+                <span className="block italic text-[#949599] font-light px-1.5">for</span>
+                <span className="block">
+                  Businesses
+                </span>
+              </h1>
 
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delay={600} direction="left">
-          <p className="max-w-[600px] leading-snug text-center py-4">
-            VASTEX Resources Limited delivers operation advisory, management solutions, industrial solutions, logistics, procurement,
-            and manufacturing services to businesses worldwide.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={900} direction="up">
-          <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center">
-            <Link href="/services">
-              <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-                Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
-              >
-                Contact Us
-              </Button>
-            </Link>
-          </div>
-        </ScrollReveal>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={600} direction="left">
+            <p className="max-w-[600px] leading-snug text-center py-4 text-white">
+              VASTEX Resources Limited delivers operation advisory, management solutions, industrial solutions, logistics, procurement,
+              and manufacturing services to businesses worldwide.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={900} direction="up">
+            <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center">
+              <Link href="/services">
+                <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
+                  Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
+
+
 
     </div>
   )
@@ -103,12 +107,14 @@ export default function Home() {
                 <CarouselItem className="bg-[url('https://images.pexels.com/photos/7658414/pexels-photo-7658414.jpeg')] bg-center bg-cover min-h-[100vh] w-full">
                   <div className="bg-primary/30 bg-gradient-to-r from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
                     <div className="container pt-32">
-                      <h2 className="text-accent">Operational Advisory / Management Solutions</h2>
-                      <p className="text-white max-w-[600px] pb-4">
-                        Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
-                      <Link href="/services">
-                        <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">See More <ArrowRight className="ml-2 h-4 w-4" /></Button>
-                      </Link>
+                      <div className="text-center flex justify-center items-center flex-col">
+                        <h2 className="text-accent">Operational Advisory / Management Solutions</h2>
+                        <p className="text-white max-w-[600px] pb-4">
+                          Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
+                        <Link href="/services">
+                          <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">See More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
@@ -130,10 +136,10 @@ export default function Home() {
                 <CarouselItem className="bg-[url('https://images.pexels.com/photos/113335/pexels-photo-113335.jpeg')] bg-center bg-cover min-h-[100vh] w-full">
                   <div className="bg-primary/30 bg-gradient-to-r from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
                     <div className="container pt-32">
-                      <div className="md:pl-32 ">
+                      <div className="text-center flex justify-center items-center flex-col">
                         <h2 className="text-accent">New Business Setup</h2>
                         <p className="text-white pb-4 max-w-[600px]">
-                          We handle the complexities of launching your venture, from legal and regulatory compliance to initial market strategy. Our expertise ensures a smooth and swift start, positioning your businesses / brands to appeal to the right target consumers, through the right channels and using the appropriate systems.
+                          We handle the complexities of launching your venture, from legal and regulatory compliance to initial market strategy. Our expertise ensures a smooth and swift start, positioning your
                         </p>
                         <Link href="/services">
                           <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
@@ -150,56 +156,6 @@ export default function Home() {
               <FloatingPaths position={-2} />
             </div> */}
           </div>
-
-          {/* <div className="flex flex-col md:flex-row-reverse justify-center py-20 md:py-28 z-10">
-            <ScrollReveal delay={300} direction="right" className="flex justify-center pb-8">
-              <div className="scale-80 md:scale-100 w-[275px] h-[176px]">
-                <Logo width={"100%"} height={"100%"} className="pb-4 size-full" />
-              </div>
-            </ScrollReveal>
-            <div className="space-y-2">
-              <ScrollReveal delay={300} direction="left">
-                <div className="flex flex-col md:flex-row gap-y-6 gap-x-10 items-center">
-                  <h1 className="text-primary text-5xl md:text-5xl lg:text-6xl flex flex-col gap-y-2.5 items-center text-center w-full justify-center">
-                    <span className="flex flex-col justify-center items-center gap-x-2.5">
-                      <span className="p-1.5 bg-primary rounded-xl text-white"><AnimatedTextCycle words={innovativeAlternatives} interval={2500} /> </span>
-                      <span className="p-1.5">
-                        Solutions
-                      </span>
-                    </span>
-                    <span className="block italic text-[#949599] font-light px-1.5">for</span>
-                    <span className="block">
-                      Global Industries
-                    </span>
-                  </h1>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={600} direction="left">
-                <p className="max-w-[600px] leading-snug text-center pb-4">
-                  VASTEX Resources Limited delivers expert consulting, industrial solutions, logistics, procurement,
-                  and manufacturing services to businesses worldwide.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal delay={900} direction="up">
-                <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center">
-                  <Link href="/services">
-                    <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-                      Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-blue-50 transition-transform hover:scale-105"
-                    >
-                      Contact Us
-                    </Button>
-                  </Link>
-                </div>
-              </ScrollReveal>
-            </div>
-
-          </div> */}
         </section>
 
         {/* Services Section */}
