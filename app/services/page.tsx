@@ -388,7 +388,7 @@ export default function ServicesPage() {
                     ].map((description, index) => (
                       <ScrollReveal key={index} delay={100 * (index + 1)} direction="up" className="h-full">
                         <div className="relative h-full">
-                          <span className="absolute text-9xl opacity-35 text-vastex-green/70 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
+                          <span className="absolute text-9xl opacity-35 text-vastex-green/80 -top-10 -left-6 -z-10  font-mono font-extralight">{index + 1}</span>
                           <div className="flex h-full flex-col lg:items-center space-y-2 rounded-xl p-6 lg:text-center transition-all duration-300">
                             <p>{description}</p>
                           </div>
