@@ -94,7 +94,7 @@ export default function Home() {
                 loop: true,
                 containScroll: "keepSnaps"
               }}
-              plugins={[Autoplay({ delay: 7500 })]}
+            // plugins={[Autoplay({ delay: 7500 })]}
             >
               <CarouselContent>
                 <CarouselItem className="size-full">
@@ -103,10 +103,12 @@ export default function Home() {
                 <CarouselItem className="bg-[url('https://images.pexels.com/photos/7658414/pexels-photo-7658414.jpeg')] bg-center bg-cover min-h-[100vh] w-full">
                   <div className="bg-primary/30 bg-gradient-to-r from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
                     <div className="container pt-32">
-                      <h2 className="text-accent">Operational Consultation Solutions</h2>
+                      <h2 className="text-accent">Operational Advisory / Management Solutions</h2>
                       <p className="text-white max-w-[600px] pb-4">
-                        Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure lasting success.                        </p>
-                      <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">See More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
+                      <Link href="/services">
+                        <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">See More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                      </Link>
                     </div>
                   </div>
                 </CarouselItem>
@@ -116,9 +118,11 @@ export default function Home() {
                       <div className="text-center flex justify-center items-center flex-col">
                         <h2 className="text-accent">Company Representation</h2>
                         <p className="text-white max-w-[600px] pb-4">
-                          Beyond a simple presence, we become your strategic voice in the market. We build vital connections and identify new opportunities, significantly boosting your {"brand's"} influence and opening doors to unparalleled growth.
+                          Beyond a simple presence, we become your strategic partner and voice in the market. We build vital connections and identify new opportunities, significantly boosting your {"brand's"} influence and opening doors to unparalleled growth.
                         </p>
-                        <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        <Link href="/services">
+                          <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -129,9 +133,11 @@ export default function Home() {
                       <div className="md:pl-32 ">
                         <h2 className="text-accent">New Business Setup</h2>
                         <p className="text-white pb-4 max-w-[600px]">
-                          We handle the complexities of launching your venture, from legal and regulatory compliance to initial market strategy. Our expertise ensures a smooth and swift start, positioning your business for immediate growth.
+                          We handle the complexities of launching your venture, from legal and regulatory compliance to initial market strategy. Our expertise ensures a smooth and swift start, positioning your businesses / brands to appeal to the right target consumers, through the right channels and using the appropriate systems.
                         </p>
-                        <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        <Link href="/services">
+                          <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        </Link>
                       </div>
                     </div>
                   </div>
