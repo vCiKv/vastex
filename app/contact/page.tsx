@@ -398,7 +398,7 @@ export default function ContactPage() {
                 {
                   question: "What makes Vastex Resources different?",
                   answer:
-                    "Our comprehensive approach sets us apart. We offer end-to-end solutions across consulting, industrial solutions, logistics, procurement, and manufacturing, allowing us to address all aspects of your business needs with integrated expertise.",
+                    "Our comprehensive approach sets us apart. We offer end-to-end solutions across operation advisory, management solutions, industrial solutions, logistics, procurement, and manufacturing, allowing us to address all aspects of your business needs with integrated expertise.",
                   delay: 500,
                 },
               ].map((faq, index) => (

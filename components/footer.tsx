@@ -18,7 +18,7 @@ export default function Footer() {
                 <Logo variant="white" width={176} height={100} textClassName="text-gray-300" />
               </Link>
               <p className="text-gray-400 pt-4">
-                Providing  business solutions including, operational consulting, industrial solutions, logistics, procurement,
+                Providing  business solutions including, operation advisory, management solutions, industrial solutions, logistics, procurement,
                 and manufacturing services to businesses worldwide.
               </p>
               {/* <div className="flex space-x-4">

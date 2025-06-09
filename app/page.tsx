@@ -23,9 +23,9 @@ import Autoplay from "embla-carousel-autoplay"
 function HeroText() {
   const innovativeAlternatives = [
     "Innovative",
-    "Trailblazing",
+    "Winning",
+    "Practical",
     "Transformative",
-    "Pioneering",
   ]
   return (
     <div className="flex flex-col md:flex-row-reverse justify-center py-28">
@@ -46,7 +46,7 @@ function HeroText() {
               </span>
               <span className="block italic text-[#949599] font-light px-1.5">for</span>
               <span className="block">
-                Global Industries
+                Businesses
               </span>
             </h1>
 
@@ -54,7 +54,7 @@ function HeroText() {
         </ScrollReveal>
         <ScrollReveal delay={600} direction="left">
           <p className="max-w-[600px] leading-snug text-center py-4">
-            VASTEX Resources Limited delivers operational consulting, industrial solutions, logistics, procurement,
+            VASTEX Resources Limited delivers operation advisory, management solutions, industrial solutions, logistics, procurement,
             and manufacturing services to businesses worldwide.
           </p>
         </ScrollReveal>
@@ -246,7 +246,7 @@ export default function Home() {
               {[
                 {
                   icon: <Settings className="h-5 w-5 text-primary" />,
-                  title: "Consulting",
+                  title: "Operation Advisory",
                   description: "Expert business and technical consulting services",
                   features: ["Strategic planning", "Process optimization", "Business transformation"],
                   delay: 100,
