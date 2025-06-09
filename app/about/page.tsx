@@ -57,21 +57,21 @@ function Person(props: {
             <p className="text-primary/80 font-light">{member.role}</p>
             {member.role.toLowerCase() !== "president" && <p className="text-primary font-bold">{member.department}</p>}
           </div>
+          <div>
+            <p className="lowercase font-light text-sm">Qualifications</p>
+            <div className="flex flex-row flex-wrap gap-1.5">
+              {member.qualifications.map(qualification =>
+                <span
+                  key={member.name + "-" + qualification}
+                  className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
+                >
+                  {qualification}
+                </span>
+              )}
+            </div>
+          </div>
           <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span>
           {showBio && <>
-            <div>
-              <p className="lowercase font-light text-sm">Qualifications</p>
-              <div className="flex flex-row flex-wrap gap-1.5">
-                {member.qualifications.map(qualification =>
-                  <span
-                    key={member.name + "-" + qualification}
-                    className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
-                  >
-                    {qualification}
-                  </span>
-                )}
-              </div>
-            </div>
             <p className="text-base text-left">
               {member.bio}
             </p>
