@@ -19,16 +19,20 @@ function Person(props: {
   member: {
     name: string;
     role: string;
+    title: string;
+    isTitleAfter: boolean;
     department: string;
     bio: string;
     avatarUrl: string;
+    qualifications: string[];
     experience: string[];
     contact: {
       phones: string[];
       companyEmail: string;
       emails: string[];
     }
-  }, index: number
+  },
+  index: number
 }) {
   const { index, member } = props
   const [showBio, setShowBio] = useState(false)
@@ -48,13 +52,26 @@ function Person(props: {
           />
         </div>
         <div className="text-center space-y-2">
-          <h4 className="text-xl font-bold text-gray-900 capitalize">{member.name}</h4>
+          <h4 className="text-xl font-bold text-gray-900 capitalize h-16">{!member.isTitleAfter && member.title} {member.name} {member.isTitleAfter && member.title}</h4>
           <div className="capitalize text-base">
             <p className="text-primary/80 font-light">{member.role}</p>
-            <p className="text-primary font-bold lg:h-[70px]">{member.department}</p>
+            {member.role.toLowerCase() !== "president" && <p className="text-primary font-bold">{member.department}</p>}
           </div>
           <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span>
           {showBio && <>
+            <div>
+              <p className="lowercase font-light text-sm">Qualifications</p>
+              <div className="flex flex-row flex-wrap gap-1.5">
+                {member.qualifications.map(qualification =>
+                  <span
+                    key={member.name + "-" + qualification}
+                    className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
+                  >
+                    {qualification}
+                  </span>
+                )}
+              </div>
+            </div>
             <p className="text-base text-left">
               {member.bio}
             </p>

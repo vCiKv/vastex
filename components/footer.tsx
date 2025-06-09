@@ -114,13 +114,13 @@ export default function Footer() {
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} VASTEX Resources Limited. All rights reserved.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((policy, index) => (
                 <Link key={index} href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {policy}
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
