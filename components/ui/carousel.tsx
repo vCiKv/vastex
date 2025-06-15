@@ -170,7 +170,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
     />
   )
 }
-const carouselButtonClassName = "absolute size-12 rounded-full bg-primary/80  text-white cursor-pointer hover:border-primary hover:text-primary border-2"
+const carouselButtonClassName = "absolute size-12 rounded-full bg-primary/80 text-white cursor-pointer hover:border-primary hover:text-primary border-2 border-input hover:bg-white transition-all"
 function CarouselPrevious({
   className,
   variant = "outline",

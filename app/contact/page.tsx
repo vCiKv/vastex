@@ -31,7 +31,6 @@ function OutroGrid() {
   return (
     <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 p-4 min-h-[30vh] max-h-[60vh]">
       <div className="md:block hidden rounded-xl relative col-span-1">
-        {/* <GridImage src="https://images.unsplash.com/photo-1628149455678-16f37bc392f4?" /> */}
         <GridImage src="./logo.png" />
       </div>
       <div className="flex size-full relative rounded-xl col-span-2 bg-primary text-accent p-4 items-center justify-center">
@@ -42,7 +41,7 @@ function OutroGrid() {
 
       <div className="w-full h-[100%] md:block hidden rounded-xl relative col-span-2" >
         <div className="relative bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
-          <GridImage src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" />
+          <GridImage src="/imgs/contact-hello.jpg" />
         </div>
       </div>
 
@@ -131,7 +130,7 @@ export default function ContactPage() {
       <main className="flex-1">
         <PageHeader
           pageTitle="Contact"
-          imageUrl="https://images.pexels.com/photos/7680154/pexels-photo-7680154.jpeg"
+          imageUrl="/imgs/contact-hero.jpeg"
           breadcrumb={["contact"]}
         />
         {/* Hero Section */}

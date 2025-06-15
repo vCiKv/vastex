@@ -15,7 +15,7 @@ function HeaderLink(props: { url: string, text?: string, className?: string }) {
   return (
     <Link
       href={url}
-      className={cn("capitalize md:text-sm text-lg w-fit md:w-auto font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+      className={cn("capitalize md:px-0 md:text-sm text-lg w-fit md:w-auto font-medium text-gray-700 transition-all duration-200 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
         className,
         pathname.toLowerCase() === "/" + url.toLowerCase() && "text-base font-bold text-primary",
         pathname.toLowerCase() === "/" && url.toLowerCase() === "home" && "text-base font-bold text-primary"
@@ -75,10 +75,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <div className="mb-6">
+              <div className="my-6 ml-4">
                 <Logo width={96} height={52} />
               </div>
-              <div className="flex flex-col space-y-4 py-6">
+              <div className="flex flex-col space-y-4 p-6">
                 {["Home", "About", "Services", "Contact"].map((item, index) => (
                   <span onClick={() => setIsMenuOpen(false)} key={"nav-item-" + index} >
                     <HeaderLink url={item === "Home" ? "/" : item.toLowerCase()} text={item === "/" ? "Home" : item} />

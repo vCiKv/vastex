@@ -10,6 +10,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ['https://images.pexels.com/'],
   },
+  output:"export"
 }
 
 export default nextConfig

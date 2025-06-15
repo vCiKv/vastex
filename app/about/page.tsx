@@ -1,23 +1,33 @@
-"use client"
 import Link from "next/link"
 import Image from "next/image"
 import CallToAction from "../cta"
 import ScrollReveal from "@/components/scroll-reveal"
 import Section from "@/components/section"
-import { partners } from "../companyDetails"
+import { partners, SocialMediaList } from "../companyDetails"
 import { Blob } from "@/components/ui/blob"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronDown, ChevronUp, Copy } from "lucide-react"
-import { FaBullseye, FaPeopleGroup, FaListCheck, FaShieldHalved, FaMoneyBill1Wave, FaStar } from "react-icons/fa6";
+import { ArrowRight, ChevronRight, Copy, XIcon } from "lucide-react"
+import { FaPeopleGroup, FaListCheck, FaShieldHalved, FaMoneyBill1Wave, FaStar } from "react-icons/fa6";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { RiFlagLine } from "react-icons/ri";
 import { TbContract } from "react-icons/tb";
 import PageHeader from "@/components/page-header"
-import { useState } from "react"
 import { toast } from "sonner"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogHeader,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import SocialMedia from "@/components/social-media"
+import React from "react"
 function Person(props: {
   member: {
+    id: number;
     name: string;
+    lastName: string;
+    firstName: string;
     role: string;
     title: string;
     isTitleAfter: boolean;
@@ -30,15 +40,12 @@ function Person(props: {
       phones: string[];
       companyEmail: string;
       emails: string[];
+      socials?: SocialMediaList
     }
   },
   index: number
 }) {
   const { index, member } = props
-  const [showBio, setShowBio] = useState(false)
-  const toggle = () => {
-    setShowBio(p => !p)
-  }
   return (
     <ScrollReveal delay={(index + 1) * 200} direction="up">
       <div className="flex flex-col items-center space-y-4 transition-all duration-300 hover:-translate-y-1 py-8">
@@ -52,26 +59,112 @@ function Person(props: {
           />
         </div>
         <div className="text-center space-y-2">
-          <h4 className="text-xl font-bold text-gray-900 capitalize h-16">{!member.isTitleAfter && member.title} {member.name} {member.isTitleAfter && member.title}</h4>
+          <h4 className="text-xl font-bold text-gray-900 capitalize h-16">{!member.isTitleAfter && <span className="font-light">{member.title}</span>} {member.firstName}<br />{member.lastName} {member.isTitleAfter && member.title}</h4>
           <div className="capitalize text-base">
             <p className="text-primary/80 font-light">{member.role}</p>
-            {member.role.toLowerCase() !== "president" && <p className="text-primary font-bold">{member.department}</p>}
+            <p className="text-primary font-bold">{member.department}</p>
           </div>
-          <div>
+          {index > 1 && (<div>
             <p className="lowercase font-light text-sm">Qualifications</p>
             <div className="flex flex-row flex-wrap gap-1.5">
               {member.qualifications.map(qualification =>
                 <span
                   key={member.name + "-" + qualification}
-                  className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
+                  className="bg-primary/80 text-white rounded-lg px-1.5 pb-0.5"
                 >
                   {qualification}
                 </span>
               )}
             </div>
           </div>
-          <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span>
-          {showBio && <>
+          )}
+          <Dialog>
+            <DialogTrigger>
+              <span className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer hover:bg-primary/80 hover:text-white py-0.5 px-3 rounded-full">see more <ChevronRight className="size-4" /></span>
+            </DialogTrigger>
+            <DialogContent className="bg-transparent backdrop-blur-md w-full md:max-w-[85vw] h-screen overflow-auto fixed rounded-2xl p-0" showCloseButton={false}>
+              <div className="relative size-full">
+
+                <DialogClose
+                  data-slot="dialog-close"
+                  className="focus:ring-ring data-[state=open]:bg-accent  absolute top-4 right-4 opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5 bg-red-600 text-white rounded-full p-1 shadow-md cursor-pointer"
+                >
+                  <XIcon />
+                  <span className="sr-only">Close</span>
+                </DialogClose>
+                <DialogHeader className="mx-auto text-center bg-accent/90 w-full pt-6 pb-10">
+                  <div className="relative aspect-square size-64 md:size-80 rounded-2xl overflow-hidden mx-auto">
+                    <Image
+                      src={member.avatarUrl}
+                      alt={`${member.name}`}
+                      fill
+                      className="aspect-square object-cover transition-transform scale-105 size-64 md:size-80 rounded-3xl"
+                    />
+                  </div>
+
+                  <h2 className="text-xl smd:text-3xl capitalize tracking-wide text-center">
+                    {!member.isTitleAfter && <span className="font-light text-base">{member.title}</span>} {member.firstName} {member.lastName} {member.isTitleAfter && member.title}
+                  </h2>
+                  <div className="capitalize text-base text-center space-y-1">
+                    <p className="text-primary/80 font-light">{member.role}</p>
+                    <p className="text-primary font-bold">{member.department}</p>
+                    <p className="text-primary inline-flex gap-2 cursor-pointer items-center lowercase text-base" onClick={() => { navigator.clipboard.writeText(member.contact.companyEmail); toast.success("Email copied to clipboard") }}>
+                      {member.contact.companyEmail} <Copy className="size-4" />
+                    </p>
+                    <SocialMedia socials={member.contact.socials ?? {}} className="px-3.5 py-0.5 w-min text-primary backdrop-blur-2xl bg-primary/10 justify-center mx-auto rounded-md" iconClassName="text-primary size-5" />
+                  </div>
+                </DialogHeader>
+                <div className="space-y-3 px-6 pt-6 pb-10 bg-white">
+                  <div>
+                    <p className="lowercase font-light text-sm">Qualifications</p>
+                    <div className="flex flex-row flex-wrap gap-1.5">
+                      {member.qualifications.map(qualification =>
+                        <span
+                          key={member.name + "-" + qualification}
+                          className="bg-primary/80 text-white rounded-lg px-1.5 pb-0.5"
+                        >
+                          {qualification}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="lowercase font-light text-sm">Experiences</p>
+                    <div className="flex flex-row flex-wrap gap-1.5">
+                      {member.experience.map(experience =>
+                        <span
+                          key={member.name + "-" + experience}
+                          className="bg-primary/80 text-white rounded-lg px-1.5 py-0.5"
+                        >
+                          {experience}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="lowercase font-light text-sm">Bio</p>
+                    {/* <p className="text-base text-left whitespace-pre-line"> */}
+                    <div className="text-base text-left space-y-2">
+                      {/* {member.bio} */}
+                      {member.bio.split('\n').map((line, index) => (
+                        <p className="text-base text-left pb-1" key={index}> {line}</p>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* <div>
+                    <p className="lowercase pt-4 font-light text-sm">Contact</p>
+                    <p className="text-primary inline-flex gap-2 cursor-pointer items-center" onClick={() => { navigator.clipboard.writeText(member.contact.companyEmail); toast.success("Email copied to clipboard") }}>
+                      {member.contact.companyEmail} <Copy />
+                    </p>
+                  </div> */}
+                </div>
+              </div>
+
+            </DialogContent>
+          </Dialog>
+          {/* <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span> */}
+          {/* {showBio && <>
             <p className="text-base text-left">
               {member.bio}
             </p>
@@ -95,8 +188,7 @@ function Person(props: {
               </p>
             </div>
             <span onClick={toggle} className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer">see {!showBio ? <>more <ChevronDown className="size-4" /></> : <>less <ChevronUp className="size-4" /></>}</span>
-
-          </>}
+          </>} */}
           <div>
             {/* <p className="lowercase pt-4 font-light text-sm">Contact</p>
             <div className="flex flex-row flex-wrap gap-1.5">
@@ -110,7 +202,7 @@ function Person(props: {
           </div>
         </div>
       </div >
-    </ScrollReveal>
+    </ScrollReveal >
   )
 }
 
@@ -146,7 +238,7 @@ function Person(props: {
 
 //   return (
 //     <p>
-//       VASTEX Resources Limited is an integrated service firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
+//       VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
 //       Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
 //       We target Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets.We aim to become a pivotal partner in their set up and set out journey.
 //     </p>
@@ -160,7 +252,7 @@ export default function AboutPage() {
         <Section containerClassName="relative overflow-hidden bg-white py-0 md:py-0">
           <PageHeader
             pageTitle="About"
-            imageUrl="https://images.pexels.com/photos/12885861/pexels-photo-12885861.jpeg"
+            imageUrl="/imgs/about-hero.jpeg"
             breadcrumb={["about"]}
           />
           <Blob
@@ -189,15 +281,15 @@ export default function AboutPage() {
                       that drive growth and efficiency for our clients.
                     </p> */}
                   </div>
-                  <p className="pb-24">
-                    VASTEX Resources Limited is an integrated service firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting, Company Representation and New Business Set Up.
+                  <p className="pb-24 pr-6">
+                    VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting, Company Representation and New Business Set Up.
                     Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
                     Our clients include Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses, especially foreign companies looking to enter Nigerian Market. We aim to become a pivotal partner in their set up and set out journey.
                   </p>
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={500} className="relative rounded-xl -z-10">
-                <div className="flex items-center justify-center h-[50vh] md:h-[90vh] md:w-full w-[100vw] rounded-xl bg-[url('https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 opacity-80">
+                <div className="flex items-center justify-center h-[50vh] md:h-[90vh] md:w-full w-[100vw] rounded-xl bg-[url('/imgs/about-building.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 opacity-80">
                   <div className="bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
                   </div>
                 </div>
@@ -214,7 +306,7 @@ export default function AboutPage() {
             variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "mt-[-5px]"
           }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-8 gap-12 pb-12 size-full">
+          <div className="grid grid-cols-1 px-6 md:px-8 gap-12 pb-12 size-full">
             <div className="border rounded-xl shadow-sm py-2 group">
               <div className="flex  items-center gap-x-6 border-l-4 border-accent group-hover:border-primary">
                 <div className="flex justify-center items-center p-2.5 ml-2.5 size-12 bg-accent text-primary group-hover:bg-primary group-hover:text-accent rounded-full">
@@ -226,18 +318,17 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="border rounded-xl shadow-sm py-2 group">
+            {/* <div className="border rounded-xl shadow-sm py-2 group">
               <div className="flex  items-center gap-x-6 border-l-4 border-accent group-hover:border-primary">
                 <div className="flex justify-center items-center p-2.5 ml-2.5 size-12 bg-accent text-primary group-hover:bg-primary group-hover:text-accent rounded-full">
                   <FaBullseye className="size-full" />
                 </div>
                 <div className="py-2">
                   <h4 className="group-hover:text-primary text-2xl font-bold tracking-tight font-gilroy pb-4">Our Vision</h4>
-                  {/* <p className="group-hover:text-primary/60 leading-5">To be a pivotal partner to all our clients</p> */}
+                  <p className="group-hover:text-primary/60 leading-5">To be a pivotal partner to all our clients</p>
                 </div>
               </div>
-
-            </div>
+            </div> */}
           </div>
         </Section>
         {/* Values Section */}
@@ -292,7 +383,7 @@ export default function AboutPage() {
                 },
                 {
                   icon: <FaStar className="text-primary" />,
-                  title: "Passionate",
+                  title: "Passion",
                   description:
                     "The bedrock of all successful engagements",
                 },

@@ -47,7 +47,6 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/contact">
-
                     <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
                       Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -56,7 +55,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
                   <Link href="/services">
                     <Button
                       variant="outline"
-                      className="border-white text-white hover:text-white hover:bg-blue-900 bg-primary transition-transform hover:scale-105"
+                      className="border-white text-white hover:text-primary hover:bg-accent"
                     >
                       Explore Our Services
                     </Button>

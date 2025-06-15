@@ -7,8 +7,8 @@ export default function CareersPage() {
   return (
     <Section className="container px-4 md:px-6 min-h-[70vh]">
       <PageHeader
-        pageTitle="CareeRs"
-        imageUrl="https://images.pexels.com/photos/5737622/pexels-photo-5737622.jpeg"
+        pageTitle="Careers"
+        imageUrl="/imgs/careers-hero"
         breadcrumb={["careers"]}
       />
       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">Help Us</div>

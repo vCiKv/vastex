@@ -7,6 +7,8 @@ import ScrollReveal from "@/components/scroll-reveal"
 import { companyAddress, companyEmail, getServicesList } from "@/app/companyDetails"
 import { CompanyNumbers } from "./company-detail"
 
+
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">

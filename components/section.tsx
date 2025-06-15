@@ -19,7 +19,7 @@ export default function Section(props: {
 
 }) {
   const { divider, dividerBottom } = props
-  const defaultSectionClassName = "relative py-16 md:py-24"
+  const defaultSectionClassName = "relative py-12 md:py-16"
   if (!divider) {
     return (
       <section className={cn(defaultSectionClassName, props.containerClassName)} style={props.style}>

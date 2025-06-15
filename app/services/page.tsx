@@ -10,6 +10,7 @@ import PageHeader from "@/components/page-header"
 import { companyServices } from "../companyDetails"
 import { cn } from "@/lib/utils"
 import { SectionDivider } from "@/components/ui/section-divider"
+import Logo from "@/components/logo"
 
 function BlobVariants(props: { index: number }) {
   const { index } = props
@@ -144,211 +145,13 @@ function DisplayService(props: { services: ServiceType, noPoints?: boolean, isOd
     </Section>
   )
 }
-// function DisplayServiceSupplyChain() {
-//   const services = companyServices.supplyChain
-//   return (
-//     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
-//       {services.services.map((service, index) => (
-//         <div
-//           key={service.title + "-" + index}
-//           className="relative"
-//         >
-
-//           <SectionDivider fill={index % 2 === 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
-//           <div
-//             className={cn(
-//               "relative py-24 md:py-26",
-//               index % 2 === 0 ? "" : "bg-gray-50"
-//             )}>
-
-//             <BlobVariants index={index} />
-//             <div className="container relative z-10 px-4 md:px-6" id={service.title}>
-//               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
-//                 <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
-//                   <div className="flex flex-col justify-center space-y-4">
-//                     <div className="space-y-2">
-//                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-//                         Supply-Chain
-//                       </div>
-//                       <h2>
-//                         {service.title}
-//                       </h2>
-//                     </div>
-//                     <ul className="flex flex-col gap-y-2 text-gray-600">
-//                       {service.points.map((point, index) => (
-//                         <li key={"points-" + index} className="inline-flex items-center">
-//                           <CheckCircle className="mr-2 size-6 text-primary" />
-//                           <span>{point}</span>
-//                         </li>
-//                       ))}
-//                     </ul>
-//                     <div>
-//                       <Link href="/contact">
-//                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-//                           Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
-//                         </Button>
-//                       </Link>
-//                     </div>
-//                   </div>
-//                 </ScrollReveal>
-//                 <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
-//                   <div className="flex items-center justify-center">
-//                     <Image
-//                       src={service.imageUrl}
-//                       width={600}
-//                       height={400}
-//                       alt={service.title}
-//                       className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
-//                     />
-//                   </div>
-//                 </ScrollReveal>
-//               </div>
-//             </div>
-//           </div>
-//           <SectionDivider fill={index % 2 === 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
-//         </div>
-
-//       ))}
-//     </Section>
-//   )
-// }
-// function DisplayServiceTechnical() {
-//   const services = companyServices.technical
-//   return (
-//     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
-//       {services.services.map((service, index) => (
-//         <div
-//           key={service.title + "-" + index}
-//           className="relative"
-//         >
-
-//           <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
-//           <div
-//             className={cn(
-//               "relative py-24 md:py-26",
-//               index % 2 !== 0 ? "" : "bg-gray-50"
-//             )}>
-
-//             <BlobVariants index={index} />
-//             <div className="container relative z-10 px-4 md:px-6" id={service.title}>
-//               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
-//                 <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
-//                   <div className="flex flex-col justify-center space-y-4">
-//                     <div className="space-y-2">
-//                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary capitalize">
-//                         {services.department}
-//                       </div>
-//                       <h2>
-//                         {service.title}
-//                       </h2>
-//                     </div>
-//                     <ul className="flex flex-col gap-y-2 text-gray-600">
-//                       {service.points.map((point, index) => (
-//                         <li key={"points-" + index} className="inline-flex items-center">
-//                           <CheckCircle className="mr-2 size-6 text-primary" />
-//                           <span>{point}</span>
-//                         </li>
-//                       ))}
-//                     </ul>
-//                     <div>
-//                       <Link href="/contact">
-//                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-//                           Request Consultation <ArrowRight className="ml-2 h-4 w-4" />
-//                         </Button>
-//                       </Link>
-//                     </div>
-//                   </div>
-//                 </ScrollReveal>
-//                 <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
-//                   <div className="flex items-center justify-center">
-//                     <Image
-//                       src={service.imageUrl}
-//                       width={600}
-//                       height={400}
-//                       alt={service.title}
-//                       className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
-//                     />
-//                   </div>
-//                 </ScrollReveal>
-//               </div>
-
-//             </div>
-//           </div>
-//           <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
-//         </div>
-
-//       ))}
-//     </Section>
-//   )
-// }
-// function DisplayServiceNewBusinessSetup() {
-//   const services = companyServices.businessDevelopment
-//   return (
-//     <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0 pb:24">
-//       {services.services.map((service, index) => (
-//         <div
-//           key={service.title + "-" + index}
-//           className="relative"
-//         >
-//           <SectionDivider fill={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="top" />
-//           <div
-//             className={cn(
-//               "relative",
-//               index % 2 !== 0 ? "" : "bg-gray-50"
-//             )}>
-//             <BlobVariants index={index} />
-//             <div className="container relative z-10 px-4 md:px-6 py-24 md:py-26" id={service.title}>
-//               <div className={cn("grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16")}>
-//                 <ScrollReveal direction={(index % 2 === 0) ? "left" : "right"} className={(index % 2 === 0) ? "lg:order-first" : "lg:order-last"}>
-//                   <div className="flex flex-col justify-center space-y-4">
-//                     <div className="space-y-2">
-//                       <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary capitalize">
-//                         {services.department}
-//                       </div>
-//                       <h2>
-//                         {service.title}
-//                       </h2>
-//                     </div>
-//                     <p className="text-gray-600">
-//                       {service.description}
-//                     </p>
-//                     <div>
-//                       <Link href="/contact">
-//                         <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-//                           Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-//                         </Button>
-//                       </Link>
-//                     </div>
-//                   </div>
-//                 </ScrollReveal>
-//                 <ScrollReveal direction={(index % 2 === 0) ? "right" : "left"} delay={300}>
-//                   <div className="flex items-center justify-center">
-//                     <Image
-//                       src={service.imageUrl}
-//                       width={600}
-//                       height={400}
-//                       alt={service.title}
-//                       className="rounded-xl object-cover shadow-lg transition-transform hover:scale-[1.02] duration-500"
-//                     />
-//                   </div>
-//                 </ScrollReveal>
-//               </div>
-//             </div>
-//           </div>
-//           <SectionDivider className={index % 2 !== 0 ? "fill-white" : "fill-gray-50"} variant={sectionVariants[index + 1 % 4] as "wave" | "curve" | "tilt" | "curveAlt" | "tiltAlt" | "waveAlt"} position="bottom" />
-//         </div>
-
-//       ))}
-//     </Section>
-//   )
-// }
 export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         <PageHeader
           pageTitle="Services"
-          imageUrl="https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg"
+          imageUrl="/imgs/service-hero.jpg"
           breadcrumb={["services"]}
         />
         {/* Hero Section */}
@@ -371,15 +174,15 @@ export default function ServicesPage() {
                     Our Services
                   </div>
                   <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
-                    Integrated Service Firm
+                    VASTEX Resources Limited
                   </h1>
                   <p className="pb-12">
-                    VASTEX Resources Limited an integrated service firm offers a wide range of innovative and practical solutions, designed to help your business thrive in {"today's"} competitive market.
+                    We are an integrated services firm offers a wide range of innovative and practical solutions, designed to help your business thrive in {"today's"} competitive market.
                   </p>
                   {/* <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Why?
                     </div> */}
-                  <h2 className="text-center font-normal text-vastex-green">Why VASTEX?</h2>
+                  <h2 className="text-center font-normal text-vastex-green">Why <Logo />?</h2>
                   <div className="h-full mx-auto max-w-6xl gap-12 px-6 pb-12 pt-8 w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center">
                     {[
                       "We have deep industry experience and deep market knowledge",
@@ -406,12 +209,96 @@ export default function ServicesPage() {
         </Section>
         <h2 className="text-center font-normal text-vastex-green pb-0">Our Services</h2>
         <DisplayService services={companyServices.businessDevelopment} noPoints />
-        <DisplayService services={companyServices.tradeChannel} noPoints isOdd />
+        <Section className="relative bg-white py-0 md:py-0 px-0 md:px-0" containerClassName="py-0 md:py-0" >
+
+          <SectionDivider fill={"fill-white"} variant="curve" position="top" />
+          <div
+            className={cn(
+              "relative pb-24 py-10 md:pb-26",
+            )}>
+
+            <BlobVariants index={4} />
+            <div className="container relative z-10 px-4 md:px-6" id={"Trade Channel and Customer Franchise Building Strategy"}>
+              <div className={cn("")}>
+                <ScrollReveal direction={"left"}>
+                  <div className="flex flex-col justify-center space-y-4">
+                    <div className="space-y-2">
+                      <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
+                        route-to-market
+                      </div>
+                      <h2>
+                        Trade Channel and Customer Franchise Building Strategy
+                      </h2>
+                    </div>
+                    <p>
+                      At Vastex Resources Limited, we don’t just sell—we build lasting partnerships, expand market reach, and drive sustainable growth.
+                      Our expertise lies in optimizing primary and secondary sales strategies, enhancing customer engagement, and positioning businesses for long-term success across Nigeria and the West African sub-region.
+                      We offer tailored solutions, designed to amplify brand visibility, strengthen trade relationships, and maximize revenue potential. No matter where your business stands, we provide the right platform for performance and expansion.
+                    </p>
+                    <h4 className="font-bold">Our Expertise & Offerings</h4>
+                    <div>
+                      <h3>
+                        Strategic Route-to-Market (RTM) Models
+                      </h3>
+                      <p>We help businesses penetrate new markets and fortify existing customer bases with customized RTM strategies:  We help to build,</p>
+                      <ul className="pt-4 pb-12 space-y-4 opacity-85">
+                        <li><b>Smart Distribution Networks: </b> Establishing multi-tiered sales channels that blend traditional trade and digital platforms for seamless consumer access.</li>
+                        <li><b>High-Impact Secondary Sales Force: </b> Recruiting trade partners with great passion to fuel wholesale-to-retail distribution with powerful numeric growth and brand visibility.  </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>
+                        Customer Engagement & Sustainability Model
+                      </h3>
+                      <ul className="pt-4 pb-12 space-y-4 opacity-85">
+                        <li><b>Customer Acquisition & Retention Model: </b> We shall craft personalized engagement models that attract new customers while deepening loyalty through superior service. In today’s competitive market, retaining customers is harder than ever—but we make it easier because of our understanding of the environment in which we operate.  </li>
+                        <li><b>Digital & Social Brand Connection: </b> Strengthening customer franchise-building strategies through interactive digital and social platforms to boost long-term brand loyalty.  </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>
+                        B2B & Specialty Sales Growth
+                      </h3>
+                      <ul className="pt-4 pb-12 space-y-4 opacity-85">
+                        <li><b>Industry-Specific Sales Solutions: </b>It is ours to strengthen client relations across major food service centers, hypermarkets, downstream oil sector players, and premium retail outlets.</li>
+                        <li><b>Business Development Segments: </b>We develop blue prints that Specializes in machine tools, chemical, and agro supplies, to simplify industrial sourcing and procurement.</li>
+                        <li><b>Market Intelligence & Mystery Shopping: </b> Deploying expert shopper teams to gather market insights and ensure strategic product placement at high-value sales touch points</li>
+
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>
+                        Sales Optimization & Sales Operational Support model
+                      </h3>
+                      <ul className="pt-4 pb-12 space-y-4 opacity-85">
+                        <li><b>Hub Centre Establishment & Franchising: </b> Setting up storage, logistics, and sales operations centers for efficient supply chains and accelerated sell-out success.</li>
+                        <li><b>Comprehensive Business Health Checks: </b> Evaluating and optimizing sales models to align financial strategies, operational effectiveness, and customer service excellence.  </li>
+                        <li><b>Local & International Brand Expansion: </b> Crafting scalable sales strategies for both domestic businesses and global brands seeking market entry in Nigeria and West Africa.   </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <Link href="/contact">
+                        <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
+                          Partner with us <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                    <p className="py-12">
+                      From Nigeria to the broader West African market, we empower businesses with innovative solutions that fuel revenue growth and market leadership
+                    </p>
+                  </div>
+                </ScrollReveal>
+
+              </div>
+            </div>
+          </div>
+          <SectionDivider fill={"fill-white"} variant="wave" position="bottom" />
+
+        </Section>
         <DisplayService services={companyServices.supplyChain} buttonText="Contact Us" />
         <DisplayService services={companyServices.technical} buttonText="Learn More" />
 
-        {/* <DisplayServiceSupplyChain />
-        <DisplayServiceTechnical /> */}
+
         {/* CTA Section */}
         <CallToAction />
       </main>
