@@ -15,7 +15,7 @@ export const partners = [
     experience: ["Apt & Synchs Limited", "Genesis Group", "Fidelity Bank Plc", "UAC Foods"],
     department: "marketing & strategy",
     avatarUrl: "/avatar/chima.jpg",
-    bio: ("Seasoned Senior Executive and business leader with 26+ years in Marketing / Sales gained within the FMCG and Banking industries. My career is marked by consistently driving substantial revenue growth through execution of cutting-edge brand turnaround strategies, building and leveraging strong teams, and boosting operational efficiency. \n My leadership approach is deeply rooted in a passion for goals and values driven approach to nurturing strong teams and fostering robust cross-functional partnerships. My commercial leadership acumen is evident in my recorded success across various categories / businesses / markets: \n Currently President / Chief Results Officer: Apt & Synchs Limited.\n We set up Apt & Synchs Limited as a Go-to-Market and Brand Management Solutions firm, committed to providing top notch services to foreign businesses or Nigerians with interest in setting up businesses in Nigeria. We enable them set up and creatively work with them launch out to deliver on their business / brand objectives.\n I am responsible for leading a team of driven and hands-on experts to ensure successful incubation and launch of the new businesses. We advise and guide them to succeed with whatever entry strategy that is preferred, be it Franchising, 100% Direct Investment (manufacturing), Importation, Joint Venture Businesses, etc, From registration to rollout."),
+    bio: ("Seasoned Senior Executive and business leader with 26+ years in Marketing / Sales gained within the FMCG and Banking industries. My career is marked by consistently driving substantial revenue growth through execution of cutting-edge brand turnaround strategies, building and leveraging strong teams, and boosting operational efficiency. \n My leadership approach is deeply rooted in a passion for goals and values driven approach to nurturing strong teams and fostering robust cross-functional partnerships. My commercial leadership acumen is evident in my recorded success across various categories / businesses / markets: \n Currently President / Chief Results Officer: Apt & Synchs Limited.\n We set up Apt & Synchs Limited as a Go-to-Market and Brand Management Solutions firm, committed to providing top notch services to foreign businesses or Nigerians with interest in setting up businesses in Nigeria. We enable them set up and creatively work with them launch out to deliver on their business / brand objectives.\n I am responsible for leading a team of driven and hands-on experts to ensure successful incubation and launch of the new businesses. We advise and guide them to succeed with whatever entry strategy that is preferred, be it Franchising, 100% Direct Investment (manufacturing), Importation, Joint Venture Businesses, etc, From registration to rollout.\n Key Positions Held In Recent Past Include \n    \n Executive General Manager, Genesis Group;     \n Head, Business Marketing, Consumer Banking, West Africa; Standard Chartered Bank    \n Head, Brand Management - Fidelity Bank Plc.      \n Marketing Manager, Oral Care - GSK Plc;     \n Project & Brand Manager Lager and RTD - Guinness (Diageo) Nigeria;     \n Marketing Manager - UAC Foods;     \n Regional Sales Manager - UAC Foods and     \n Brand Manager - UAC Foods.\n Competencies include: Business strategy, People Leadership, Project Leadership,	Digital Marketing, Brand Management & Marketing,	Trade & Channel Marketing, Go To Market Strategy, Construction	Brand Refresh, Sales Leadership,	PR & Media Management\n Major Courses Attended:\n    \n Strategic Marketing Management – Stanford University Graduate Business School, USA     \n Digital Marketing Programme – Stanford University Graduate Business School, USA     \n Rethinking Leadership Programme, Standard Chartered Bank; Kenya     \n Project Leadership Programme – GSK Global Project Leadership Team, GSK Lagos.    \n Marketing Leadership Champions Workshop – GSK MLP, UK     \n Strategic Marketing Management Course – Lagos Business School     \n Brand Champions Course – Ashridge Business School, Hertfordshire, England    \n Diageo Way of Brand Building and Project Management – Diageo, Lagos  "),
     qualifications: ["B.sc", "MBA", "FNIMN"],
     contact: {
       phones: ["+2348033060701"],
@@ -180,20 +180,31 @@ export const companyServices = {
         title: "Production management",
         imageUrl: "/imgs/technical-production.jpeg",
         points: [
-          "Efficient and effective work methods.",
+          "We carry out time and motion studies to enhance efficient and effective work methods.",
+          "Recommendation and implementation of appropriate equipment maintenance system ",
+          "We partner with our clients to increase productivity. ",
           "Process time standards.",
           "Production Line balance.",
           "Plant layout and workstation design.",
-          "Equipment selection and maintenance.",
+          "Technology and right sizing of workforce ",
         ]
       },
       {
         title: "Building and Construction",
         imageUrl: "/imgs/technical-building.jpg",
         points: [
-          "Idea generation",
-          "Planning, Execution, Completion and Commissioning.",
-          "Review Designs, Quantity, Quality, and Cost.",
+          "We carry out new building / factory construction and also old buildings renovation works.",
+          "We partner with clients to generate ideas. ",
+          "We design and evaluate other designs. ",
+          "Generate bills of quantities and tender evaluation.",
+          "Review designs, quantity, quality, and cost.",
+        ]
+      },
+      {
+        title: "Project Supervision",
+        imageUrl: "/imgs/technical-building.jpg",
+        points: [
+          "Project execution, completion,  commissioning, and hand-over.",
           "Project Supervision and Evaluation.",
         ]
       },
@@ -201,18 +212,18 @@ export const companyServices = {
         title: "Utilities Management",
         imageUrl: "/imgs/technical-utilities.jpg",
         points: [
-          "Energy Resources Management",
-          "Water system, borehole, water treatment and distribution.",
-          "Waste Management",
-          "Gas and Steam management, safely and control systems.",
+          "Energy Resources Management - Power generating set, solar power system, and public power supply.",
+          "Water system, borehole, water treatment, and distribution.",
+          "Waste Management - effluent waste",
         ]
       },
       {
-        title: "Technical Training and Development",
+        title: "Training and Development",
         imageUrl: "/imgs/technical-training.jpeg",
         points: [
-          "Assist in Technical Training",
-          "Identify Team gaps/deficiencies."
+          "Identify engineering team gaps/deficiencies.",
+          "Assist in Technical Training on-site and off-site training.",
+          "Monitors after training development and performance evaluation.",
         ]
       },
     ]
