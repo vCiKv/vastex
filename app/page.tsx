@@ -41,7 +41,7 @@ function HeroText() {
                   Solutions
                 </span>
               </span>
-              <span className="block italic text-white font-light px-1.5">for</span>
+              <span className="block italic text-stone-800 font-light px-1.5">for</span>
               <span className="block">
                 Businesses
               </span>
@@ -56,7 +56,7 @@ function HeroText() {
       </div>
       <ScrollReveal delay={600} direction="up">
         <p className="leading-snug text-center py-4 md:w-4/5 px-1 mx-auto text-stone-950 rounded-xl">
-          VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting, Company Representation and New Business Set Up.        </p>
+          VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation and New Business Set Up.        </p>
       </ScrollReveal>
       <ScrollReveal delay={900} direction="up" className="relative pb-10 pt-2">
         <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center z-10 relative">

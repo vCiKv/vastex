@@ -29,7 +29,7 @@ function GridImage(props: { src: string }) {
 }
 function OutroGrid() {
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 p-4 min-h-[30vh] max-h-[60vh]">
+    <div className="relative grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 p-4 min-h-[30vh] max-h-[50vh]">
       <div className="md:block hidden rounded-xl relative col-span-1">
         <GridImage src="./logo.png" />
       </div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
           breadcrumb={["contact"]}
         />
         {/* Hero Section */}
-        <Section className="relative overflow-hidden bg-white py-20 md:py-28 min-h-[70vh]" containerClassName="py-0 md:py-0">
+        <Section className="relative overflow-hidden bg-white py-16 min-h-[20vh]" containerClassName="py-0 md:py-0">
           {/* Background blobs */}
           <Blob
             variant="blob2"
