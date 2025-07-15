@@ -57,7 +57,7 @@ export default function Header() {
           <Logo width={96} height={52} />
         </Link>
         <nav className="hidden flex-1 items-center justify-center space-x-6 md:flex">
-          {["Home", "About", "Services", "Contact"].map((item, index) => (
+          {["Home", "About", "Competences", "Contact"].map((item, index) => (
             <HeaderLink url={item === "Home" ? "./" : item.toLowerCase()} text={item === "/" ? "Home" : item} key={"nav-item-" + index} />
           ))}
         </nav>
@@ -78,8 +78,9 @@ export default function Header() {
               <div className="my-6 ml-4">
                 <Logo width={96} height={52} />
               </div>
+
               <div className="flex flex-col space-y-4 p-6">
-                {["Home", "About", "Services", "Contact"].map((item, index) => (
+                {["Home", "About", "Competences", "Contact"].map((item, index) => (
                   <span onClick={() => setIsMenuOpen(false)} key={"nav-item-" + index} >
                     <HeaderLink url={item === "Home" ? "/" : item.toLowerCase()} text={item === "/" ? "Home" : item} />
                   </span>

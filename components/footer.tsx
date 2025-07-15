@@ -20,7 +20,7 @@ export default function Footer() {
                 <Logo variant="white" width={176} height={100} textClassName="text-gray-300" />
               </Link>
               <p className="text-gray-400 pt-4">
-                Providing  business solutions including, operation advisory, management solutions, industrial solutions, logistics, procurement,
+                Providing  business solutions including, operation advisory, turn around,management solutions, industrial solutions, logistics, procurement,
                 and manufacturing services to businesses.
               </p>
               {/* <div className="flex space-x-4">
@@ -49,7 +49,7 @@ export default function Footer() {
                 {[
                   { name: "Home", path: "/" },
                   { name: "About Us", path: "/about" },
-                  { name: "Services", path: "/services" },
+                  { name: "Competences", path: "/competences" },
                   { name: "Contact", path: "/contact" },
                   { name: "Careers", path: "/careers" },
                 ].map((link, index) => (
@@ -67,13 +67,13 @@ export default function Footer() {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={300}>
             <div className="space-y-4">
-              <h4 className="text-lg font-bold">Services</h4>
+              <h4 className="text-lg font-bold">Competences</h4>
               <ul className="space-y-2">
                 {getServicesList().map(
                   (service, index) => (
                     <li key={index}>
                       <Link
-                        href={`/services#${service.toLowerCase()}`}
+                        href={`/competences#${service.toLowerCase()}`}
                         className="text-gray-400 transition-all duration-200 hover:text-white hover:translate-x-1 inline-block"
                       >
                         {service}
@@ -94,15 +94,15 @@ export default function Footer() {
                     {companyAddress}
                   </span>
                 </li>
-                <CompanyNumbers />
+                {/* <CompanyNumbers /> */}
                 {/* <li className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-primary" />
                   <span className="text-gray-400 w-4/5">+1 (555) 123-4567</span>
                 </li> */}
-                <li className="flex items-center space-x-2">
+                <li className="flex items-center space-x-2 ">
                   <Mail className="h-5 w-5 text-primary" />
                   <span className="text-gray-400 w-4/5">
-                    <a href={"mailto:" + companyEmail} target="_blank">
+                    <a href={"mailto:" + companyEmail} target="_blank" className="hover:underline underline-gray-400 transition-all cursor-pointer">
                       {companyEmail}
                     </a>
                   </span>
