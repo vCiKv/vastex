@@ -17,6 +17,7 @@ import Link from "next/link"
 import PageHeader from "@/components/page-header"
 import { toast } from "sonner"
 import emailjs from "@emailjs/browser"
+import useHotjar from "@/hooks/useHotjar"
 
 function GridImage(props: { src: string }) {
   return (
@@ -52,7 +53,7 @@ function OutroGrid() {
               Get to <span className="text-primary">know us</span>
             </h4>
             <div className="inline-flex gap-1.5">
-              <Button size={"sm"} className="border-2 border-transparent hover:border-white">
+              <Button size={"sm"} className="border-2 border-transparent hover:border-primary hover:bg-white hover:text-primary">
                 <Link href="/services">
                   see services
                 </Link>
@@ -79,8 +80,8 @@ const isValidString = (str: unknown) => {
   return (typeof (str) === "string" && str.trim() !== "")
 }
 export default function ContactPage() {
+  useHotjar()
   const [formData, setFormData] = useState(defaultContactData)
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -155,7 +156,7 @@ export default function ContactPage() {
                     Get in Touch with Vastex Resources
                   </h1>
                   <p  >
-                    {"We're"} here to answer your questions and help your business succeed.
+                    We are here to answer your questions and help your business succeed.
                   </p>
                 </div>
               </div>
@@ -279,7 +280,7 @@ export default function ContactPage() {
                         </div>
                         <h4 className="text-xl font-bold">Email</h4>
                         <p>info@vastex.ng</p>
-                        <p>support@vastex.ng</p>
+                        {/* <p>support@vastex.ng</p> */}
                       </CardContent>
                     </Card>
                   </div>
@@ -345,7 +346,7 @@ export default function ContactPage() {
         </Section>
 
         {/* FAQ Section */}
-        <Section className="relative bg-gray-50 py-16"
+        {/* <Section className="relative bg-gray-50 py-16"
           divider={{
             variant: "curveAlt", fill: "fill-gray-50", height: 60, position: "top", className: "mt-4"
           }}
@@ -397,7 +398,7 @@ export default function ContactPage() {
                 {
                   question: "What makes Vastex Resources different?",
                   answer:
-                    "Our comprehensive approach sets us apart. We offer end-to-end solutions across operation advisory, management solutions, industrial solutions, logistics, procurement, and manufacturing, allowing us to address all aspects of your business needs with integrated expertise.",
+                    "Our comprehensive approach sets us apart. We offer end-to-end solutions across operations advisory, management solutions, industrial solutions, logistics, procurement, manufacturing and much more, allowing us to address all aspects of your business needs with integrated expertise.",
                   delay: 500,
                 },
               ].map((faq, index) => (
@@ -414,7 +415,9 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-        </Section>
+        </Section> */}
+
+
         {/* Outro */}
         <div className="relative py-12">
           <OutroGrid />

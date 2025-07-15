@@ -23,6 +23,9 @@ import {
 } from "@/components/ui/dialog"
 import SocialMedia from "@/components/social-media"
 import React from "react"
+import useHotjar from "@/hooks/useHotjar"
+
+
 function Person(props: {
   member: {
     id: number;
@@ -65,7 +68,7 @@ function Person(props: {
             <p className="text-primary/80 font-light">{member.role}</p>
             <p className="text-primary font-bold">{member.department}</p>
           </div>
-          {index > 1 && (<div>
+          {/* {index > 1 && (<div>
             <p className="lowercase font-light text-sm">Qualifications</p>
             <div className="flex flex-row flex-wrap gap-1.5">
               {member.qualifications.map(qualification =>
@@ -78,7 +81,7 @@ function Person(props: {
               )}
             </div>
           </div>
-          )}
+          )} */}
           <Dialog>
             <DialogTrigger>
               <span className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer hover:bg-primary/80 hover:text-white py-0.5 px-3 rounded-full">see more <ChevronRight className="size-4" /></span>
@@ -106,32 +109,36 @@ function Person(props: {
                   <h2 className="text-xl smd:text-3xl capitalize tracking-wide text-center">
                     {!member.isTitleAfter && <span className="font-light text-base">{member.title}</span>} {member.firstName} {member.lastName} {member.isTitleAfter && member.title}
                   </h2>
+                  <div className="flex flex-row flex-wrap gap-1.5 justify-center items-center">
+                    {member.qualifications.map(qualification =>
+                      <span
+                        key={member.name + "-" + qualification}
+                        className="bg-primary/80 text-white rounded-lg px-1.5 pb-0.5"
+                      >
+                        {qualification}
+                      </span>
+                    )}
+                  </div>
                   <div className="capitalize text-base text-center space-y-1">
                     <p className="text-primary/80 font-light">{member.role}</p>
                     <p className="text-primary font-bold">{member.department}</p>
-                    <p className="text-primary inline-flex gap-2 cursor-pointer items-center lowercase text-base" onClick={() => { navigator.clipboard.writeText(member.contact.companyEmail); toast.success("Email copied to clipboard") }}>
-                      {member.contact.companyEmail} <Copy className="size-4" />
+                    <p className="group text-primary inline-flex gap-2 cursor-pointer items-center lowercase text-base" onClick={() => { navigator.clipboard.writeText(member.contact.companyEmail); toast.success("Email copied to clipboard") }}>
+                      {member.contact.companyEmail}
+                      <span className="flex items-center justify-center p-2 border border-transparent group-hover:bg-primary group-hover:text-white group-hover:border-white group-hover:rounded-full transition-all">
+                        <Copy className="size-4" />
+                      </span>
                     </p>
                     <SocialMedia socials={member.contact.socials ?? {}} className="px-3.5 py-0.5 w-min text-primary backdrop-blur-2xl bg-primary/10 justify-center mx-auto rounded-md" iconClassName="text-primary size-5" />
                   </div>
                 </DialogHeader>
                 <div className="space-y-3 px-6 pt-6 pb-10 bg-white">
-                  <div>
+                  {/* <div>
                     <p className="lowercase font-light text-sm">Qualifications</p>
-                    <div className="flex flex-row flex-wrap gap-1.5">
-                      {member.qualifications.map(qualification =>
-                        <span
-                          key={member.name + "-" + qualification}
-                          className="bg-primary/80 text-white rounded-lg px-1.5 pb-0.5"
-                        >
-                          {qualification}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  <div>
+                  
+                  </div> */}
+                  {/* <div>
                     <p className="lowercase font-light text-sm">Experiences</p>
-                    <div className="flex flex-row flex-wrap gap-1.5">
+                    <div className="flex flex-row flex-wrap gap-1.5 ">
                       {member.experience.map(experience =>
                         <span
                           key={member.name + "-" + experience}
@@ -141,7 +148,7 @@ function Person(props: {
                         </span>
                       )}
                     </div>
-                  </div>
+                  div> */}
                   <div>
                     <p className="lowercase font-light text-sm">Bio</p>
                     {/* <p className="text-base text-left whitespace-pre-line"> */}
@@ -246,6 +253,8 @@ function Person(props: {
 //   )
 // }
 export default function AboutPage() {
+  useHotjar()
+
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">

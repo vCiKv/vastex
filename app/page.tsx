@@ -19,6 +19,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
+import useHotjar from "@/hooks/useHotjar"
 
 function HeroText() {
   const innovativeAlternatives = [
@@ -80,6 +81,7 @@ function HeroText() {
   )
 }
 export default function Home() {
+  useHotjar()
   return (
     <div className="flex min-h-screen flex-col">
 
@@ -103,7 +105,7 @@ export default function Home() {
                   <div className="bg-primary/30 bg-gradient-to-r from-primary/20 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
                     <div className="container pt-32">
                       <div className="text-center flex justify-center items-center flex-col">
-                        <h2 className="text-accent">Operations Advisory / Management Solutions</h2>
+                        <h2 className="text-accent">Business Turnaround / Operations Advisory</h2>
                         <p className="text-white max-w-[600px] pb-4">
                           Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
                         <Link href="/services">
