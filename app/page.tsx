@@ -6,7 +6,7 @@ import { ArrowRight, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Blob } from "@/components/ui/blob"
 import ScrollReveal from "@/components/scroll-reveal"
-import CallToAction from "./cta"
+import CallToAction from "../components/cta"
 import Section from "@/components/section"
 import Logo from "@/components/logo"
 // import { FloatingPaths } from "@/components/ui/background-paths"
@@ -57,7 +57,7 @@ function HeroText() {
       </div>
       <ScrollReveal delay={600} direction="up">
         <p className="leading-snug text-center py-4 md:w-4/5 px-1 mx-auto text-stone-950 rounded-xl">
-          VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation and New Business Set Up.        </p>
+          VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation, Business Turnaround and New Business Set Up.        </p>
       </ScrollReveal>
       <ScrollReveal delay={900} direction="up" className="relative pb-10 pt-2">
         <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center z-10 relative">
@@ -146,6 +146,20 @@ export default function Home() {
                     </div>
                   </div>
                 </CarouselItem>
+                {/* <CarouselItem className="bg-[url('/imgs/slide-4.jpeg')] bg-center bg-cover min-h-[100vh] w-full">
+                  <div className="bg-primary/30 bg-gradient-to-r from-primary/20 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
+                    <div className="container pt-32">
+                      <div className="text-center flex justify-center items-center flex-col">
+                        <h2 className="text-accent">Business Turnaround</h2>
+                        <p className="text-white max-w-[600px] pb-4">
+                          Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
+                        <Link href="/services">
+                          <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Start Now<ArrowRight className="ml-2 h-4 w-4" /></Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem> */}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />

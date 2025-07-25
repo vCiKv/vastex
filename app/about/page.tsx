@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import CallToAction from "../cta"
+import CallToAction from "../../components/cta"
 import ScrollReveal from "@/components/scroll-reveal"
 import Section from "@/components/section"
 import { partners, SocialMediaList } from "../companyDetails"
@@ -213,45 +213,6 @@ function Person(props: {
     </ScrollReveal >
   )
 }
-
-// function AboutUs() {
-//   const buttonVariants = [
-//     "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-//     , {
-//       variants: {
-//         variant: {
-//           default: "bg-primary text-primary-foreground hover:bg-primary/90",
-//           destructive:
-//             "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-//           outline:
-//             "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-//           secondary:
-//             "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-//           ghost: "hover:bg-accent hover:text-accent-foreground",
-//           link: "text-primary underline-offset-4 hover:underline",
-//         },
-//         size: {
-//           default: "h-10 px-4 py-2",
-//           sm: "h-9 rounded-md px-3",
-//           lg: "h-11 rounded-md px-8",
-//           icon: "h-10 w-10",
-//         },
-//       },
-//       defaultVariants: {
-//         variant: "default",
-//         size: "default",
-//       },
-//     },
-//   ]
-
-//   return (
-//     <p>
-//       VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Consulting,  Company Representation and New Business Set Up,
-//       Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
-//       We target Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses especially foreign companies looking to enter Nigerian Markets.We aim to become a pivotal partner in their set up and set out journey.
-//     </p>
-//   )
-// }
 export default function AboutPage() {
   useHotjar()
 
@@ -292,7 +253,7 @@ export default function AboutPage() {
                     </p> */}
                   </div>
                   <p className="pb-24 pr-6">
-                    VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation and New Business Set Up.
+                    VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation Business Turnaround, and New Business Set Up.
                     Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
                     Our clients include Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses, especially foreign companies looking to enter Nigerian Market. We aim to become a pivotal partner in their set up and set out journey.
                   </p>
