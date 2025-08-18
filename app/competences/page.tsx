@@ -201,8 +201,7 @@ export default function CompetencesPage() {
                     VASTEX Resources Limited
                   </h1>
                   <p className="pb-12">
-                    We are an integrated services firm offers a wide range of innovative and practical solutions, designed to help your business thrive in {"today's"} competitive market.
-                  </p>
+                    We are an integrated services firm that offers a wide range of innovative and practical solutions, designed to help your business thrive in today's competitive market.                  </p>
                   {/* <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
                       Why?
                     </div> */}
@@ -253,27 +252,11 @@ export default function CompetencesPage() {
                             route-to-market
                           </div>
                           <h3>
-                            Trade Channel and Customer Franchise Building Strategy
-                          </h3>
-                        </div>
-                        <p>
-                          At Vastex Resources Limited, we build strong availability, visibility and accessibility through a well carved out RTM strategy that supports and creates lasting relationships, fostering connections, and ensuring continuous and profitable customer and consumer network system for your brand(s).
-                          We drive business success by optimizing secondary and tertiary sales techniques, expanding channels which will strengthening customer engagement across all important locations in our chosen market.
-                          We build road maps that support and sustain businesses. No matter what level your business is, we will work with you to place your business on the right platform for greater performance.
-                        </p>
-                      </div>
-                      <div className="pb-8">
-                        <div className="space-y-2">
-                          <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-                            route-to-market
-                          </div>
-                          <h3>
                             Appropriate RTM Model for your Business
                           </h3>
                         </div>
                         <p>
-                          Vastex Resources helps you to penetrate new markets while reinforcing existing customer bases through tailored RTM strategies that will
-                        </p>
+                          At Vastex Resources we work with you to penetrate and hold on to new markets while reinforcing existing customer bases through tailored RTM strategies that will                        </p>
                         <div className="space-y-4">
                           <div>
                             <h6 className="font-bold pb-2">Identify, design and develop suitable distribution Channels </h6>
@@ -282,9 +265,7 @@ export default function CompetencesPage() {
                           <div>
                             <h6 className="font-bold pb-2">Build Strong Secondary Sales Force for Clients.</h6>
                             <p>
-                              Identify and recruit the right internal and external trade partners that will drive tour businesses from Manufacturing, through to retail, mobilizing the right secondary sales force that will build your expected numeric and width of distribution is key to our Organization.
-                              We grow businesses through increased numeric strength of distribution and continuous brand exposition at consumer touch points.
-                            </p>
+                              We Identify, recruit and groom the right internal and external trade partners that will drive businesses from Manufacturing, through to retail, mobilizing the right secondary sales force that will build your expected numeric and width of distribution is key to our Organization. We grow businesses through increased numeric strength of distribution and continuous brand exposition at consumer touch points.                            </p>
                           </div>
                         </div>
                       </div>
@@ -301,9 +282,10 @@ export default function CompetencesPage() {
                           <div>
                             <h6 className="font-bold pb-2">Customer Acquisition & Retention </h6>
                             <p>
-                              We Design personalized engagement solutions that attracts new customers, and deepen loyalty through superior service.
-                              In today’s Nigeria business environment, it has become more difficult to recruit, develop and keep Customers .In Vastex Resources Ltd, we will work with you to create and sustain the brand essence and offerings that keeps your business and entire  customer channels  profitable and competitive.                               </p>
+                              We Design personalized engagement solutions that attracts new customers, and deepen loyalty through superior service. In today’s Nigeria business environment, it has become more difficult to recruit, develop and keep Customers .At Vastex Resources Ltd, we will work with you to create and sustain the brand essence and offerings that keeps your business and entire customer channels profitable and competitive.
+                            </p>
                           </div>
+
                           <div>
                             <h6 className="font-bold pb-2">Brand-Driven Consumer Connection</h6>
                             <p>
@@ -313,68 +295,9 @@ export default function CompetencesPage() {
                           <div>
                             <h6 className="font-bold pb-2">B2B or Specialty Sales and Customer Service model</h6>
                             <p>
-                              We build Business network for both FMCG and non FMCG Clients. We develop and maintain strong customer relationship with companies and major retail hubs in Nigeria.. Our business model cuts across different business sectors and segments.                            </p>
+                              We build Business network for both FMCG and non FMCG Clients. We develop and maintain strong customer relationship with companies and major retail hubs in Nigeria. Our business model cuts across different business sectors and segments.                            </p>
                             <p>
-                              We develop business segments that will help you specialize in machine tool, chemical and agro sourcing and supplies to industries                             </p>
-                            <p>
-                              We create mystery shopper team for major brands to improve market information gathering and to ensure that chosen brands are at the right sales touch points.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="pb-8">
-                        <div className="space-y-2">
-                          <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-                            route-to-market
-                          </div>
-                          <h3>
-                            Operational Support for Sales Growth
-                          </h3>
-                        </div>
-                        <div className="space-y-4">
-                          <div>
-                            <h6 className="font-bold pb-2">Hub Centre establishment and franchising </h6>
-                            <p>
-                              We work to Establish storage, logistics, and sell-out teams to stabilize supply chains and drive sales velocity.
-                              In today’s Nigeria business environment, it has become more difficult to recruit, develop and keep Customers .In Vastex Resources Ltd, we will work with you to create and sustain the brand essence and offerings that keeps your business and entire  customer channels  profitable and competitive.                               </p>
-                          </div>
-                          <div>
-                            <h6 className="font-bold pb-2">Brand-Driven Consumer Connection</h6>
-                            <p>
-                              Implementing customer franchise-building strategies via implementation of cost effective Trade Marketing plans, digital and social engagement for great brand exposition and reach.
-                            </p>
-                          </div>
-                          <div>
-                            <h6 className="font-bold pb-2">B2B or Specialty Sales and Customer Service model</h6>
-                            <p>
-                              We build Business network for both FMCG and non FMCG Clients. We develop and maintain strong customer relationship with companies and major retail hubs in Nigeria.. Our business model cuts across different business sectors and segments.                            </p>
-                            <p>
-                              We develop business segments that will help you specialize in machine tool, chemical and agro sourcing and supplies to industries                             </p>
-                            <p>
-                              We create mystery shopper team for major brands to improve market information gathering and to ensure that chosen brands are at the right sales touch points.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="pb-8">
-                        <div className="space-y-2">
-                          <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-                            route-to-market
-                          </div>
-                          <h3>
-                            Develop customer service schemes for business sustainability
-                          </h3>
-                        </div>
-                        <div className="space-y-4">
-                          <div>
-                            <h6 className="font-bold pb-2">Customer Acquisition & Retention </h6>
-                            <p>
-                              We Design personalized engagement solutions that attracts new customers, and deepen loyalty through superior service.
-                            </p>
-                            <p>
-                              We support clients to source for Hub centers and or sales operation centers that enables clients to keep sales inventories close to the market. We source and set up logistics services and inventory management system that creates seamless delivery to trade, customers and ultimately to the consumers.
+                              We create mystery shopper teams for major brands to improve market information gathering and to ensure that chosen brands are at the right sales touch points.
                             </p>
                           </div>
                           <div>
@@ -421,7 +344,9 @@ export default function CompetencesPage() {
 
 
         {/* CTA Section */}
-        <CallToAction />
+        <CallToAction >
+
+        </CallToAction>
       </main>
 
     </div>

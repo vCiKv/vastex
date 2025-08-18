@@ -54,8 +54,8 @@ function OutroGrid() {
             </h4>
             <div className="inline-flex gap-1.5">
               <Button size={"sm"} className="border-2 border-transparent hover:border-primary hover:bg-white hover:text-primary">
-                <Link href="/services">
-                  see services
+                <Link href="/competences">
+                  see competences
                 </Link>
               </Button>
               <Button size={"sm"} variant={"outline"}>
@@ -102,12 +102,8 @@ export default function ContactPage() {
       toast.error("Contact Form", { description: `Invalid Name` })
       return
     }
-
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-
-    emailjs.send('service_1cdgp2s', 'template_lrluw2c', formData, {
-      publicKey: "user_kgMxU5V2Jzhmp0R3hiDeD",
+    emailjs.send("service_ceyu3zy", "template_ha43dkm", formData, {
+      publicKey: "OPtHgyJK1HpW2xPE2",
       limitRate: {
         throttle: 90 * 1000
       }

@@ -52,7 +52,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
                     </Button>
 
                   </Link>
-                  <Link href="/services">
+                  <Link href="/competences">
                     <Button
                       variant="outline"
                       className="border-white text-white hover:text-primary hover:bg-accent"

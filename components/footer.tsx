@@ -13,17 +13,18 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container px-4 py-12 md:px-6 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <ScrollReveal direction="up" delay={100}>
-            <div className="space-y-4">
-              <Link href="/">
-                <Logo variant="white" width={176} height={100} textClassName="text-gray-300" />
-              </Link>
-              <p className="text-gray-400 pt-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <ScrollReveal direction="up" delay={100}>
+              <div className="pb-8">
+                <Link href="/">
+                  <Logo variant="white" width={176} height={100} textClassName="text-gray-300" />
+                </Link>
+                {/* <p className="text-gray-400 pt-4">
                 Providing  business solutions including, operation advisory, turn around,management solutions, industrial solutions, logistics, procurement,
                 and manufacturing services to businesses.
-              </p>
-              {/* <div className="flex space-x-4">
+              </p> */}
+                {/* <div className="flex space-x-4">
                 {[
                   { icon: <Facebook className="h-5 w-5" />, label: "Facebook" },
                   { icon: <Twitter className="h-5 w-5" />, label: "Twitter" },
@@ -40,31 +41,33 @@ export default function Footer() {
                   </Link>
                 ))}
               </div> */}
-            </div>
-          </ScrollReveal>
-          <ScrollReveal direction="up" delay={200}>
-            <div className="space-y-4">
-              <h4 className="text-lg font-bold">Quick Links</h4>
-              <ul className="space-y-2">
-                {[
-                  { name: "Home", path: "/" },
-                  { name: "About Us", path: "/about" },
-                  { name: "Competences", path: "/competences" },
-                  { name: "Contact", path: "/contact" },
-                  { name: "Careers", path: "/careers" },
-                ].map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.path}
-                      className="text-gray-400 transition-all duration-200 hover:text-white hover:translate-x-1 inline-block"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </ScrollReveal>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={200}>
+              <div className="space-y-4">
+                <h4 className="text-lg font-bold">Quick Links</h4>
+                <ul className="space-y-2">
+                  {[
+                    { name: "Home", path: "/" },
+                    { name: "About Us", path: "/about" },
+                    { name: "Competences", path: "/competences" },
+                    { name: "Contact", path: "/contact" },
+                    { name: "Careers", path: "/careers" },
+                  ].map((link, index) => (
+                    <li key={index}>
+                      <Link
+                        href={link.path}
+                        className="text-gray-400 transition-all duration-200 hover:text-white hover:translate-x-1 inline-block"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+          </div>
+
           <ScrollReveal direction="up" delay={300}>
             <div className="space-y-4">
               <h4 className="text-lg font-bold">Competences</h4>

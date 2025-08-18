@@ -19,6 +19,7 @@ import {
   DialogClose,
   DialogContent,
   DialogHeader,
+  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 import SocialMedia from "@/components/social-media"
@@ -86,9 +87,9 @@ function Person(props: {
             <DialogTrigger>
               <span className="inline-flex flex-row flex-nowrap w-full gap-2 justify-center items-center text-primary cursor-pointer hover:bg-primary/80 hover:text-white py-0.5 px-3 rounded-full">see more <ChevronRight className="size-4" /></span>
             </DialogTrigger>
-            <DialogContent className="bg-transparent backdrop-blur-md w-full md:max-w-[85vw] h-screen overflow-auto fixed rounded-2xl p-0" showCloseButton={false}>
-              <div className="relative size-full">
-
+            <DialogContent className="bg-transparent backdrop-blur-md  h-screen overflow-auto fixed rounded-2xl p-0" showCloseButton={false}>
+              <div className="relative size-full w-full md:max-w-[800px]">
+                <DialogTitle className="hidden">leader </DialogTitle>
                 <DialogClose
                   data-slot="dialog-close"
                   className="focus:ring-ring data-[state=open]:bg-accent  absolute top-4 right-4 opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5 bg-red-600 text-white rounded-full p-1 shadow-md cursor-pointer"
@@ -240,7 +241,7 @@ export default function AboutPage() {
               <ScrollReveal direction="left" delay={300} className="md:col-span-2">
                 <div className="flex flex-col justify-center space-y-4 md:pb-12">
                   <div className="space-y-2 pb-4">
-                    <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">About Us</div>
+                    <div className="inline-block rounded-xl bg-blue-100 items-center justify-center px-3 py-1 text-sm text-primary">How We Help You</div>
                     {/* <h1 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
                       Our Story
                     </h1> */}
@@ -253,18 +254,17 @@ export default function AboutPage() {
                     </p> */}
                   </div>
                   <p className="pb-24 pr-6">
-                    VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation Business Turnaround, and New Business Set Up.
+                    VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Business Turnaround /Operations Advisory, Company Representation and New Business Setup.
                     Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement.
                     Our clients include Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses, especially foreign companies looking to enter Nigerian Market. We aim to become a pivotal partner in their set up and set out journey.
                   </p>
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={500} className="relative rounded-xl -z-10">
-                <div className="flex items-center justify-center h-[50vh] md:h-[90vh] md:w-full w-[100vw] rounded-xl bg-[url('/imgs/about-building.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 opacity-80">
+                <div className="block items-center justify-center h-[50vh] w-[100vw] md:h-[90vh] md:w-full  rounded-xl bg-[url('/imgs/about-building.jpeg')] bg-center bg-cover bg-fixed shadow-lg transition-transform hover:scale-[1.02] duration-500 opacity-80">
                   <div className="bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
                   </div>
                 </div>
-
               </ScrollReveal>
             </div>
           </div>
@@ -273,33 +273,22 @@ export default function AboutPage() {
         <Section
           containerClassName="py-0 md:py-0 z-20 mt-[-120px]"
           className="pt-12 z-20"
-          divider={{
-            variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "mt-[-5px]"
-          }}
+        // divider={{
+        //   variant: "tiltAlt", fill: "fill-white", height: 160, position: "top", className: "mt-[-5px]"
+        // }}
         >
           <div className="grid grid-cols-1 px-6 md:px-8 gap-12 pb-12 size-full">
-            <div className="border rounded-xl shadow-sm py-2 group">
-              <div className="flex  items-center gap-x-6 border-l-4 border-accent group-hover:border-primary">
+            <div className="border-0 rounded-xl py-2 group">
+              <div className="flex  items-center gap-x-6 border-l-4 group-hover:border-primary">
                 <div className="flex justify-center items-center p-2.5 ml-2.5 size-12 bg-accent text-primary group-hover:bg-primary group-hover:text-accent rounded-full">
                   <RiFlagLine className="size-full" />
                 </div>
                 <div className="py-2">
-                  <h4 className="group-hover:text-primary text-2xl font-bold tracking-tight font-gilroy pb-4">Our Mission</h4>
+                  <h4 className="group-hover:text-primary text-3xl font-bold tracking-tight font-gilroy pb-4">Our Mission</h4>
                   <p className="group-hover:text-primary/60 leading-5">To be a pivotal partner to all our clients</p>
                 </div>
               </div>
             </div>
-            {/* <div className="border rounded-xl shadow-sm py-2 group">
-              <div className="flex  items-center gap-x-6 border-l-4 border-accent group-hover:border-primary">
-                <div className="flex justify-center items-center p-2.5 ml-2.5 size-12 bg-accent text-primary group-hover:bg-primary group-hover:text-accent rounded-full">
-                  <FaBullseye className="size-full" />
-                </div>
-                <div className="py-2">
-                  <h4 className="group-hover:text-primary text-2xl font-bold tracking-tight font-gilroy pb-4">Our Vision</h4>
-                  <p className="group-hover:text-primary/60 leading-5">To be a pivotal partner to all our clients</p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </Section>
         {/* Values Section */}
@@ -325,45 +314,46 @@ export default function AboutPage() {
                 {
                   icon: <FaMoneyBill1Wave className="text-primary" />,
                   title: "Market Knowledge",
-                  description:
-                    "is the strategic foresight that enables us to pinpoint opportunities, navigate competition, and deliver measurable impact.",
+                  description: "We know the market"
+                  // "is the strategic foresight that enables us to pinpoint opportunities, navigate competition, and deliver measurable impact.",
                 },
                 {
-                  icon: <FaGlobeAfrica className="text-primary" />,
-                  title: "Innovation",
-                  description:
-                    "Propelling forward ideas, ensuring our solutions consistently redefine industry benchmarks and secure future relevance.",
+                  // icon: <FaGlobeAfrica className="text-primary" />,
+                  icon: <FaPeopleGroup className="text-primary" />,
+                  title: "Hands-on",
+                  description: "Our strength is in brilliant implementation"
+                  // "Propelling forward ideas, ensuring our solutions consistently redefine industry benchmarks and secure future relevance.",
                 },
                 {
                   icon: <FaListCheck className="text-primary" />,
                   title: "Competence",
-                  description:
-                    "Our demonstrable capability and consistent delivery of superior results",
+                  description: "We are experts at what we do"
+                  // "Our demonstrable capability and consistent delivery of superior results",
                 },
                 {
                   icon: <TbContract className="text-primary" />,
                   title: "Partnership",
-                  description:
-                    "Aligning objectives and amplifying collective strengths for unparalleled success.",
+                  description: "We execute our briefs as if we are invested in the enterprise"
+                  // "Aligning objectives and amplifying collective strengths for unparalleled success.",
                 },
                 {
                   icon: <FaShieldHalved className="text-primary" />,
-                  title: "Integrity",
+                  title: "Trust",
                   description:
-                    "The unwavering foundation of our brand",
+                    "We keep our word",
                 },
-                {
-                  icon: <FaStar className="text-primary" />,
-                  title: "Passion",
-                  description:
-                    "The bedrock of all successful engagements",
-                },
-                {
-                  icon: <FaPeopleGroup className="text-primary" />,
-                  title: "Relationship",
-                  description:
-                    "Transforming transactional interactions into invaluable, long-term strategic alliances.",
-                },
+                // {
+                //   icon: <FaStar className="text-primary" />,
+                //   title: "Passion",
+                //   description:
+                //     "The bedrock of all successful engagements",
+                // },
+                // {
+                //   icon: <FaPeopleGroup className="text-primary" />,
+                //   title: "Relationship",
+                //   description:
+                //     "Transforming transactional interactions into invaluable, long-term strategic alliances.",
+                // },
 
 
               ].map((value, index) => (
@@ -373,7 +363,7 @@ export default function AboutPage() {
                     <div className="flex h-full flex-col items-center space-y-2 rounded-xl border border-accent bg-white/90 p-6 text-center shadow-xs transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                       <div className="rounded-full bg-accent p-3">{value.icon}</div>
                       <h4 className="text-xl font-bold text-gray-900">{value.title}</h4>
-                      {/* <p>{value.description}</p> */}
+                      <p>{value.description}</p>
                     </div>
                   </div>
                 </ScrollReveal>

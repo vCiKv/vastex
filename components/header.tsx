@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import Logo from "@/components/logo"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
@@ -75,6 +75,7 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetTitle className="hidden">Navigation Bar</SheetTitle>
               <div className="my-6 ml-4">
                 <Logo width={96} height={52} />
               </div>

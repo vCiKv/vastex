@@ -234,22 +234,30 @@ export const companyServices = {
       {
         title: "Go To Market Solutions",
         imageUrl: "/imgs/biz-dev-market-solutions.jpeg",
-        description: ("VASTEX works with Businesses / Brands to develop winning strategies and plans that enable them to successfully Launch their new businesses into the market. To do this, we navigate the entire spectrum from brand essence development, consumer touchpoints exercise consumer and trade understanding, consumer and trade insights generation, route to market design and construction, through to business / brand reveal. We go through the rigor to ensure that all the stakeholders in the entire space are aligned to ensure a perfect punch launch or relaunch.")
+        description: (
+          "VASTEX works with Businesses / Brands to develop winning strategies and plans that enable them to successfully Launch their new businesses into the market. To do this,We navigate the entire spectrum from brand essence development, consumer touch points exercise through to Customer and understanding of entire trade network. We work rely on consumer and trade insights generation, functional route to market design and construction, that grows through to business / brand reveal. We go through the rigor to ensure that all the stakeholders in the entire space are aligned to ensure a perfect punch launch or prelaunch."
+        )
       },
       {
         title: "Marketing/Brand Strategy and Planing Solutions",
         imageUrl: "/imgs/biz-dev-planning.jpeg",
-        description: ("VASTEX work with Businesses to articulate / couch their annual marketing strategy and practical plans to enable them achieve their business objectives and win in the market. \n  Lead Businesses Marketing functions in an outsourced capacity to drive their strategy and planning process, develop actionable activities and provide oversight supervision on implementation to ensure achievement of Goals for an agreed period.")
+        description: (
+          "At VASTEX we works with Businesses to articulate / couch client’s annual marketing strategies and practical plans to enable them achieve their business objectives and win in the market.\n We lead Businesses, Marketing functions in an outsourced capacity to drive client’s strategy and planning process. We develop actionable activities and provide oversight supervision on implementation to ensure achievement of Goals for an agreed period."
+        )
       },
       {
         title: "Innovation & New Product Development",
         imageUrl: "/imgs/biz-dev-innovation.jpeg",
-        description: ("VASTEX assists businesses instil new ways of thinking that energies creativity, ensures the team has the requisite skills and resources to develop breakthrough ideas, and works with them to embed an efficient system to bring the ideas to market.\n  Essentially, we lead businesses through the process of creating ideas, turning them into business opportunities and launching the opportunities into the market. \n Innovation is a core driver of Growth and is too important in businesses.However, it may be too expensive for businesses to carry.Reason smart businesses may need to consider the route of outsourcing this to function VASTEX while they consider sweating their assets for growth.")
+        description: (
+          "VASTEX assists businesses instill new ways of thinking that energizes creativity, ensures the team has the requisite skills and resources to develop breakthrough ideas, and works with such skills to imbed an efficient system to bring the ideas to market.\n Essentially, we lead businesses through the process of creating ideas, turning them into business opportunities and launching the opportunities into the market.\n Innovation is a core driver of Growth and is too important in businesses. However, it may be too expensive for businesses to carry. This is the Reason smart businesses may need to consider the route of outsourcing her function to VASTEX while they consider sweating their assets for growth."
+        )
       },
       {
         title: "Brand Essence & Positioning Solutions",
         imageUrl: "/imgs/biz-dev-solutions.jpeg",
-        description: ("Most medium enterprises / brand owners in Manufacturing, Franchise, Retail etc practice mostly the marketing principle of advertising without understanding the core essence and right positioning of the Brand in the Market.\n  VASTEX will work with such clients to develop a Brand Essence and Positioning that will act as the soul and persona of the brand, such that will guide the brand activities and behaviour, build consumer affinity for the brands to enable them win sustainably in the market.")
+        description: (
+          "Many medium-sized enterprises and brand owners across manufacturing, franchising, and retail rely primarily on advertising initiatives, often without clearly defining their brand’s essence or establishing the right market positioning.\n At VASTEX, we collaborate with clients to develop a well-defined Brand Essence and Positioning framework that serves as the foundation of their identity. This framework acts as the guiding principle for brand strategy, communication, and market behavior—ensuring consistency, clarity, and long-term relevance. \n By strengthening the brand’s core identity and aligning it with strategic market positioning, we enable organizations to foster deeper consumer affinity, differentiate effectively from competitors, and achieve sustainable growth in an increasingly competitive environment."
+        )
       },
     ]
   },

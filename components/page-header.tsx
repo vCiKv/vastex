@@ -24,10 +24,10 @@ export default function PageHeader(
             className="rounded-b-xl object-cover shadow-lg transition-transform group-hover:scale-[1.02] duration-500 size-full opacity-50"
           />
         </div>
-        <div className="absolute bg-primary/70 rounded-lg top-10 left-10 pt-12 w-4/5 md:w-auto md:min-w-md flex flex-col backdrop-blur-sm">
+        <div className="absolute z-10 bg-primary/70 rounded-lg top-10 left-10 pt-12 w-4/5 md:w-auto md:min-w-md flex flex-col backdrop-blur-sm">
           <div className="px-6 py-3 z-20">
             <h2 className="text-white">{pageTitle}</h2>
-            <span className="flex flex-nowrap gap-2 font-light text-white capitalize text-sm items-center">
+            <span className="flex flex-nowrap gap-2 font-light text-white capitalize text-sm items-center ">
               <Link className="hover:font-normal cursor-pointer hover:underline transition-all" href={"/"}>Home</Link>
               {breadcrumb.map((bread, index) => (
                 <React.Fragment key={pageTitle + "-breadcrumb-" + index}>

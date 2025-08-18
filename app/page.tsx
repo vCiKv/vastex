@@ -57,13 +57,13 @@ function HeroText() {
       </div>
       <ScrollReveal delay={600} direction="up">
         <p className="leading-snug text-center py-4 md:w-4/5 px-1 mx-auto text-stone-950 rounded-xl">
-          VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Operations Advisory, Company Representation, Business Turnaround and New Business Set Up.        </p>
+          VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Business Turnaround /Operations Advisory, Company Representation and New Business Setup.        </p>
       </ScrollReveal>
       <ScrollReveal delay={900} direction="up" className="relative pb-10 pt-2">
         <div className="flex flex-col gap-2 min-[400px]:flex-row items-center justify-center z-10 relative">
-          <Link href="/services">
+          <Link href="/competences">
             <Button className="bg-primary hover:bg-primary/70 transition-transform hover:scale-105">
-              Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
+              Explore Our competences <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
           <Link href="/contact">
@@ -108,7 +108,7 @@ export default function Home() {
                         <h2 className="text-accent">Business Turnaround / Operations Advisory</h2>
                         <p className="text-white max-w-[600px] pb-4">
                           Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
-                        <Link href="/services">
+                        <Link href="/competences">
                           <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">See More <ArrowRight className="ml-2 h-4 w-4" /></Button>
                         </Link>
                       </div>
@@ -123,7 +123,7 @@ export default function Home() {
                         <p className="text-white max-w-[600px] pb-4">
                           Beyond a simple presence, we become your strategic partner and voice in the market. We build vital connections and identify new opportunities, significantly boosting your {"brand's"} influence and opening doors to unparalleled growth.
                         </p>
-                        <Link href="/services">
+                        <Link href="/competences">
                           <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Read More <ArrowRight className="ml-2 h-4 w-4" /></Button>
                         </Link>
                       </div>
@@ -136,10 +136,8 @@ export default function Home() {
                       <div className="text-center flex justify-center items-center flex-col">
                         <h2 className="text-accent">New Business Setup</h2>
                         <p className="text-white pb-4 max-w-[600px]">
-                          We handle the complexities of launching your venture, from legal and regulatory compliance through to a winning market strategy.
-                          We position your businesses / brands to appeal to the right target consumers, through the right channels and using the appropriate systems.
-                        </p>
-                        <Link href="/services">
+                          We handle the complexities of launching your venture, from legal and regulatory compliance through to a winning market strategy. We position your businesses / brands to appeal to the right target consumers, through the right channels and using appropriate system.                        </p>
+                        <Link href="/competences">
                           <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
                         </Link>
                       </div>
@@ -153,7 +151,7 @@ export default function Home() {
                         <h2 className="text-accent">Business Turnaround</h2>
                         <p className="text-white max-w-[600px] pb-4">
                           Achieve peak performance with our expert operational guidance. We streamline your processes, optimize resources, and enhance efficiency, transforming challenges into clear opportunities that boost profitability and ensure sustainable success.                        </p>
-                        <Link href="/services">
+                        <Link href="/competences">
                           <Button className="border border-white hover:text-primary hover:bg-white hover:border-primary">Start Now<ArrowRight className="ml-2 h-4 w-4" /></Button>
                         </Link>
                       </div>
@@ -277,11 +275,11 @@ export default function Home() {
             </div> */}
             <ScrollReveal delay={1000} className="pt-16">
               <div className="flex justify-center">
-                <Link href="/services">
+                <Link href="/competences">
                   <Button
                     variant="outline"
                   >
-                    View All Services <ChevronRight className="ml-1 h-4 w-4" />
+                    View All Competences <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -320,9 +318,13 @@ export default function Home() {
                       Your Trusted Partner in Business Excellence
                     </h2>
                     <p>
-                      VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives
+                      VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses in achieving their commercial objectives with focus on Business Turnaround /Operations Advisory, Company Representation and New Business Setup. Our services encompass New Product Development & Innovations, Supply chain management, Brand building and marketing strategies, Project Management, Route to market design and construction, Distribution management and Customer experience enhancement. Our clients include Manufacturing companies, Marketing and Distribution Firms, Medium and Large Enterprises as well as new businesses, especially foreign companies looking to enter Nigerian Market. We aim to become a pivotal partner in their set up and set out journey.
                     </p>
-                  </div>
+                    {/* <p>
+                      VASTEX Resources Limited is an integrated services firm committed to helping businesses achieve their commercial goals. With a team of seasoned professionals with years of collective experience, we deliver innovative solutions that optimize operations, reduce costs, and drive sustainable growth.
+                      Guided by excellence, integrity, and client-focused service, we have earned the trust of businesses of all sizes in our market segment. At VASTEX, we don’t just provide services — we build lasting partnerships that empower organizations to succeed in an ever-changing business landscape.
+                    </p> 
+                    </div>
                   <div className="space-y-4 text-gray-600">
                     <p>
                       With years of experience between a team of dedicated professionals, we deliver innovative solutions
@@ -332,6 +334,7 @@ export default function Home() {
                       Our commitment to excellence, integrity, and client satisfaction makes us a trusted partner
                       for businesses of all sizes around the world.
                     </p>
+                    */}
                   </div>
                   <div>
                     <Link href="/about">
