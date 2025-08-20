@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import CallToAction from "../../components/cta"
+import CallToAction from "@/components/cta"
 import ScrollReveal from "@/components/scroll-reveal"
 import Section from "@/components/section"
 import { partners, SocialMediaList } from "../companyDetails"
@@ -403,7 +403,7 @@ export default function AboutPage() {
         </Section>
 
         {/* CTA Section */}
-        <CallToAction>
+        {/* <CallToAction>
           <Blob
             variant="blob2"
             color="text-white"
@@ -431,6 +431,31 @@ export default function AboutPage() {
                 </div>
               </div>
             </ScrollReveal>
+          </div> */}
+        <CallToAction>
+          <div className="space-y-4 text-center">
+            <h6 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">
+              Ready to Grow?
+            </h6>
+            <p className="mx-auto max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              {"Let’s"} discuss your vision and see how VASTEX Resources Limited can help you achieve it.
+            </p>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
+              <Link href="/contact">
+                <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
+                  Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+
+              </Link>
+              <Link href="/competences">
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:text-primary hover:bg-accent"
+                >
+                  Explore Our Services
+                </Button>
+              </Link>
+            </div>
           </div>
         </CallToAction>
       </main>

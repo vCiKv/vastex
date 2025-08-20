@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Blob } from "@/components/ui/blob"
 import ScrollReveal from "@/components/scroll-reveal"
-import CallToAction from "../../components/cta"
+import CallToAction from "@/components/cta"
 import Section from "@/components/section"
 import PageHeader from "@/components/page-header"
 import { companyServices } from "../companyDetails"
@@ -175,7 +175,7 @@ export default function CompetencesPage() {
       <main className="flex-1">
         <PageHeader
           pageTitle="Competences"
-          imageUrl="/imgs/service-hero.jpg"
+          imageUrl="/imgs/service-hero.jpeg"
           breadcrumb={["competences"]}
         />
         {/* Hero Section */}
@@ -344,8 +344,28 @@ export default function CompetencesPage() {
 
 
         {/* CTA Section */}
-        <CallToAction >
-
+        <CallToAction>
+          <div className="space-y-4 mx-auto text-center">
+            <h6 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">Ready to Innovate?</h6>
+            <p className="mx-auto max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Take the next step with VASTEX Resources Limited. We'll help you unlock your business's full potential.
+            </p>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
+              <Link href="/contact">
+                <Button className="bg-white text-primary hover:bg-blue-50 transition-transform hover:scale-105">
+                  Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:text-primary hover:bg-accent"
+                >
+                  Learn More About Us
+                </Button>
+              </Link>
+            </div>
+          </div>
         </CallToAction>
       </main>
 

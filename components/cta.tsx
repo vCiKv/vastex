@@ -1,9 +1,9 @@
-import ScrollReveal from "@/components/scroll-reveal";
-import { Button } from "@/components/ui/button";
-import { SectionDivider } from "@/components/ui/section-divider";
-import { Blob } from "@/components/ui/blob"
 import Link from "next/link";
+import ScrollReveal from "@/components/scroll-reveal";
+import { Blob } from "@/components/ui/blob"
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { SectionDivider } from "@/components/ui/section-divider";
 
 export default function CallToAction(props: { children?: React.ReactNode }) {
   if (props.children) {
@@ -12,7 +12,7 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
         <div className="relative rotate-180 -mb-1">
           <SectionDivider variant="waveAlt" fill="fill-primary" height={70} />
         </div>
-        <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
+        <section className={"relative bg-primary py-16 md:py-24 overflow-hidden"}>
           {props.children}
         </section>
       </>
@@ -38,9 +38,9 @@ export default function CallToAction(props: { children?: React.ReactNode }) {
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   {/* <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl"> */}
-                  <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">
+                  <h6 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">
                     Ready to Transform Your Business?
-                  </h2>
+                  </h6>
                   <p className="max-w-[900px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Contact us today to discuss how VASTEX Resources Limited can help your business thrive.
                   </p>
