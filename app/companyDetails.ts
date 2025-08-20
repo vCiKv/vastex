@@ -96,7 +96,7 @@ export const companyServices = {
     services: [
       {
         title: "Procurement & Supplier Management",
-        imageUrl: "/imgs/supply-procurement.jpg",
+        imageUrl: "/imgs/supply-procurement.jpeg",
         points: [
           "Sourcing materials and equipment for cost-effective operations and projects",
           "Supplier & Compliance Management",
@@ -106,7 +106,7 @@ export const companyServices = {
       },
       {
         title: "Inventory & Warehouse Management",
-        imageUrl: "/imgs/supply-warehouse.jpg",
+        imageUrl: "/imgs/supply-warehouse.jpeg",
         points: [
           "Balancing stock for operations and projects",
           "Inventory tracking and warehouse management",
@@ -191,7 +191,7 @@ export const companyServices = {
       },
       {
         title: "Building and Construction",
-        imageUrl: "/imgs/technical-building.jpg",
+        imageUrl: "/imgs/technical-building.jpeg",
         points: [
           "We carry out new building / factory construction and also old buildings renovation works.",
           "We partner with clients to generate ideas. ",
@@ -202,7 +202,7 @@ export const companyServices = {
       },
       {
         title: "Project Supervision",
-        imageUrl: "/imgs/technical-building.jpg",
+        imageUrl: "/imgs/technical-building.jpeg",
         points: [
           "Project execution, completion,  commissioning, and hand-over.",
           "Project Supervision and Evaluation.",
@@ -210,7 +210,7 @@ export const companyServices = {
       },
       {
         title: "Utilities Management",
-        imageUrl: "/imgs/technical-utilities.jpg",
+        imageUrl: "/imgs/technical-utilities.jpeg",
         points: [
           "Energy Resources Management - Power generating set, solar power system, and public power supply.",
           "Water system, borehole, water treatment, and distribution.",
@@ -266,7 +266,7 @@ export const companyServices = {
     services: [
       {
         title: "Trade Channel and Customer Franchise Building Strategy",
-        imageUrl: "/imgs/trade-channel.jpg",
+        imageUrl: "/imgs/trade-channel.jpeg",
         description: ("Vastex Resources Limited is committed to building lasting relationships, fostering connections, and ensuring continuous consumer and customer franchise creation.\n We drive business success by optimizing secondary sales strategies, expanding market reach, and strengthening customer engagement across Nigeria and the West African sub-region.  \n Our Secondary Sales Excellence \n Strategic Market Expansion – Helping businesses penetrate new markets while reinforcing existing customer bases through tailored RTM & GTM strategies.  \n Enhanced Distribution Channels – We developing multi-layered sales networks that integrate both traditional and digital platforms for wider consumer accessibility.  \n Customer Acquisition & Retention – We Design personalized engagement solutions to attract new customers and deepen loyalty through superior service.  \n Operational Support for Sales Growth – Establishing storage, logistics, and sell-out teams to stabilize supply chains and drive sales velocity.  \n Brand-Driven Consumer Connection – Implementing customer franchise-building strategies via digital and social engagement for lasting brand loyalty.  \n Sales Optimization for Local & International Brands – Creating scalable sales and customer service platforms tailored to both local businesses and foreign product entry into the region.  \n At Vastex, we don’t just sell—we cultivate long-term partnerships, refine sales ecosystems, and ensure businesses thrive in competitive markets. \n Imagine a business where customer satisfaction meets sales excellence—where every interaction leads to stronger relationships and lasting success. \n Welcome to Vastex Resources Limited, your trusted partner in customer service optimization and secondary sales acceleration. \n From Nigeria to the broader West African sub-region, we deliver impactful solutions that fuel growth and drive sustainable sales success. ")
       }
     ]

@@ -130,7 +130,7 @@ export default function Home() {
                     </div>
                   </div>
                 </CarouselItem>
-                <CarouselItem className="bg-[url('/imgs/slide-3.jpg')] bg-center bg-cover min-h-[100vh] w-full">
+                <CarouselItem className="bg-[url('/imgs/slide-3.jpeg')] bg-center bg-cover min-h-[100vh] w-full">
                   <div className="bg-primary/30 bg-gradient-to-r from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 backdrop-blur-xs size-full">
                     <div className="container pt-32">
                       <div className="text-center flex justify-center items-center flex-col">
@@ -361,10 +361,6 @@ export default function Home() {
             </div>
           </div>
         </Section>
-
-
-
-        {/*Map Section*/}
         <Section className="min-h-[50vh] py-0 md:py-0" containerClassName="py-0 md:py-0" >
           <ScrollReveal>
             <div className="container mx-auto">
@@ -385,6 +381,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
         </Section>
+
         {/* CTA Section */}
         <div className="-mt-10 z-10 relative">
           <CallToAction />

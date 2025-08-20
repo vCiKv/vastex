@@ -42,7 +42,7 @@ function OutroGrid() {
 
       <div className="w-full h-[100%] md:block hidden rounded-xl relative col-span-2" >
         <div className="relative bg-primary/30 bg-gradient-to-l from-primary/60 via-15%-primary/30 via-70%-primary/10 to-white/5 size-full rounded-xl">
-          <GridImage src="/imgs/contact-hello.jpg" />
+          <GridImage src="/imgs/contact-hello.jpeg" />
         </div>
       </div>
 
