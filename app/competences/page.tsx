@@ -201,10 +201,8 @@ export default function CompetencesPage() {
                     VASTEX Resources Limited
                   </h1>
                   <p className="pb-12">
-                    We are an integrated services firm that offers a wide range of innovative and practical solutions, designed to help your business thrive in today's competitive market.                  </p>
-                  {/* <div className="inline-block rounded-xl bg-blue-100 px-3 py-1 text-sm text-primary">
-                      Why?
-                    </div> */}
+                    VASTEX Resources Limited is an integrated services firm dedicated to assisting businesses achieve their commercial objectives, with focus on  Business  Turnaround / Operations Advisory, Company Representation and New Business Setup.
+                  </p>
                   <h2 className="text-center font-normal text-vastex-green inline-flex gap-2 items-center">Why <Logo /></h2>
                   <div className="h-full mx-auto max-w-6xl gap-12 px-6 pb-12 pt-8 w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center">
                     {[
@@ -256,7 +254,8 @@ export default function CompetencesPage() {
                           </h3>
                         </div>
                         <p>
-                          At Vastex Resources we work with you to penetrate and hold on to new markets while reinforcing existing customer bases through tailored RTM strategies that will                        </p>
+                          At Vastex Resources Limited, we work with you to ensure that your brands are placed at the right / important points of purchase, through thorough review, design / redesign and construction / reconstruction of your Route To Market for effective reach to your target market.
+                        </p>
                         <div className="space-y-4">
                           <div>
                             <h6 className="font-bold pb-2">Identify, design and develop suitable distribution Channels </h6>
@@ -282,7 +281,7 @@ export default function CompetencesPage() {
                           <div>
                             <h6 className="font-bold pb-2">Customer Acquisition & Retention </h6>
                             <p>
-                              We Design personalized engagement solutions that attracts new customers, and deepen loyalty through superior service. In today’s Nigeria business environment, it has become more difficult to recruit, develop and keep Customers .At Vastex Resources Ltd, we will work with you to create and sustain the brand essence and offerings that keeps your business and entire customer channels profitable and competitive.
+                              We Design personalized engagement solutions that attracts new customers, and deepen loyalty through superior service. In {"today’s"} Nigeria business environment, it has become more difficult to recruit, develop and keep Customers .At Vastex Resources Ltd, we will work with you to create and sustain the brand essence and offerings that keeps your business and entire customer channels profitable and competitive.
                             </p>
                           </div>
 
@@ -295,11 +294,13 @@ export default function CompetencesPage() {
                           <div>
                             <h6 className="font-bold pb-2">B2B or Specialty Sales and Customer Service model</h6>
                             <p>
-                              We build Business network for both FMCG and non FMCG Clients. We develop and maintain strong customer relationship with companies and major retail hubs in Nigeria. Our business model cuts across different business sectors and segments.                            </p>
+                              We build Business network for both FMCG and non FMCG Clients. We develop and maintain strong customer relationship with companies and major retail hubs in Nigeria. Our business model cuts across different business sectors and segments.
+                            </p>
                             <p>
                               We create mystery shopper teams for major brands to improve market information gathering and to ensure that chosen brands are at the right sales touch points.
                             </p>
                           </div>
+
                           <div>
                             <h6 className="font-bold pb-2">Business Health Check on Sales and distribution System</h6>
                             <p>

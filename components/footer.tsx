@@ -5,7 +5,7 @@ import { Mail, MapPin } from "lucide-react"
 import Logo from "@/components/logo"
 import ScrollReveal from "@/components/scroll-reveal"
 import { companyAddress, companyEmail, getServicesList } from "@/app/companyDetails"
-import { CompanyNumbers } from "./company-detail"
+import { CompanyNumbers } from "./helper-company-detail"
 
 
 
